@@ -1,8 +1,8 @@
 <template>
-  <div class="text-white">
+  <div>
     <h2 class="pl-8 text-4xl font-bold">{{ label }}</h2>
     <div class="slider" v-swiper:mySwiper="swiperOption">
-      <ul class="mt-5 swiper-wrapper">
+      <ul class="swiper-wrapper">
         <li
           v-for="list in video"
           :key="list.id"
@@ -10,34 +10,27 @@
         >
           <nuxt-link :to="{ name: `${videoType}-id`, params: { id: list.id } }">
             <div class="overflow-hidden rounded-md">
-              <img
-                :src="`${imagesURL}${list.backdrop_path}`"
-                :alt="list.title"
-              />
-            </div>
-            <div class="flex justify-start items-start px-2 py-3">
-              <div class="mt-1 mr-5">
-                <div class="vote-average bg-gradient">
-                  {{ list.vote_average }}
-                </div>
-              </div>
-              <div class="flex-1">
-                <p class="text-2xl text-gray-300">{{ list.release_date }}</p>
-                <p class="video-title">{{ list.title }}</p>
-              </div>
+              <img :src="`${imagesURL}${list.poster_path}`" :alt="list.title" />
             </div>
           </nuxt-link>
         </li>
       </ul>
+      <div class="swiper-button-prev">
+        <AppIcon icon="chevron_left" />
+      </div>
+      <div class="swiper-button-next">
+        <AppIcon icon="chevron_right" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import IMAGES from '@/data/images-src.json'
+import AppIcon from '@/components/AppIcon'
 
 export default {
-  components: {},
+  components: { AppIcon },
   props: {
     videoType: {
       type: String,
@@ -54,11 +47,16 @@ export default {
   },
   data() {
     return {
-      imagesURL: IMAGES.card,
+      imagesURL: IMAGES.post,
       swiperOption: {
         loop: true,
         slidesPerView: 'auto',
         spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          hideOnClick: true,
+        },
       },
     }
   },

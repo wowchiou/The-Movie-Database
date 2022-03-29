@@ -16,7 +16,6 @@ export default {
     return axiosTMDB.get(`/movie/latest?api_key=${API_KEY}&language=zh-TW`)
   },
   getNowPlayingMovie(page) {
-    console.log(page)
     return axiosTMDB.get(
       `/movie/now_playing?api_key=${API_KEY}&language=zh-TW&page=${page}`
     )
@@ -24,6 +23,14 @@ export default {
   getTopMovie(page) {
     return axiosTMDB.get(
       `/movie/top_rated?api_key=${API_KEY}&language=zh-TW&page=${page}`
+    )
+  },
+  getLatestTV() {
+    return axiosTMDB.get(`/tv/latest?api_key=${API_KEY}&language=zh-TW`)
+  },
+  getNowPlayingTV(page) {
+    return axiosTMDB.get(
+      `/tv/now_playing?api_key=${API_KEY}&language=zh-TW&page=${page}`
     )
   },
   getTopTV(page) {
