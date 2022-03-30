@@ -1,0 +1,13 @@
+.slider {
+  @apply w-full;
+}
+
+.cast-item {
+  width: 138px;
+}
+
+.cast-image {
+  @apply rounded-md overflow-hidden relative;
+  width: 138px;
+  height: 175px;
+}

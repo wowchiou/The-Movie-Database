@@ -12,7 +12,8 @@ span {
 }
 
 body {
-  @apply bg-iColor-dark text-gray-100;
+  min-width: 960px;
+  @apply bg-iColor-dark text-gray-100 m-auto;
 }
 
 img {
@@ -55,4 +56,25 @@ button {
     rgba(1, 180, 228, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90cea1', endColorstr='#01b4e4',GradientType=1 );
+}
+
+.banner {
+  @apply relative flex justify-center items-center w-full bg-slate-300;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  &::after {
+    content: '';
+    @apply absolute w-full h-full top-0 left-0  backdrop-blur-sm backdrop-grayscale bg-slate-700/70 z-0;
+  }
+}
+
+.slider .swiper-lazy-preloader {
+  @apply absolute w-full h-full bg-gray-400 top-0 left-0 m-0 rounded-none border-0;
+  animation: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% auto;
+  background-image: url(~@/assets/images/logo-primary-short.svg);
 }

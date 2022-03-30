@@ -10,8 +10,13 @@
 
 .video-list {
   width: 250px;
+  height: 375px;
   font-size: 0;
   @apply inline-block;
+}
+
+.video-image {
+  @apply overflow-hidden rounded-md;
 }
 
 .video-title {

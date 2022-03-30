@@ -20,12 +20,12 @@
         videoType="Movie"
         :video="topMovie"
       />
-      <!-- <VideoSlider
+      <VideoSlider
         class="mt-10"
-        label="現正熱映影劇"
+        label="高人氣影劇"
         videoType="Tv"
-        :video="topTV"
-      /> -->
+        :video="popularTV"
+      />
       <VideoSlider
         class="mt-10"
         label="最高評分影劇"
@@ -47,12 +47,12 @@ export default {
   async asyncData() {
     const nowPlayingMovie = await http.getNowPlayingMovie(1)
     const topMovie = await http.getTopMovie(1)
-    // const nowPlayingTV = await http.getNowPlayingTV(1)
+    const popularTV = await http.getPopularTV(1)
     const topTV = await http.getTopTV(1)
     return {
       nowPlayingMovie: nowPlayingMovie.data.results,
       topMovie: topMovie.data.results,
-      // nowPlayingTV: nowPlayingTV.data.results,
+      popularTV: popularTV.data.results,
       topTV: topTV.data.results,
     }
   },

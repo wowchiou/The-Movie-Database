@@ -9,8 +9,13 @@
           class="video-list swiper-slide"
         >
           <nuxt-link :to="{ name: `${videoType}-id`, params: { id: list.id } }">
-            <div class="overflow-hidden rounded-md">
-              <img :src="`${imagesURL}${list.poster_path}`" :alt="list.title" />
+            <div class="video-image">
+              <img
+                :data-src="`${imagesURL}${list.poster_path}`"
+                :alt="list.title"
+                class="swiper-lazy"
+              />
+              <div class="swiper-lazy-preloader"></div>
             </div>
           </nuxt-link>
         </li>
@@ -56,6 +61,13 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
           hideOnClick: true,
+        },
+        preloadImages: true,
+        lazy: {
+          loadOnTransitionStart: true,
+          checkInView: true,
+          loadPrevNextAmount: 7,
+          loadPrevNext: true,
         },
       },
     }

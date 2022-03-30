@@ -14,3 +14,10 @@ export default {
   components: { AppHeader },
 }
 </script>
+
+<style lang="scss">
+.app-container {
+  max-width: 2000px;
+  margin: auto;
+}
+</style>
