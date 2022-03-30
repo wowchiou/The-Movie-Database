@@ -1,2 +1,77 @@
-._id {
+.main {
+  @apply w-11/12 max-w-screen-xl m-auto;
+}
+
+.info {
+  @apply relative z-10 flex justify-center items-start;
+  margin-top: -400px;
+}
+
+.video-post {
+  width: 300px;
+  @apply mr-10 rounded-md overflow-hidden;
+}
+
+.logo-list {
+  width: 10rem;
+  height: 7.5rem;
+  text-align: center;
+  @apply flex justify-center items-center m-3;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.type {
+  @apply flex justify-start items-center flex-wrap;
+  & li + li {
+    @apply m-2;
+  }
+}
+
+.type-list {
+  @apply mr-3 px-5 py-2 rounded-md text-iColor-green border-iColor-green text-2xl;
+  border-width: 1px;
+}
+
+.companies {
+  @apply mt-5 flex justify-start items-start bg-gray-100/[.5] rounded-md p-3;
+}
+
+.vote-average {
+  font-size: 9rem;
+  @apply leading-none font-bold;
+}
+
+.reviews {
+  padding: 20rem 0;
+  ul {
+    li {
+      &:not(:first-child) {
+        margin-top: 10rem;
+      }
+    }
+  }
+}
+
+.pic-bar {
+  @apply w-full h-screen;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.avatar {
+  @apply rounded-full overflow-hidden flex justify-center items-center bg-gray-300;
+  width: 40px;
+  height: 40px;
+}
+
+.vote-ball {
+  width: 5rem;
+  height: 5rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  @apply rounded-full flex
+    justify-center items-center;
 }

@@ -30,6 +30,20 @@ export default {
       `/movie/top_rated?api_key=${API_KEY}&language=zh-TW&page=${page}`
     )
   },
+  getDetailMovie(movieID) {
+    return axiosTMDB.get(`/movie/${movieID}?api_key=${API_KEY}&language=zh-TW`)
+  },
+  getCastMovie(movieID) {
+    return axiosTMDB.get(
+      `/movie/${movieID}/credits?api_key=${API_KEY}&language=zh-TW`
+    )
+  },
+  getReviewMovie(movieID, page) {
+    return axiosTMDB.get(
+      `/movie/${movieID}/reviews?api_key=${API_KEY}&language=([a-z]{2})-([A-Z]{2})&page=${page}`
+    )
+  },
+
   getLatestTV() {
     return axiosTMDB.get(`/tv/latest?api_key=${API_KEY}&language=zh-TW`)
   },
@@ -55,8 +69,5 @@ export default {
     return axiosTMDB.get(
       `/tv/${tvID}/reviews?api_key=${API_KEY}&language=([a-z]{2})-([A-Z]{2})&page=${page}`
     )
-  },
-  getReview(id) {
-    return axiosTMDB.get(`/review/${id}?api_key=${API_KEY}`)
   },
 }
