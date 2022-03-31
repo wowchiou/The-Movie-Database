@@ -2,25 +2,25 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { createVuexStore } from '@/store'
 import { routes } from '@/router'
-import Tv from './Tv.vue'
+import ReviewList from './ReviewList.vue'
 
 let wrapper
 let store
 let router
 
-describe('Tv', () => {
+describe('ReviewList', () => {
   beforeEach(() => {
     store = createVuexStore()
     router = createRouter({
       history: createWebHashHistory(process.env.BASE_URL),
       routes,
     })
-    wrapper = mount(Tv, {
+    wrapper = mount(ReviewList, {
       global: { plugins: [store, router] },
     })
   })
 
-  it('Tv is exist', () => {
+  it('ReviewList is exist', () => {
     expect(true).toBe(true)
   })
 })

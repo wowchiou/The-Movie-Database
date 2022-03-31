@@ -1,0 +1,12 @@
+.recommendations {
+  @apply w-full;
+  max-width: 900px;
+  margin: 10rem auto;
+  font-size: 0;
+  li {
+    width: calc(100% / 3);
+  }
+  .video-post {
+    width: 100%;
+  }
+}

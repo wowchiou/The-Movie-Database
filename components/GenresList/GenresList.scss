@@ -1,0 +1,11 @@
+.type {
+  @apply flex justify-start items-center flex-wrap;
+  & li + li {
+    @apply m-2;
+  }
+}
+
+.type-list {
+  @apply mr-3 px-5 py-2 rounded-md text-iColor-green border-iColor-green text-2xl;
+  border-width: 1px;
+}

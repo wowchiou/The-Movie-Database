@@ -2,25 +2,25 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { createVuexStore } from '@/store'
 import { routes } from '@/router'
-import _id from './_id.vue'
+import RecommendationsCard from './RecommendationsCard.vue'
 
 let wrapper
 let store
 let router
 
-describe('_id', () => {
+describe('RecommendationsCard', () => {
   beforeEach(() => {
     store = createVuexStore()
     router = createRouter({
       history: createWebHashHistory(process.env.BASE_URL),
       routes,
     })
-    wrapper = mount(_id, {
+    wrapper = mount(RecommendationsCard, {
       global: { plugins: [store, router] },
     })
   })
 
-  it('_id is exist', () => {
+  it('RecommendationsCard is exist', () => {
     expect(true).toBe(true)
   })
 })

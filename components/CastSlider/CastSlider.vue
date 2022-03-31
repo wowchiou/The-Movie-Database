@@ -9,7 +9,7 @@
         <div class="cast-image">
           <img
             class="swiper-lazy"
-            :data-src="`https://image.tmdb.org/t/p/w138_and_h175_face${cast.profile_path}`"
+            :data-src="`${$store.state.images.cast}${cast.profile_path}`"
             :alt="cast.name"
           />
           <div class="swiper-lazy-preloader"></div>
@@ -56,8 +56,6 @@ export default {
       return this.casts.filter((cast) => cast.profile_path)
     },
   },
-  methods: {},
-  mounted() {},
 }
 </script>
 

@@ -12,7 +12,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
         rel: 'stylesheet',
@@ -26,7 +26,10 @@ export default {
   css: ['@/assets/scss/main.scss', 'swiper/css/swiper.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/vue-swiper.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-swiper.js', ssr: false },
+    { src: '~/plugins/vue-infinite-scroll.js', ssr: false },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

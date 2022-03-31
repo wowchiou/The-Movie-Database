@@ -1,24 +1,35 @@
 <template>
   <div class="w-full flex justify-center items-center">
     <div class="w-1/2">
-      <p class="text-4xl font-bold">從這裡開始尋找電影、電視劇吧...</p>
-      <div class="search-bar">
-        <input type="text" />
+      <p class="text-4xl font-bold">從這裡開始尋找電影吧...</p>
+      <form class="search-bar" @submit.prevent="searchMovie">
+        <input type="text" v-model="searchText" />
         <button class="bg-gradient">搜尋</button>
-      </div>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  components: {},
   data() {
-    return {}
+    return {
+      searchText: '',
+    }
   },
-  computed: {},
-  methods: {},
-  mounted() {},
+  methods: {
+    searchMovie() {
+      if (!this.searchText) return
+      this.$router.push({
+        name: 'Search',
+        query: { searchText: this.searchText },
+      })
+      if (this.$route.name === 'Search' && process.browser) {
+        // this.$router.go(0)
+        window.reload()
+      }
+    },
+  },
 }
 </script>
 
