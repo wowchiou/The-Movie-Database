@@ -1,0 +1,857 @@
+<!doctype html>
+<html data-n-head-ssr lang="zh-TW" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22zh-TW%22%7D%7D">
+  <head >
+    <title>小飛象 - TMDB</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="歡迎來到電影基地，我們提供多部電影的影評資料，希望你喜歡！"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="preload" href="/_nuxt/e77e378.js" as="script"><link rel="preload" href="/_nuxt/02331da.js" as="script"><link rel="preload" href="/_nuxt/d9d54d2.js" as="script"><link rel="preload" href="/_nuxt/58da8b5.js" as="script"><link rel="preload" href="/_nuxt/62087d8.js" as="script"><link rel="preload" href="/_nuxt/9792ad0.js" as="script"><style data-vue-ssr-id="65b97e00:0 2c6794ac:0 63e2dbec:0 771aba7f:0 add73248:0 703a6812:0 05ec5855:0 a0e5a038:0 39784872:0 44551948:0 509c5d8f:0 0c9d9bb0:0 fad283f2:0 e5c03b90:0">/*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;}.relative{position:relative;}.z-10{z-index:10;}.m-auto{margin:auto;}.my-20{margin-top:5rem;margin-bottom:5rem;}.mt-2{margin-top:0.5rem;}.mt-10{margin-top:2.5rem;}.ml-5{margin-left:1.25rem;}.mt-5{margin-top:1.25rem;}.mb-5{margin-bottom:1.25rem;}.mr-10{margin-right:2.5rem;}.flex{display:flex;}.w-full{width:100%;}.w-1\/2{width:50%;}.w-20{width:5rem;}.flex-1{flex:1 1 0%;}.flex-col{flex-direction:column;}.flex-wrap{flex-wrap:wrap;}.items-start{align-items:flex-start;}.items-center{align-items:center;}.justify-start{justify-content:flex-start;}.justify-center{justify-content:center;}.justify-between{justify-content:space-between;}.justify-self-center{justify-self:center;}.overflow-hidden{overflow:hidden;}.p-20{padding:5rem;}.pb-5{padding-bottom:1.25rem;}.text-left{text-align:left;}.text-center{text-align:center;}.text-2xl{font-size:1.5rem;line-height:2rem;}.text-4xl{font-size:2.25rem;line-height:2.5rem;}.text-3xl{font-size:1.875rem;line-height:2.25rem;}.text-5xl{font-size:3rem;line-height:1;}.font-bold{font-weight:700;}.leading-normal{line-height:1.5;}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity));}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity));}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity));}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+/*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;}.relative{position:relative;}.z-10{z-index:10;}.m-auto{margin:auto;}.my-20{margin-top:5rem;margin-bottom:5rem;}.mt-2{margin-top:0.5rem;}.mt-10{margin-top:2.5rem;}.ml-5{margin-left:1.25rem;}.mt-5{margin-top:1.25rem;}.mb-5{margin-bottom:1.25rem;}.mr-10{margin-right:2.5rem;}.flex{display:flex;}.w-full{width:100%;}.w-1\/2{width:50%;}.w-20{width:5rem;}.flex-1{flex:1 1 0%;}.flex-col{flex-direction:column;}.flex-wrap{flex-wrap:wrap;}.items-start{align-items:flex-start;}.items-center{align-items:center;}.justify-start{justify-content:flex-start;}.justify-center{justify-content:center;}.justify-between{justify-content:space-between;}.justify-self-center{justify-self:center;}.overflow-hidden{overflow:hidden;}.p-20{padding:5rem;}.pb-5{padding-bottom:1.25rem;}.text-left{text-align:left;}.text-center{text-align:center;}.text-2xl{font-size:1.5rem;line-height:2rem;}.text-4xl{font-size:2.25rem;line-height:2.5rem;}.text-3xl{font-size:1.875rem;line-height:2.25rem;}.text-5xl{font-size:3rem;line-height:1;}.font-bold{font-weight:700;}.leading-normal{line-height:1.5;}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity));}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity));}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity));}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.bg-gradient{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1)}html{font-size:10px}a, span{display:inline-block;}body{min-width:960px;margin:auto;--tw-bg-opacity:1;background-color:rgb(13 37 63 / var(--tw-bg-opacity));--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity))}img{vertical-align:middle}input,select{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;outline:none;font-size:2rem;background-color:hsla(0,0%,100%,.5)}input, select{border-radius:0.375rem;}button,input:focus,select:focus{outline:none}button{border:none}.banner{position:relative;display:flex;width:100%;align-items:center;justify-content:center;--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity));height:500px;background-size:cover;background-position:50%;background-attachment:fixed;}.banner:after{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;background-color:rgb(51 65 85 / 0.7);--tw-backdrop-blur:blur(4px);--tw-backdrop-grayscale:grayscale(100%);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.slider .swiper-lazy-preloader{position:absolute;top:0px;left:0px;margin:0px;height:100%;width:100%;border-radius:0px;border-width:0px;--tw-bg-opacity:1;background-color:rgb(156 163 175 / var(--tw-bg-opacity));-webkit-animation:none;animation:none;background-repeat:no-repeat;background-position:50%;background-size:80% auto;background-image:url(/_nuxt/img/logo-primary-short.bb8aa70.svg);}.slideLeft-enter{transform:translateX(10px);opacity:0}.slideLeft-enter-active{transition:all 1s}.fadeIn-enter{opacity:0}.fadeIn-enter-active{transition:all .5s}@-webkit-keyframes shinny{0%{opacity:1}to{opacity:.3}}@keyframes shinny{0%{opacity:1}to{opacity:.3}}@-webkit-keyframes shift-to-left{0%{left:0}50%{left:3000px}to{left:3000px}}@keyframes shift-to-left{0%{left:0}50%{left:3000px}to{left:3000px}}
+@font-face{font-family:"swiper-icons";src:url("data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA") format("woff");font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-container-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{transform:translateZ(0)}.swiper-container-multirow>.swiper-wrapper{flex-wrap:wrap}.swiper-container-multirow-column>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.swiper-container-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform}.swiper-slide-invisible-blank{visibility:hidden}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{height:auto}.swiper-container-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-container-3d{perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:linear-gradient(270deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-right{background-image:linear-gradient(90deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-top{background-image:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent)}.swiper-container-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-container-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-container-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-container-horizontal.swiper-container-css-mode>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-container-vertical.swiper-container-css-mode>.swiper-wrapper{scroll-snap-type:y mandatory}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:calc(44px/44*27);width:calc(var(--swiper-navigation-size)/44*27);height:44px;height:var(--swiper-navigation-size);margin-top:calc(44px*-1/2);margin-top:calc(var(--swiper-navigation-size)*-1/2);z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-theme-color);color:var(--swiper-navigation-color,var(--swiper-theme-color))}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-next:after,.swiper-button-prev:after{font-family:swiper-icons;font-size:44px;font-size:var(--swiper-navigation-size);letter-spacing:0;text-transform:none;font-variant:normal;line-height:1}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{left:10px;right:auto}.swiper-button-prev:after,.swiper-container-rtl .swiper-button-next:after{content:"prev"}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{right:10px;left:auto}.swiper-button-next:after,.swiper-container-rtl .swiper-button-prev:after{content:"next"}.swiper-button-next.swiper-button-white,.swiper-button-prev.swiper-button-white{--swiper-navigation-color:#fff}.swiper-button-next.swiper-button-black,.swiper-button-prev.swiper-button-black{--swiper-navigation-color:#000}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;transition:opacity .3s;transform:translateZ(0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:10px;left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active,.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet-active{opacity:1;background:var(--swiper-theme-color);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.swiper-container-vertical>.swiper-pagination-bullets{right:10px;top:50%;transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:6px 0;display:block}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:transform .2s,top .2s}.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 4px}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:transform .2s,left .2s}.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:transform .2s,right .2s}.swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-theme-color);background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progressbar,.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-container-vertical>.swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}.swiper-pagination-white{--swiper-pagination-color:#fff}.swiper-pagination-black{--swiper-pagination-color:#000}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.swiper-slide-zoomed{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;animation:swiper-preloader-spin 1s linear infinite;box-sizing:border-box;border-radius:50%;border:4px solid var(--swiper-theme-color);border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-top:4px solid transparent}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{to{transform:rotate(1turn)}}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-container-fade.swiper-container-free-mode .swiper-slide{transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none;transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-container-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-cube.swiper-container-rtl .swiper-slide{transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-container-flip{overflow:visible}.swiper-container-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right,.swiper-container-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.nuxt-progress{position:fixed;top:0;left:0;right:0;height:5px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#90cea1;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}
+.app-container{max-width:2000px;width:100%;margin:auto;display:flex;min-height:100vh;flex-direction:column;align-items:flex-start;justify-content:flex-start}.app-content{width:100%;flex:1 1 0%}
+.header[data-v-8f99df62]{position:fixed;top:0px;left:0px;z-index:20;display:flex;width:100%;align-items:center;justify-content:space-between;padding-left:2rem;padding-right:2rem;padding-top:2.5rem;padding-bottom:2.5rem;transition:.3s}.header-left[data-v-8f99df62]{position:relative;z-index:10;display:flex;align-items:flex-end;justify-content:flex-start}.header.active[data-v-8f99df62]{background-color:rgb(13 37 63 / .5)}.header.active[data-v-8f99df62]:before{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.logo[data-v-8f99df62]{width:20rem}.logo .wrap[data-v-8f99df62]{width:100%;padding-bottom:13.0098522167%;background-image:url(/_nuxt/img/logo-alt-short.bf7f470.svg);background-size:100% 100%}.menu[data-v-8f99df62]{margin-left:2.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;line-height:2rem}.menu li[data-v-8f99df62]{font-weight:700;--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity));transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.menu li[data-v-8f99df62]:hover{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))}.menu li+li[data-v-8f99df62]{margin-left:2rem}
+.tabs li .nuxt-link-active[data-v-78f47c59]{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1);-webkit-background-clip:text;color:transparent}.tabs[data-v-78f47c59]{display:flex;align-items:flex-end;justify-content:center;font-size:1.875rem;line-height:2.25rem;font-weight:700}.tabs li[data-v-78f47c59]{padding-left:2.5rem;padding-right:2.5rem;--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))}.tabs li[data-v-78f47c59]:hover{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity))}
+.vote-average[data-v-1cb37e65],.vote-line[data-v-1cb37e65]{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1)}.vote-average[data-v-1cb37e65]{-webkit-background-clip:text;color:transparent}.main[data-v-1cb37e65]{margin:auto;width:91.666667%;max-width:1280px}.info[data-v-1cb37e65]{position:relative;z-index:10;display:flex;align-items:flex-start;justify-content:center;margin-top:-400px}.video-post[data-v-1cb37e65]{width:300px;margin-right:2.5rem;overflow:hidden;border-radius:0.375rem}.vote-average[data-v-1cb37e65]{font-size:3rem;line-height:1;font-weight:700}.vote-average span[data-v-1cb37e65]{font-weight:700;line-height:1;font-size:9rem}.pic-bar[data-v-1cb37e65]{position:relative;height:100vh;width:100%}.pic-bar[data-v-1cb37e65]:after{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity));background-color:hsla(0,0%,100%,.5);-webkit-animation:shinny .5s linear infinite alternate;animation:shinny .5s linear infinite alternate}.pic-bar[data-v-1cb37e65]:before{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity));background-image:url(/_nuxt/img/logo-primary-full.de1a664.svg);background-repeat:no-repeat;background-size:40% auto;background-position:50%;background-attachment:fixed}.pic-bar div[data-v-1cb37e65]{position:absolute;top:0px;left:0px;z-index:10;height:100%;width:100%;background-size:cover;background-attachment:fixed;background-position:center}.vote-line[data-v-1cb37e65]{position:absolute;bottom:0px;left:0px;height:0.5rem;overflow:hidden;border-radius:9999px}.vote-line[data-v-1cb37e65]:after{content:"";position:absolute;top:0px;left:0px;height:100%;background-color:rgb(255 255 255 / .2);-webkit-animation:shift-to-left 4s linear infinite;animation:shift-to-left 4s linear infinite;width:200px}
+.type[data-v-5a0e3ca0]{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start}.type li+li[data-v-5a0e3ca0]{margin:0.5rem}.type-list[data-v-5a0e3ca0]{margin-right:0.75rem;border-radius:0.375rem;--tw-border-opacity:1;border-color:rgb(144 206 161 / var(--tw-border-opacity));padding-left:1.25rem;padding-right:1.25rem;padding-top:0.5rem;padding-bottom:0.5rem;font-size:1.5rem;line-height:2rem;--tw-text-opacity:1;color:rgb(144 206 161 / var(--tw-text-opacity));border-width:1px}
+.companies[data-v-545b7ed0]{margin-top:1.25rem;display:flex;align-items:flex-start;justify-content:flex-start;border-radius:0.375rem;background-color:rgb(243 244 246 / .5);padding:0.75rem}.logo-list[data-v-545b7ed0]{width:10rem;height:7.5rem;text-align:center;margin:0.75rem;display:flex;align-items:center;justify-content:center}.logo-list img[data-v-545b7ed0]{max-width:100%;max-height:100%}
+.slider[data-v-da975202]{width:100%}.cast-item[data-v-da975202]{width:138px}.cast-image[data-v-da975202]{position:relative;overflow:hidden;border-radius:0.375rem;width:138px;height:175px}
+.reviews[data-v-5c50ff08]{padding:10rem 0}.reviews ul li[data-v-5c50ff08]:not(:first-child){margin-top:10rem}.avatar[data-v-5c50ff08]{display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:9999px;--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity));width:40px;height:40px}.vote-ball[data-v-5c50ff08]{width:5rem;height:5rem;text-shadow:.2rem .2rem .2rem rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;border-radius:9999px}
+.recommendations[data-v-02596022]{width:100%;max-width:900px;margin:10rem auto;font-size:0}.recommendations li[data-v-02596022]{width:33.3333333333%}.recommendations .video-post[data-v-02596022]{width:100%}
+.appFooter[data-v-5025bf52]:after,.appFooter a[data-v-5025bf52]{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1)}.appFooter a[data-v-5025bf52]{-webkit-background-clip:text;color:transparent}.appFooter[data-v-5025bf52]{position:relative;margin-top:5rem;width:100%;padding-top:2rem;padding-bottom:2rem}.appFooter[data-v-5025bf52]:after{content:"";position:absolute;top:0px;width:500px;height:1px;left:50%;transform:translateX(-50%)}.appFooter a[data-v-5025bf52]{margin-left:0.5rem;margin-right:0.5rem}</style>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="app-container"><header class="header" data-v-8f99df62><div class="header-left" data-v-8f99df62><a href="/" class="logo nuxt-link-active" data-v-8f99df62><div class="wrap" data-v-8f99df62></div></a> <ul class="tabs" data-v-78f47c59 data-v-8f99df62><li data-v-78f47c59><a href="/Overview/now" data-v-78f47c59><span data-v-78f47c59>現正熱映</span></a></li><li data-v-78f47c59><a href="/Overview/top" data-v-78f47c59><span data-v-78f47c59>高評價</span></a></li><li data-v-78f47c59><a href="/Overview/popular" data-v-78f47c59><span data-v-78f47c59>高人氣</span></a></li></ul></div></header> <div class="app-content"><div class="_id" data-v-1cb37e65><div class="banner" style="background-image:url(\n        https://image.tmdb.org/t/p/w1920_and_h800_face//5tFt6iuGnKapHl5tw0X0cKcnuVo.jpg\n      );" data-v-1cb37e65></div> <div class="main" data-v-1cb37e65><div class="info" data-v-1cb37e65><div class="video-post" data-v-1cb37e65><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//j8uIHGWcIAXCJrhn2IRuTLmQNGN.jpg" alt="小飛象" data-v-1cb37e65></div> <div class="flex-1 text-3xl overflow-hidden" data-v-1cb37e65><div class="relative flex justify-start items-start pb-5" data-v-1cb37e65><div class="flex-1 mr-10" data-v-1cb37e65><h1 class="font-bold text-5xl" data-v-1cb37e65>
+              小飛象
+              <span class="text-3xl text-gray-300" data-v-1cb37e65>
+                2019
+              </span></h1> <ul class="type mt-5" data-v-5a0e3ca0 data-v-1cb37e65><li class="type-list" data-v-5a0e3ca0>
+    家庭
+  </li><li class="type-list" data-v-5a0e3ca0>
+    奇幻
+  </li><li class="type-list" data-v-5a0e3ca0>
+    冒险
+  </li></ul></div> <div class="vote-average" data-v-1cb37e65><span class="vote-average" data-v-1cb37e65>0</span>%
+          </div> <span class="vote-line" style="width:0%;" data-v-1cb37e65></span></div> <p class="mt-5 leading-normal" data-v-1cb37e65>生意岌岌可危的瑪帝奇馬戲團，誕生了一隻有對招風耳的象寶寶，團中兩個年幼的孩子，不顧嘲笑和漫罵，細心呵護這隻特別的小象，終於有天，小象在萬眾矚目下飛向天際，也讓面臨倒閉的馬戲團重振票房。小飛象驚人的表演引來娛樂大亨凡德爾的目光，在大筆資金的誘惑下，馬戲團的老闆決定把事業賣給凡德爾，馬戲團中的表演者們，包括小飛象，也一同搬到重金打造的大型豪華表演莊園中。在這裡小飛象和才華洋溢的美女表演家一起演出精彩的空中飛人秀，一切看似美夢成真，直到漸漸的，凡德爾的野心浮上檯面……眾人才驚覺落入黑暗的圈套中……</p> <ul class="companies" data-v-545b7ed0 data-v-1cb37e65><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>Tim Burton Productions</span></li><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//wdrCwmRnLFJhEoH8GSfymY85KHT.png" alt="Walt Disney Pictures" data-v-545b7ed0></li><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//gSS2OBc6dRsK2ewRx5lcwnARrpl.png" alt="Moving Picture Company" data-v-545b7ed0></li><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>Infinite Detective</span></li><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>Secret Machine Entertainment</span></li><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>British Film Commission</span></li><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>UK Government's High End Television Tax Relief</span></li><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>Province of British Columbia Production Services Tax Credit</span></li><li class="logo-list" data-v-545b7ed0><span data-v-545b7ed0>Government of Australia</span></li><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//vxOhCbpsRBh10m6LZ3HyImTYpPY.png" alt="South Australian Film Corporation" data-v-545b7ed0></li></ul> <div class="slider mt-5 w-full" data-v-da975202 data-v-1cb37e65><ul class="cast-list swiper-wrapper" data-v-da975202><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//3iHqlaeSAQwJ0KraRKD1A4vBaCS.jpg" alt="Colin Farrell" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Colin Farrell</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//umhNfjzQX4exZl7HxygkWMHrPs1.jpg" alt="Michael Keaton" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Michael Keaton</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//uLW4Y9yjtwxtVmcJfwHZ7sKJai4.jpg" alt="Danny DeVito" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Danny DeVito</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//LkbrpPaGzCnyNd5Go79pGZGMce.jpg" alt="Eva Green" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Eva Green</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//mhACkTNrnwR4E115h8EfCZ263zH.jpg" alt="Alan Arkin" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Alan Arkin</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//9Vg0jgyx6IJRb22A48d3TmtjZeL.jpg" alt="Nico Parker" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Nico Parker</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//Ta2SggDtsw3jBnan0Jolz8Kyzz.jpg" alt="Finley Hobbins" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Finley Hobbins</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//4TbHkaZxPegaTns250cVXr8F91F.jpg" alt="Roshan Seth" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Roshan Seth</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//kcw8vNMlYgK8peuN80zhX6TqeNk.jpg" alt="Deobia Oparei" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Deobia Oparei</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ufXNVj0gOpGOB6uUnNuTIzk5rpb.jpg" alt="Joseph Gatt" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Joseph Gatt</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//gWOIb6AcTD4dWlue1OnJMRZ31GG.jpg" alt="Miguel Muñoz Segura" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Miguel Muñoz Segura</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//aMsYxadSBZ2dIlULmpHZCJyL9VF.jpg" alt="Sharon Rooney" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Sharon Rooney</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//433i2ensZyexe2tD0jlPEvCQakn.jpg" alt="Michael Buffer" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Michael Buffer</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//9kYoNUQ1Gb9cZ8JfN2IsiW9KHH8.jpg" alt="Phil Zimmerman" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Phil Zimmerman</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//anCACB76BRtagfk3KKtHzHeM8o2.jpg" alt="Ragevan Vasan" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Ragevan Vasan</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//1AWUOKX5978SbppSTLZjtyGnl70.jpg" alt="Frank Bourke" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Frank Bourke</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//i5KBDy76ac0VAsK8ZKAjieX4RPE.jpg" alt="Edd Osmond" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Edd Osmond</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//6cTye3OgvI2DCHwVNLqND1A9zQv.jpg" alt="Jo Osmond" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Jo Osmond</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//wDSKSBO5VwlcUUiiJWaGMajCG8V.jpg" alt="Lars Eidinger" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Lars Eidinger</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//48dfosYTTfngOeX00ngo0uF2tgt.jpg" alt="Douglas Reith" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Douglas Reith</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//wMR75F1tIAVA6tTnlq0A0xP30tE.jpg" alt="Sandy Martin" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Sandy Martin</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//uDsER1RNgmYVepr86nkXNHKkcI3.jpg" alt="Scott Haney" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Scott Haney</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//a9OkTdaR2mw6McSL5xTlU7bfKzl.jpg" alt="Erick Hayden" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Erick Hayden</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//11s6Q8mtyERY2o2lWPqn5b6GTAB.jpg" alt="Greg Canestrari" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Greg Canestrari</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//9BiptRAS5SZrTqhm5lJVn1HzrBJ.jpg" alt="Chris Rogers" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Chris Rogers</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//izjjkm0MdaObxkP8t7Cb3gqUZX7.jpg" alt="Simon Connolly" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Simon Connolly</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//8DVXmCJO8KWOnnFRPL9KVXdKT3j.jpg" alt="Nick Bartlett" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Nick Bartlett</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//rFRquRTGotsCqH5mF1P5vUWU6Lx.jpg" alt="Vincent Andriano" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Vincent Andriano</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//geljWJJDVuthFmwqiFundYwqwPR.jpg" alt="Josef Davies" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Josef Davies</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//jQ6rtpcmqVcic1ew172LePqFz1B.jpg" alt="Clive Brunt" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Clive Brunt</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//un2Y5NxT1zpAnV8pW8ljCXMzk0I.jpg" alt="Richard Leeming" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Richard Leeming</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//8S0KgilZ7PPYsKz13fFb4AXfJsc.jpg" alt="Angela Ashton" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Angela Ashton</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//96zTUd5W3jF9eLCxdAjmBgqk5De.jpg" alt="Philip Rosch" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Philip Rosch</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//vcngmOmJJvZmTteiOkCH6R1zX5m.jpg" alt="Amerjit Deu" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Amerjit Deu</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//jlLyxmuAe56QuOL02D8zfqpl1Bn.jpg" alt="Lucy DeVito" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Lucy DeVito</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ekqDB4JHpZdFU20LUQdzxu6l8V2.jpg" alt="Zee Asha" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Zee Asha</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//mTjjsfAfeBA4k5YyVHfsTG1VHWR.jpg" alt="Jessica Barker-Wren" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Jessica Barker-Wren</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//vGpjaH9heMMpZ0Fb3TvUSpEeaK0.jpg" alt="Arabella Neale" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Arabella Neale</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//9A1NZ4aJqSMmDhbNr1vJ18rokFf.jpg" alt="Anatoli Akerman" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Anatoli Akerman</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ddk6mDSrd2EnODbDGZf6AdPT755.jpg" alt="Kamil Lemieszewski" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Kamil Lemieszewski</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//FhYiUP9OWdN6T8j3ZlUKBfqylx.jpg" alt="Lampros Kalfuntzos" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Lampros Kalfuntzos</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//85iIX4dYk8cuECr44OTzd8dbuQj.jpg" alt="Zoë Scott" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Zoë Scott</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//rAEyqsVGVoXCR7zSsqfaxZNgELU.jpg" alt="Suan-Li Ong" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Suan-Li Ong</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ziLGGjo5GWzYDL8H4MUquoFj8r0.jpg" alt="Bern Collaço" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Bern Collaço</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//mke4JdGrIsKxZiGLmSRtTpPynqh.jpg" alt="Paul Riddell" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Paul Riddell</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//wDkbB5FhdYZaASSuohXDUmuFRnw.jpg" alt="Will Rowlands" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Will Rowlands</p> <p class="text-gray-400" data-v-da975202></p></div></li></ul></div> <div class="reviews" data-v-5c50ff08 data-v-1cb37e65><ul data-v-5c50ff08><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/3593437cbd05cebe0a4ee753965a8ad1.jpg" alt="garethmb" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              garethmb
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2019-03-28T16:48:13.872Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>0</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>Disney has continued their trend of live-action remakes of their animated classics with “Dumbo”. The film follows the same premise as the 1941 classic in that a baby elephant with giant ears is born into a travelling circus. Like in the animated film he is separated from his mother and soon becomes an unlikely circus act when it is discovered that his giant ears give him the power of flight. 
+In the new version we are introduced to Holt Farrier (Colin Farrell); who returns from WWI injured and dealing with the fact that his wife has died  and he must raise their two children alone. Further complicating matters is the fact that Circus owner Max Medici (Danny DeVito), has sold the prized horses Holt used in his act in an effort to keep his struggling circus alive. 
+What has become a tragedy soon becomes a boon when wealthy industrialist V.A. Vandevere (<ichael Keaton) offers to make Max a partner and take him and his troup on at his fabled entertainment park with Dumbo as his featured star. 
+It is at this point where the film takes some wild deviations and becomes very linear with paper thin characters and an emphasis on effects over story. 
+Director Tim Burton has once again crafted a film filled with lavish visuals as his take on the entertainment park and circus is amazing; but it as usual comes at a cost. Like most of Burton’s works, the visuals are the star and key element and the development of characters and story are often given little more than lip service. 
+The same is true fro this film as we learn noting about the motivation of the characters and the villains play out as stock baddies without even a nod as to why they are so inclined to tehir action.s They are being evil just for the sake of being evil. The same can be said for the other characters as we are given very little reasons to care for them. There is a nice subplot with Eva Green but it is never fully developed and the worst part is that the title star almost becomes an afterthought in the final acts so we can be given scene after scene of lavinsh park visuals. 
+The film may be a bit to dark and intense at times for younger viewers and those who remember the original may have a hard time with this take of the film. It entertains at times but could have been so much better. 
+3 stars out of 5 
+ 
+Second review by Tracey Barrientos
+In 1941 Walt Disney Pictures brought audiences around the world the fourth animated Disney feature film Dumbo. 78 years later Disney has partnered with Tim Burton to bring audiences of new generations a fresh and live action take on the classic tale.
+After returning home and left injured from the war, Holt Farrier (Collin Farrell) unites with his kids and his beloved job and home. His home is a traveling circus and his act has been cut due to his injury. Max Medici (Danny DeVito) the owner of the circus asks him to forget about the act and instead take care of a newborn elephant with hopes that the young elephant would help the once booming but now looming circus. The peculiar pachyderm nicknamed Dumbo with extremely oversized ears is the new laughingstock of the circus until Holt’s children discover the magic within Dumbo. He can fly and is attracting attention from all around.
+As a huge Tim Burton fan I was ecstatic to hear that he was set to direct the live action version of the beloved film. A fantastic cast was put together and to be honest I don’t know that anybody else could’ve played those roles as well as Collin Farrell, Michael Keaton, Danny DeVito, Eva Green and Alan Arkin just to name a few. They brought a sense of magic and true emotion to each character which added depth and soul to the film. Every time the first note from Danny Elfman’s music reaches my ear I instantly get goosebumps. I was extremely happy to here that familiar music in this film. As with all of Tim Burton’s films, it gave a touch of magic and intrigue that Dumbo deserved. The colors were beautiful and vibrant but still held drab contrast to what we are normally used to.
+I was asked a little bit ago if the film made me cry. The answer is I did. Both with sad and happy tears. A film that encapsulates so many emotions in only two hours and leaves you with a happy heart, THAT is what I look for in a film. That is what a film should make an audience feel. A good tug at those heart strings along with happiness and laughter is the perfect formula. Well done Mr. Burton! I recommend this film to be seen by fans old and new because you won’t be disappointed.
+5 out of 5!</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/992eef352126a53d7e141bf9e8707576.jpg" alt="MSB" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              MSB
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2019-04-02T13:46:14.773Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>70</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>If you enjoy reading my spoiler-free reviews, please follow my blog :)
+
+1941’s Dumbo was never a favorite of mine. It’s a great movie with a sweet message (as most Disney flicks), but I was curious to see how a remake of a 60-min film would develop. Obviously, changes to the story not only will occur, but they need to. People have to stop desiring these live-action remakes to be a literal copy-paste of their originals and start being fair to these movies. Pure animation is different from live-action, and the latter provides a much more realistic environment than the former, so it’s evident that every remake they produce will have some “updates” in the more “silly” aspects.
+
+Furthermore, I’ve witnessed a couple of “critics” hating this Dumbo. Hating! Calling it one of the worst films of the year! Now that’s a strong feeling to have against a movie that improves so much regarding its original. Yes, it has a bunch of narrative issues, and the dialogues can be cringe-worthy, but hating this 2019 remake while defending the original as it was some kind of masterpiece is ridiculous. Complaining about the 2019’s ending when the 1941’s is absolutely inadmissible is being a hypocrite. Whining about Dumbo not being 100% the star of the show when the original has the elephant discover his flight abilities four minutes before the end is dumb. In addition to that, this film runs for twice the original’s runtime! What did you expect?! That human characters wouldn’t be a necessary modification? 
+
+Some “critics” are even complaining about animal abuse or their unnecessary exploration … Are they joking?! Have they seen the original? Do they remember how racist it was? How discrimination was treated as comedy? Even alcohol was handled as a plot point for God’s sake! 2019’s Dumbo barely has any animal violence, and its final message is against animal captivity or exploration, so any person who criticizes this ending is either a despicable human being or not a fan of the original Dumbo, at all.
+
+Enough about those “critics”. I feel sick just remembering what they wrote/said. Unfortunately, 2019’s Dumbo does have a lot of screenplay issues. There’s no way of denying it. The human characters are filled with cliche storylines and child-written dialogues. I know that analyzing children’s acting is not exactly a fair critic, but I’ve seen so many remarkable young actors nowadays, who make Nico Parker and Finley Hobbins performances look not that good (their scripts also don’t help). The visual style characteristic of Tim Burton is definitely present, even if its magic becomes overwhelming at times. 1941’s Dumbo was very concentrated in one small location contrary to its 2019 remake where V. A. Vandevere‘s park feels like Disneyland.
+
+The stiff dialogues don’t help the movie’s pacing, and its tone could be better balanced. Nevertheless, just the opportunity to watch such a gorgeous, magnificent, and visually jaw-dropping live-action elephant come to life is absolutely delightful and entertaining as hell. When a character like Dumbo makes you cry when he’s crying, makes you feel sad when he’s feeling sad, makes you happy when he’s feeling happy, that’s when you know the visual effects team has reached a point where live-action is pretty much reality. The little elephant looks like an adorable little elephant. I mean, what better compliment can I give a live-action character than “it looks and feels real”?
+
+Even with the issues mentioned above, it’s still a heartfelt story, filled with emotional moments, and a wonderful message. Technically, it might lack consistency and some overall quality, but I end up enjoying myself. Experiencing Dumbo‘s pain, happiness, and his bond with the kids flourish is special. Colin Farrell and Eva Green deliver good performances, and their character arcs, cliche as they may be, still carry some efficiency. There’s a wrong vibe surrounding the word “cliche”, like it’s a bad thing. Not at all! Something being cliche just means we’ve seen that before a lot of times, it doesn’t mean we’ve seen it performed better or worse. Dumbo is a remake of a very influential 1941 film, so obviously, cliches are a certainty. It’s a Disney tale, after all. 
+
+In the end, cliche as it might be, 2019’s Dumbo improves on a lot of aspects of its predecessor. I do believe these movies are almost incomparable since the dimension, runtime, and even the main plot are surprisingly (or not) different. Still, not remembering or even acknowledging the original not only is an absolute flaw, but it can ultimately make you a hypocrite, so be careful with what you write/say. I understand a person not enjoying this film or not liking it as much as I did, but if you hate (!) it, you better give me good enough reasons.
+
+Dumbo is probably the most visually stunning and incredibly realistic live-action character Disney was able to produce so far. This little elephant alone is worth the price of admission. His arc is way bigger and complex than the one in the original, which can either delight or disappoint you. To me, it not only worked, but it finished strong and way better than the original. It’s upsetting that the screenplay couldn’t accompany Burton‘s impressive visual style, even if overwhelming at times, as well as the human characters who feel a bit detached from the actual story to tell. It’s still a good time at the movie theater, so go see it!
+
+Rating: B</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.themoviedb.org/t/p/w45_and_h45_face//3n6oS5nnHo5sU1DRNTbOr6JMjY7.jpg" alt="Myles" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              Myles
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2019-04-07T04:16:13.581Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>60</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>The visuals are done well, but this movie is crowded and there wasn't enough working room to make this the great movie I'd hoped for.</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.themoviedb.org/t/p/w45_and_h45_face//xUObnJSvHrFPsIpoDmb1jiQZLq7.jpg" alt="Gimly" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              Gimly
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2019-07-17T03:42:16.609Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>30</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>Can't believe I got cheated out of Pink Elephants on Parade like that. Literally the only reason I watched this. 
+
+_Final rating:★½: - Boring/disappointing. Avoid where possible._</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/96c2e0e4ac98450f9e8e3c0a0a40aad8.jpg" alt="r96sk" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              r96sk
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2020-11-18T03:10:35.738Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>70</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>Straight off the bat: I do not like the 1941 original, which is one of Disney's weakest animated films in my opinion. So that's worth bearing in mind.
+
+2019's <em>'Dumbo'</em> surpasses the '41 film with ease, it's admittedly a low bar. There's actually a storyline to this one which is pleasing, while the live-action nature really helps suck me into believing in the - obviously ludicrous - plot. With that noted, it isn't perfect. The pacing is off, while the antagonists are a bit irritating - if suitably cast.
+
+As for the protagonist, Colin Farrell plays his role nicely. Danny DeVito is an obvious but excellent cast for Max Medici, while Michael Keaton and Eva Green suit their roles. Amusing cameo from Michael Buffer too, by the way. As for the kid actors, not great... There is no real human appearance in the first film, so this one had to create one from scratch and I think they did a good job.
+
+Dumbo is super cute, just as before, and his story is undoubtedly hearty; which are arguably the only things that the 40s film did right.
+
+Overall, I liked this remake.</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.themoviedb.org/t/p/w45_and_h45_face//4KVM1VkqmXLOuwj1jjaSdxbvBDk.jpg" alt="Wuchak" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              Wuchak
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2021-03-01T20:22:52.938Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>50</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>_**It looks great and has a fine cast, but the story’s curiously lackluster**_
+
+After WW1, a struggling American circus discovers they have a star attraction on hand, a big-eared baby elephant that can fly! Colin Farrell plays the one-armed elephant trainer, Danny DeVito the circus owner, Michael Keaton a Walt Disney-like entrepreneur and Eva Green his French performer.  
+
+“Dumbo” (2019) is a live-action remake of the 1941 classic and almost twice as long. Being made by Tim Burton, it LOOKS great and you can’t beat the cast (except for the monotone kids). Unfortunately the story is generally dull. One can’t help but think of the excellent “Water for Elephants” (2011), but this is nowhere near the same league. The flat script by Ehren Kruger needed reworked for more human interest and pizazz. It plays it too safe.
+
+It’s strange that a Disney film would feature a Walt Disney-like character (with ‘Dreamland’ standing in for Disneyland), but put a malevolent spin on him. Meanwhile the sharp Green is serviceable as the aerial performer who works with Dumbo, but she seemed to be a tad long-in-the-tooth for the role at 38 during shooting.
+
+As a fan of the underrated “Dark Shadows” (2012) I thought I’d like this despite the bad reviews and mediocre box office performance. Wrong. It’s okay, but that’s not good enough for a live-action remake of such an iconic flick.
+
+The film runs 1 hour, 57 minutes, and was shot in Cardington, Bedfordshire, England, and Pinewood Studios, which is about an hour south in the west London area.
+
+GRADE: C</p></li></ul></div></div></div></div> <div class="pic-bar" data-v-1cb37e65><div style="background-image:url(\n        https://image.tmdb.org/t/p/w1920_and_h800_face//5tFt6iuGnKapHl5tw0X0cKcnuVo.jpg\n      );" data-v-1cb37e65></div></div> <div class="recommendations" data-v-02596022 data-v-1cb37e65><h2 class="text-4xl font-bold" data-v-02596022>為您推薦</h2> <ul class="flex justify-start items-start flex-wrap mt-10" data-v-02596022><li data-v-02596022><a href="/Movie/287947" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//cSo0rX3eGZGRg76D3VDl3V3ZAht.jpg" alt="沙贊！" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/420817" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//1fXy2ASWyBR8V6WDG7YoMh5cLuQ.jpg" alt="阿拉丁" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/420818" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//bby1ZxrptTycWhe0HA3wduNvKwO.jpg" alt="獅子王" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/11360" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//4x9FmvdJ464Fg7A9XcbYSmxfVw3.jpg" alt="小飛象" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/458723" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//uHTpsJNJWW8yj4KsgN1W4EsmXC.jpg" alt="我們" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/299537" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//lKRNAuhQbn7HmZTbQjQPDAqKnLl.jpg" alt="驚奇隊長" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/447404" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//lBXrQmgIWAY8HLAWWBGfgQV3v2l.jpg" alt="名偵探皮卡丘" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/157433" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//7QbyjWSJbjxZIrLNZTDBI7OTsIc.jpg" alt="禁入墳場" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/301528" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//jkQxZbNopxRRUteBQzM8dyDAjvV.jpg" alt="玩具總動員4" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/399579" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//pnSx68RSRBPjfiOcjc6dGX3rEAK.jpg" alt="艾莉塔：戰鬥天使" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/400650" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//1QzV2uOrSi5rDvDDWtJPypUC5gW.jpg" alt="愛‧滿人間" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/166428" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//eYBvJfM2Hd3P6y8teMBiNuD8imf.jpg" alt="馴龍高手3" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/456740" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//7HUcQr4bItQ1HxKBVYDGCVEbW2W.jpg" alt="地獄怪客：血后的崛起" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/404368" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//srWVX86OQjCJhbjQNxAsNnwrP8V.jpg" alt="無敵破壞王2：網路大暴走" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/480414" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//ApYfN1rYexn8us0tBN5JTg2Digl.jpg" alt="哭泣的女人" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/426543" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//6k8iNhO6Cz6c1SQirTCnm7EfcUi.jpg" alt="胡桃鉗與奇幻四國" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/522681" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//u5xRnBP6fjRyZEsw6IKMM12nW59.jpg" alt="密弒遊戲" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/450465" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//gf3rpYe7rCkhNAq5eYs2PR44f18.jpg" alt="異裂" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/412117" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//ufMWBO5vJVOZ6utdoIGcnspJCFh.jpg" alt="寵物當家2" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/454294" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//x8YwE4aHadYzV0ZVoAK6FKU3OvK.jpg" alt="魔劍少年" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/297802" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//uORC4yQpOcGIdch4Gt20WHayKRP.jpg" alt="水行俠" data-v-02596022></div></a></li></ul></div></div></div> <div class="appFooter" data-v-5025bf52><p class="text-center text-2xl" data-v-5025bf52>
+    本網站由<a href="https://www.themoviedb.org/?language=zh-TW" target="_blank" data-v-5025bf52>The Movie Database</a>提供資料
+  </p></div></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,_,$,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao,ap,aq,ar,as,at,au,av,aw,ax,ay,az,aA,aB,aC,aD,aE,aF,aG,aH,aI,aJ,aK,aL,aM,aN,aO,aP,aQ,aR,aS,aT,aU,aV,aW,aX,aY,aZ,a_,a$,ba,bb,bc,bd,be,bf,bg,bh,bi,bj,bk,bl,bm,bn,bo,bp,bq,br,bs,bt,bu,bv,bw,bx,by,bz,bA,bB,bC,bD,bE,bF,bG,bH,bI,bJ,bK,bL,bM,bN,bO,bP,bQ,bR){return {layout:"default",data:[{detail:{adult:a,backdrop_path:"\u002F5tFt6iuGnKapHl5tw0X0cKcnuVo.jpg",belongs_to_collection:c,budget:170000000,genres:[{id:l,name:"家庭"},{id:k,name:"奇幻"},{id:i,name:"冒险"}],homepage:"https:\u002F\u002Fmovies.disney.com\u002Fdumbo-2019",id:329996,imdb_id:"tt3861390",original_language:g,original_title:y,overview:"生意岌岌可危的瑪帝奇馬戲團，誕生了一隻有對招風耳的象寶寶，團中兩個年幼的孩子，不顧嘲笑和漫罵，細心呵護這隻特別的小象，終於有天，小象在萬眾矚目下飛向天際，也讓面臨倒閉的馬戲團重振票房。小飛象驚人的表演引來娛樂大亨凡德爾的目光，在大筆資金的誘惑下，馬戲團的老闆決定把事業賣給凡德爾，馬戲團中的表演者們，包括小飛象，也一同搬到重金打造的大型豪華表演莊園中。在這裡小飛象和才華洋溢的美女表演家一起演出精彩的空中飛人秀，一切看似美夢成真，直到漸漸的，凡德爾的野心浮上檯面……眾人才驚覺落入黑暗的圈套中……",popularity:32.946,poster_path:"\u002Fj8uIHGWcIAXCJrhn2IRuTLmQNGN.jpg",production_companies:[{id:8601,logo_path:c,name:"Tim Burton Productions",origin_country:m},{id:d,logo_path:"\u002FwdrCwmRnLFJhEoH8GSfymY85KHT.png",name:"Walt Disney Pictures",origin_country:z},{id:20478,logo_path:"\u002FgSS2OBc6dRsK2ewRx5lcwnARrpl.png",name:"Moving Picture Company",origin_country:A},{id:120402,logo_path:c,name:"Infinite Detective",origin_country:m},{id:120403,logo_path:c,name:"Secret Machine Entertainment",origin_country:m},{id:120404,logo_path:c,name:"British Film Commission",origin_country:m},{id:120405,logo_path:c,name:"UK Government's High End Television Tax Relief",origin_country:m},{id:120406,logo_path:c,name:"Province of British Columbia Production Services Tax Credit",origin_country:"CA"},{id:120407,logo_path:c,name:"Government of Australia",origin_country:m},{id:2806,logo_path:"\u002FvxOhCbpsRBh10m6LZ3HyImTYpPY.png",name:"South Australian Film Corporation",origin_country:"AU"}],production_countries:[{iso_3166_1:A,name:"United Kingdom"},{iso_3166_1:z,name:"United States of America"}],release_date:"2019-03-27",revenue:215832199,runtime:112,spoken_languages:[{english_name:B,iso_639_1:g,name:B}],status:"Released",tagline:"勇氣就是力量",title:C,video:a,vote_average:6.7,vote_count:3717},casts:[{adult:a,gender:d,id:72466,known_for_department:b,name:D,original_name:D,popularity:22.452,profile_path:"\u002F3iHqlaeSAQwJ0KraRKD1A4vBaCS.jpg",cast_id:u,character:"Holt Farrier",credit_id:"58d5f0479251411f90037273",order:e},{adult:a,gender:d,id:2232,known_for_department:b,name:E,original_name:E,popularity:17.758,profile_path:"\u002FumhNfjzQX4exZl7HxygkWMHrPs1.jpg",cast_id:r,character:"V. A. Vandemere",credit_id:"58e4f0bb925141281002c6aa",order:j},{adult:a,gender:d,id:518,known_for_department:b,name:F,original_name:F,popularity:13.58,profile_path:"\u002FuLW4Y9yjtwxtVmcJfwHZ7sKJai4.jpg",cast_id:j,character:"Max Medici",credit_id:"58c28efdc3a36842c600e579",order:d},{adult:a,gender:j,id:10912,known_for_department:b,name:G,original_name:G,popularity:18.298,profile_path:"\u002FLkbrpPaGzCnyNd5Go79pGZGMce.jpg",cast_id:d,character:"Colette Marchant",credit_id:"58c28f0b925141051200e5a2",order:H},{adult:a,gender:d,id:1903,known_for_department:b,name:I,original_name:I,popularity:7.807,profile_path:"\u002FmhACkTNrnwR4E115h8EfCZ263zH.jpg",cast_id:J,character:"J. Griffin Remington",credit_id:"5996843c92514123e9009d29",order:4},{adult:a,gender:j,id:2064124,known_for_department:b,name:K,original_name:K,popularity:1.709,profile_path:"\u002F9Vg0jgyx6IJRb22A48d3TmtjZeL.jpg",cast_id:L,character:"Milly Farrier",credit_id:"5b21c7900e0a264dae012d43",order:M},{adult:a,gender:d,id:2064125,known_for_department:b,name:N,original_name:N,popularity:4.746,profile_path:"\u002FTa2SggDtsw3jBnan0Jolz8Kyzz.jpg",cast_id:O,character:"Joe Farrier",credit_id:"5b21c7aac3a36813b300f800",order:u},{adult:a,gender:d,id:693,known_for_department:b,name:P,original_name:P,popularity:3.869,profile_path:"\u002F4TbHkaZxPegaTns250cVXr8F91F.jpg",cast_id:Q,character:"Pramesh Singh",credit_id:"5a6f1ffe0e0a265f07031f3f",order:r},{adult:a,gender:d,id:58758,known_for_department:b,name:R,original_name:R,popularity:7.586,profile_path:"\u002Fkcw8vNMlYgK8peuN80zhX6TqeNk.jpg",cast_id:k,character:"Rongo the Strongo",credit_id:"5a6f2018c3a368556202d462",order:8},{adult:a,gender:d,id:58508,known_for_department:b,name:S,original_name:S,popularity:4.513,profile_path:"\u002FufXNVj0gOpGOB6uUnNuTIzk5rpb.jpg",cast_id:T,character:"Neils Skellig",credit_id:"5989fdff9251414bfa018817",order:T},{adult:a,gender:e,id:2521524,known_for_department:b,name:U,original_name:U,popularity:f,profile_path:"\u002FgWOIb6AcTD4dWlue1OnJMRZ31GG.jpg",cast_id:V,character:"Ivan the Wonderful",credit_id:"5e2dd76bd6819b00147ce3f8",order:J},{adult:a,gender:j,id:1474028,known_for_department:b,name:W,original_name:W,popularity:11.234,profile_path:"\u002FaMsYxadSBZ2dIlULmpHZCJyL9VF.jpg",cast_id:X,character:"Miss Atlantis",credit_id:"5a6f1fe8925141076602ab2b",order:X},{adult:a,gender:e,id:2521526,known_for_department:b,name:Y,original_name:Y,popularity:f,profile_path:c,cast_id:Z,character:"Catherine the Greater",credit_id:"5e2dd7841685da0019e7f724",order:i},{adult:a,gender:d,id:66072,known_for_department:b,name:_,original_name:_,popularity:7.917,profile_path:"\u002F433i2ensZyexe2tD0jlPEvCQakn.jpg",cast_id:$,character:"Baritone Bates",credit_id:"5ca459310e0a26015ea83680",order:Q},{adult:a,gender:e,id:1278547,known_for_department:b,name:aa,original_name:aa,popularity:.694,profile_path:"\u002F9kYoNUQ1Gb9cZ8JfN2IsiW9KHH8.jpg",cast_id:ab,character:"Rufus Sorghum",credit_id:"5e2dd993326c1900181aac2b",order:k},{adult:a,gender:d,id:1829119,known_for_department:b,name:ac,original_name:ac,popularity:.608,profile_path:"\u002FanCACB76BRtagfk3KKtHzHeM8o2.jpg",cast_id:ad,character:"Pritam Singh",credit_id:"5e2dd9fb66f2d20017d67e6d",order:15},{adult:a,gender:e,id:1896855,known_for_department:b,name:ae,original_name:ae,popularity:1.052,profile_path:"\u002F1AWUOKX5978SbppSTLZjtyGnl70.jpg",cast_id:af,character:"Puck the Organ Grinder",credit_id:"5e2dd9ee98f1f10012fb9648",order:o},{adult:a,gender:d,id:1278780,known_for_department:b,name:ag,original_name:ag,popularity:2.491,profile_path:"\u002Fi5KBDy76ac0VAsK8ZKAjieX4RPE.jpg",cast_id:78,character:"'Dumbo' Performer",credit_id:"5e2de77cd6819b00127cfe76",order:17},{adult:a,gender:e,id:2778156,known_for_department:b,name:ah,original_name:ah,popularity:f,profile_path:c,cast_id:82,character:"Anne Farrier",credit_id:"5f5fef24fd7aa4003ae1fbb9",order:v},{adult:a,gender:e,id:2778158,known_for_department:b,name:ai,original_name:ai,popularity:f,profile_path:c,cast_id:83,character:"Contortionist",credit_id:"5f5fef3c156cc70035dd4339",order:aj},{adult:a,gender:e,id:2778159,known_for_department:b,name:ak,original_name:ak,popularity:f,profile_path:c,cast_id:84,character:"Poodle Trainer",credit_id:"5f5fef4eae28110039c646fe",order:L},{adult:a,gender:j,id:1278771,known_for_department:b,name:al,original_name:al,popularity:2.355,profile_path:"\u002F6cTye3OgvI2DCHwVNLqND1A9zQv.jpg",cast_id:85,character:"Cook",credit_id:"5f5fef55706b9f003604d66d",order:O},{adult:a,gender:e,id:2778161,known_for_department:b,name:am,original_name:am,popularity:f,profile_path:c,cast_id:86,character:"Mademoiselle Flambé",credit_id:"5f5fef618b959e0033aeb617",order:an},{adult:a,gender:d,id:111420,known_for_department:b,name:ao,original_name:ao,popularity:8.167,profile_path:"\u002FwDSKSBO5VwlcUUiiJWaGMajCG8V.jpg",cast_id:ap,character:"Hans Brugelbecker",credit_id:"5b85613cc3a368655505f50e",order:23},{adult:a,gender:e,id:2275490,known_for_department:b,name:aq,original_name:aq,popularity:f,profile_path:c,cast_id:ar,character:"Teenager in Crowd",credit_id:"5c9beab39251410a5409b8dc",order:ap},{adult:a,gender:d,id:994133,known_for_department:b,name:as,original_name:as,popularity:4.03,profile_path:"\u002F48dfosYTTfngOeX00ngo0uF2tgt.jpg",cast_id:i,character:"Sotheby",credit_id:"5a6f1ff60e0a265f04033426",order:25},{adult:a,gender:j,id:53931,known_for_department:b,name:at,original_name:at,popularity:2.584,profile_path:"\u002FwMR75F1tIAVA6tTnlq0A0xP30tE.jpg",cast_id:au,character:"Verna the Secretary",credit_id:"5e2dda0c1685da0019e7faab",order:26},{adult:a,gender:e,id:2275491,known_for_department:b,name:av,original_name:av,popularity:f,profile_path:c,cast_id:aw,character:"Stuffy Society Woman",credit_id:"5c9beacb9251410a4e09b8d2",order:s},{adult:a,gender:d,id:2275492,known_for_department:b,name:ax,original_name:ax,popularity:f,profile_path:"\u002FuDsER1RNgmYVepr86nkXNHKkcI3.jpg",cast_id:ay,character:az,credit_id:"5c9beaedc3a3680247bb171d",order:n},{adult:a,gender:d,id:1599252,known_for_department:b,name:aA,original_name:aA,popularity:.617,profile_path:"\u002Fa9OkTdaR2mw6McSL5xTlU7bfKzl.jpg",cast_id:aB,character:az,credit_id:"5c9beb089251410a4c09b975",order:29},{adult:a,gender:d,id:2004298,known_for_department:b,name:aC,original_name:aC,popularity:1.361,profile_path:"\u002F11s6Q8mtyERY2o2lWPqn5b6GTAB.jpg",cast_id:aD,character:aE,credit_id:"5c9beb210e0a265ce1363528",order:30},{adult:a,gender:e,id:2189048,known_for_department:b,name:aF,original_name:aF,popularity:1.616,profile_path:"\u002F9BiptRAS5SZrTqhm5lJVn1HzrBJ.jpg",cast_id:aG,character:aE,credit_id:"5c9beb340e0a265cdf36349e",order:31},{adult:a,gender:e,id:2521542,known_for_department:b,name:aH,original_name:aH,popularity:f,profile_path:c,cast_id:aI,character:aJ,credit_id:"5e2de46d66f2d20017d6887a",order:32},{adult:a,gender:e,id:2200176,known_for_department:b,name:aK,original_name:aK,popularity:f,profile_path:c,cast_id:aL,character:aJ,credit_id:"5e2de47bc56d2d00134d3399",order:33},{adult:a,gender:d,id:1743499,known_for_department:b,name:aM,original_name:aM,popularity:2.171,profile_path:"\u002Fizjjkm0MdaObxkP8t7Cb3gqUZX7.jpg",cast_id:p,character:"Stage Manager",credit_id:"5e2de48ad6819b00187ce944",order:34},{adult:a,gender:d,id:19704,known_for_department:b,name:aN,original_name:aN,popularity:1.706,profile_path:"\u002F8DVXmCJO8KWOnnFRPL9KVXdKT3j.jpg",cast_id:aO,character:"Armored Truck Driver",credit_id:"5e2de49766f2d20015d6a1a1",order:q},{adult:a,gender:e,id:2521543,known_for_department:b,name:aP,original_name:aP,popularity:f,profile_path:c,cast_id:aQ,character:"Power Tower Guard",credit_id:"5e2de4c0326c1900161aaf5d",order:ar},{adult:a,gender:d,id:1634547,known_for_department:b,name:aR,original_name:aR,popularity:f,profile_path:"\u002FrFRquRTGotsCqH5mF1P5vUWU6Lx.jpg",cast_id:aS,character:"Bridge Guard",credit_id:"5e2de4cfc56d2d00154d2035",order:aw},{adult:a,gender:e,id:1447654,known_for_department:b,name:aT,original_name:aT,popularity:f,profile_path:c,cast_id:aU,character:"Nightmare Island Guard",credit_id:"5e2de4dcc56d2d001a4cfee5",order:ay},{adult:a,gender:d,id:1477618,known_for_department:b,name:aV,original_name:aV,popularity:.98,profile_path:c,cast_id:aW,character:"Dreamland Guard",credit_id:"5e2de4ee66f2d20017d68975",order:aB},{adult:a,gender:d,id:1587575,known_for_department:b,name:aX,original_name:aX,popularity:2.388,profile_path:"\u002FgeljWJJDVuthFmwqiFundYwqwPR.jpg",cast_id:aY,character:"Dreamland Security Guard",credit_id:"5e2de50066f2d20013d6aea5",order:aD},{adult:a,gender:e,id:1538418,known_for_department:b,name:aZ,original_name:aZ,popularity:1.135,profile_path:"\u002FjQ6rtpcmqVcic1ew172LePqFz1B.jpg",cast_id:a_,character:"Burly Engineer",credit_id:"5e2de51598f1f1000ffbda65",order:aG},{adult:a,gender:e,id:2359939,known_for_department:b,name:a$,original_name:a$,popularity:f,profile_path:"\u002Fun2Y5NxT1zpAnV8pW8ljCXMzk0I.jpg",cast_id:ba,character:"Pipsqueak Engineer",credit_id:"5e2de52566f2d20017d68a0d",order:$},{adult:a,gender:j,id:1738224,known_for_department:b,name:bb,original_name:bb,popularity:.706,profile_path:"\u002F8S0KgilZ7PPYsKz13fFb4AXfJsc.jpg",cast_id:bc,character:"First Maid",credit_id:"5e2de5bb1685da0017e8cec6",order:bd},{adult:a,gender:e,id:2521545,known_for_department:b,name:be,original_name:be,popularity:.84,profile_path:c,cast_id:bf,character:"Second Maid",credit_id:"5e2de5c866f2d20011d6aa40",order:bg},{adult:a,gender:e,id:1196688,known_for_department:b,name:bh,original_name:bh,popularity:1.418,profile_path:"\u002F96zTUd5W3jF9eLCxdAjmBgqk5De.jpg",cast_id:bi,character:bj,credit_id:"5e2de5d44ca67600124857b0",order:V},{adult:a,gender:e,id:1809462,known_for_department:b,name:bk,original_name:bk,popularity:f,profile_path:c,cast_id:bl,character:"Reporters",credit_id:"5e2de5e5326c1900161ab03b",order:Z},{adult:a,gender:d,id:2521547,known_for_department:b,name:bm,original_name:bm,popularity:f,profile_path:c,cast_id:bn,character:bj,credit_id:"5e2de5f4d6819b00167ce5da",order:ab},{adult:a,gender:d,id:1229076,known_for_department:b,name:bo,original_name:bo,popularity:1.485,profile_path:"\u002FvcngmOmJJvZmTteiOkCH6R1zX5m.jpg",cast_id:67,character:"Indian Ship Captain",credit_id:"5e2de60666f2d20011d6aa4d",order:af},{adult:a,gender:j,id:139310,known_for_department:b,name:bp,original_name:bp,popularity:6.631,profile_path:"\u002FjlLyxmuAe56QuOL02D8zfqpl1Bn.jpg",cast_id:68,character:"Coat Check Girl",credit_id:"5e2de6131685da0017e8cf3d",order:ad},{adult:a,gender:e,id:2521548,known_for_department:b,name:bq,original_name:bq,popularity:f,profile_path:c,cast_id:69,character:w,credit_id:"5e2de61fc56d2d00134d3508",order:au},{adult:a,gender:e,id:1695142,known_for_department:b,name:br,original_name:br,popularity:f,profile_path:c,cast_id:70,character:w,credit_id:"5e2de65b4ca676001a486ee8",order:aI},{adult:a,gender:e,id:931013,known_for_department:b,name:bs,original_name:bs,popularity:.609,profile_path:c,cast_id:71,character:w,credit_id:"5e2de68366f2d20017d68c8f",order:aL},{adult:a,gender:e,id:2521549,known_for_department:b,name:bt,original_name:bt,popularity:1.094,profile_path:"\u002FekqDB4JHpZdFU20LUQdzxu6l8V2.jpg",cast_id:72,character:x,credit_id:"5e2de69998f1f10018fb8ff6",order:p},{adult:a,gender:j,id:1742633,known_for_department:b,name:bu,original_name:bu,popularity:f,profile_path:c,cast_id:73,character:x,credit_id:"5e2de6ac326c1900121ab81a",order:aO},{adult:a,gender:j,id:2521550,known_for_department:b,name:bv,original_name:bv,popularity:f,profile_path:"\u002FmTjjsfAfeBA4k5YyVHfsTG1VHWR.jpg",cast_id:74,character:x,credit_id:"5e2de6cd326c1900141a9d08",order:aQ},{adult:a,gender:e,id:2051910,known_for_department:b,name:bw,original_name:bw,popularity:f,profile_path:"\u002FvGpjaH9heMMpZ0Fb3TvUSpEeaK0.jpg",cast_id:75,character:bx,credit_id:"5e2de71c326c1900141a9db7",order:aS},{adult:a,gender:j,id:1530197,known_for_department:b,name:by,original_name:by,popularity:f,profile_path:c,cast_id:76,character:bx,credit_id:"5e2de76566f2d20013d6b153",order:aU},{adult:a,gender:e,id:2521551,known_for_department:b,name:bz,original_name:bz,popularity:f,profile_path:c,cast_id:77,character:"Vendor",credit_id:"5e2de77098f1f10012fba2f2",order:aW},{adult:a,gender:e,id:2521552,known_for_department:b,name:bA,original_name:bA,popularity:f,profile_path:"\u002F9A1NZ4aJqSMmDhbNr1vJ18rokFf.jpg",cast_id:79,character:"Clown",credit_id:"5e2de788d6819b00127cfe84",order:aY},{adult:a,gender:d,id:1654736,known_for_department:b,name:bB,original_name:bB,popularity:4.184,profile_path:"\u002Fddk6mDSrd2EnODbDGZf6AdPT755.jpg",cast_id:aj,character:"Circus Attendant (uncredited)",credit_id:"5b20d5539251416e4200a810",order:a_},{adult:a,gender:d,id:1752964,known_for_department:b,name:bC,original_name:bC,popularity:.988,profile_path:"\u002FFhYiUP9OWdN6T8j3ZlUKBfqylx.jpg",cast_id:an,character:"Dreamland Parade Guard (uncredited)",credit_id:"5b3cea4d0e0a2623f800af86",order:ba},{adult:a,gender:e,id:2106678,known_for_department:b,name:bD,original_name:bD,popularity:f,profile_path:"\u002F85iIX4dYk8cuECr44OTzd8dbuQj.jpg",cast_id:bd,character:"Lavish Apartment Maid (uncredited)",credit_id:"5ccaa26b0e0a262fb3fe9bad",order:bc},{adult:a,gender:j,id:2483264,known_for_department:b,name:bE,original_name:bE,popularity:1.646,profile_path:"\u002FrAEyqsVGVoXCR7zSsqfaxZNgELU.jpg",cast_id:bg,character:"Fringe Girl Dancer (uncredited)",credit_id:"5e044ef626dac100176c5d6a",order:bf},{adult:a,gender:d,id:1502439,known_for_department:b,name:bF,original_name:bF,popularity:4.98,profile_path:"\u002FziLGGjo5GWzYDL8H4MUquoFj8r0.jpg",cast_id:80,character:"Joplin Audience Member",credit_id:"5e6fccb9cedac400154e015d",order:bi},{adult:a,gender:d,id:2445121,known_for_department:b,name:bG,original_name:bG,popularity:f,profile_path:"\u002Fmke4JdGrIsKxZiGLmSRtTpPynqh.jpg",cast_id:87,character:"Circus Goer (uncredited)",credit_id:"5f820bd9d8e15a003beb19c4",order:bl},{adult:a,gender:e,id:2985689,known_for_department:b,name:bH,original_name:bH,popularity:1.426,profile_path:"\u002FwDkbB5FhdYZaASSuohXDUmuFRnw.jpg",cast_id:125,character:"Mr. Wilcox Customer",credit_id:"6066dc290d2f5300409d01b0",order:bn}],reviews:[{author:bI,author_details:{name:m,username:bI,avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002F3593437cbd05cebe0a4ee753965a8ad1.jpg",rating:c},content:"Disney has continued their trend of live-action remakes of their animated classics with “Dumbo”. The film follows the same premise as the 1941 classic in that a baby elephant with giant ears is born into a travelling circus. Like in the animated film he is separated from his mother and soon becomes an unlikely circus act when it is discovered that his giant ears give him the power of flight. \r\nIn the new version we are introduced to Holt Farrier (Colin Farrell); who returns from WWI injured and dealing with the fact that his wife has died  and he must raise their two children alone. Further complicating matters is the fact that Circus owner Max Medici (Danny DeVito), has sold the prized horses Holt used in his act in an effort to keep his struggling circus alive. \r\nWhat has become a tragedy soon becomes a boon when wealthy industrialist V.A. Vandevere (\u003Cichael Keaton) offers to make Max a partner and take him and his troup on at his fabled entertainment park with Dumbo as his featured star. \r\nIt is at this point where the film takes some wild deviations and becomes very linear with paper thin characters and an emphasis on effects over story. \r\nDirector Tim Burton has once again crafted a film filled with lavish visuals as his take on the entertainment park and circus is amazing; but it as usual comes at a cost. Like most of Burton’s works, the visuals are the star and key element and the development of characters and story are often given little more than lip service. \r\nThe same is true fro this film as we learn noting about the motivation of the characters and the villains play out as stock baddies without even a nod as to why they are so inclined to tehir action.s They are being evil just for the sake of being evil. The same can be said for the other characters as we are given very little reasons to care for them. There is a nice subplot with Eva Green but it is never fully developed and the worst part is that the title star almost becomes an afterthought in the final acts so we can be given scene after scene of lavinsh park visuals. \r\nThe film may be a bit to dark and intense at times for younger viewers and those who remember the original may have a hard time with this take of the film. It entertains at times but could have been so much better. \r\n3 stars out of 5 \r\n \r\nSecond review by Tracey Barrientos\r\nIn 1941 Walt Disney Pictures brought audiences around the world the fourth animated Disney feature film Dumbo. 78 years later Disney has partnered with Tim Burton to bring audiences of new generations a fresh and live action take on the classic tale.\r\nAfter returning home and left injured from the war, Holt Farrier (Collin Farrell) unites with his kids and his beloved job and home. His home is a traveling circus and his act has been cut due to his injury. Max Medici (Danny DeVito) the owner of the circus asks him to forget about the act and instead take care of a newborn elephant with hopes that the young elephant would help the once booming but now looming circus. The peculiar pachyderm nicknamed Dumbo with extremely oversized ears is the new laughingstock of the circus until Holt’s children discover the magic within Dumbo. He can fly and is attracting attention from all around.\r\nAs a huge Tim Burton fan I was ecstatic to hear that he was set to direct the live action version of the beloved film. A fantastic cast was put together and to be honest I don’t know that anybody else could’ve played those roles as well as Collin Farrell, Michael Keaton, Danny DeVito, Eva Green and Alan Arkin just to name a few. They brought a sense of magic and true emotion to each character which added depth and soul to the film. Every time the first note from Danny Elfman’s music reaches my ear I instantly get goosebumps. I was extremely happy to here that familiar music in this film. As with all of Tim Burton’s films, it gave a touch of magic and intrigue that Dumbo deserved. The colors were beautiful and vibrant but still held drab contrast to what we are normally used to.\r\nI was asked a little bit ago if the film made me cry. The answer is I did. Both with sad and happy tears. A film that encapsulates so many emotions in only two hours and leaves you with a happy heart, THAT is what I look for in a film. That is what a film should make an audience feel. A good tug at those heart strings along with happiness and laughter is the perfect formula. Well done Mr. Burton! I recommend this film to be seen by fans old and new because you won’t be disappointed.\r\n5 out of 5!",created_at:"2019-03-28T16:48:13.872Z",id:"5c9cfacd0e0a2613ebebb767",updated_at:"2021-06-23T15:58:19.828Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F5c9cfacd0e0a2613ebebb767"},{author:bJ,author_details:{name:bJ,username:"msbreviews",avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002F992eef352126a53d7e141bf9e8707576.jpg",rating:r},content:"If you enjoy reading my spoiler-free reviews, please follow my blog :)\r\n\r\n1941’s Dumbo was never a favorite of mine. It’s a great movie with a sweet message (as most Disney flicks), but I was curious to see how a remake of a 60-min film would develop. Obviously, changes to the story not only will occur, but they need to. People have to stop desiring these live-action remakes to be a literal copy-paste of their originals and start being fair to these movies. Pure animation is different from live-action, and the latter provides a much more realistic environment than the former, so it’s evident that every remake they produce will have some “updates” in the more “silly” aspects.\r\n\r\nFurthermore, I’ve witnessed a couple of “critics” hating this Dumbo. Hating! Calling it one of the worst films of the year! Now that’s a strong feeling to have against a movie that improves so much regarding its original. Yes, it has a bunch of narrative issues, and the dialogues can be cringe-worthy, but hating this 2019 remake while defending the original as it was some kind of masterpiece is ridiculous. Complaining about the 2019’s ending when the 1941’s is absolutely inadmissible is being a hypocrite. Whining about Dumbo not being 100% the star of the show when the original has the elephant discover his flight abilities four minutes before the end is dumb. In addition to that, this film runs for twice the original’s runtime! What did you expect?! That human characters wouldn’t be a necessary modification? \r\n\r\nSome “critics” are even complaining about animal abuse or their unnecessary exploration … Are they joking?! Have they seen the original? Do they remember how racist it was? How discrimination was treated as comedy? Even alcohol was handled as a plot point for God’s sake! 2019’s Dumbo barely has any animal violence, and its final message is against animal captivity or exploration, so any person who criticizes this ending is either a despicable human being or not a fan of the original Dumbo, at all.\r\n\r\nEnough about those “critics”. I feel sick just remembering what they wrote\u002Fsaid. Unfortunately, 2019’s Dumbo does have a lot of screenplay issues. There’s no way of denying it. The human characters are filled with cliche storylines and child-written dialogues. I know that analyzing children’s acting is not exactly a fair critic, but I’ve seen so many remarkable young actors nowadays, who make Nico Parker and Finley Hobbins performances look not that good (their scripts also don’t help). The visual style characteristic of Tim Burton is definitely present, even if its magic becomes overwhelming at times. 1941’s Dumbo was very concentrated in one small location contrary to its 2019 remake where V. A. Vandevere‘s park feels like Disneyland.\r\n\r\nThe stiff dialogues don’t help the movie’s pacing, and its tone could be better balanced. Nevertheless, just the opportunity to watch such a gorgeous, magnificent, and visually jaw-dropping live-action elephant come to life is absolutely delightful and entertaining as hell. When a character like Dumbo makes you cry when he’s crying, makes you feel sad when he’s feeling sad, makes you happy when he’s feeling happy, that’s when you know the visual effects team has reached a point where live-action is pretty much reality. The little elephant looks like an adorable little elephant. I mean, what better compliment can I give a live-action character than “it looks and feels real”?\r\n\r\nEven with the issues mentioned above, it’s still a heartfelt story, filled with emotional moments, and a wonderful message. Technically, it might lack consistency and some overall quality, but I end up enjoying myself. Experiencing Dumbo‘s pain, happiness, and his bond with the kids flourish is special. Colin Farrell and Eva Green deliver good performances, and their character arcs, cliche as they may be, still carry some efficiency. There’s a wrong vibe surrounding the word “cliche”, like it’s a bad thing. Not at all! Something being cliche just means we’ve seen that before a lot of times, it doesn’t mean we’ve seen it performed better or worse. Dumbo is a remake of a very influential 1941 film, so obviously, cliches are a certainty. It’s a Disney tale, after all. \r\n\r\nIn the end, cliche as it might be, 2019’s Dumbo improves on a lot of aspects of its predecessor. I do believe these movies are almost incomparable since the dimension, runtime, and even the main plot are surprisingly (or not) different. Still, not remembering or even acknowledging the original not only is an absolute flaw, but it can ultimately make you a hypocrite, so be careful with what you write\u002Fsay. I understand a person not enjoying this film or not liking it as much as I did, but if you hate (!) it, you better give me good enough reasons.\r\n\r\nDumbo is probably the most visually stunning and incredibly realistic live-action character Disney was able to produce so far. This little elephant alone is worth the price of admission. His arc is way bigger and complex than the one in the original, which can either delight or disappoint you. To me, it not only worked, but it finished strong and way better than the original. It’s upsetting that the screenplay couldn’t accompany Burton‘s impressive visual style, even if overwhelming at times, as well as the human characters who feel a bit detached from the actual story to tell. It’s still a good time at the movie theater, so go see it!\r\n\r\nRating: B",created_at:"2019-04-02T13:46:14.773Z",id:"5ca367a60e0a2605a68e73d1",updated_at:"2021-06-23T15:58:19.937Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F5ca367a60e0a2605a68e73d1"},{author:bK,author_details:{name:bK,username:"mfrencken",avatar_path:"\u002F3n6oS5nnHo5sU1DRNTbOr6JMjY7.jpg",rating:u},content:"The visuals are done well, but this movie is crowded and there wasn't enough working room to make this the great movie I'd hoped for.",created_at:"2019-04-07T04:16:13.581Z",id:"5ca9798dc3a3683f4f60839a",updated_at:"2021-06-23T15:58:20.063Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F5ca9798dc3a3683f4f60839a"},{author:bL,author_details:{name:bL,username:"Ruuz",avatar_path:"\u002FxUObnJSvHrFPsIpoDmb1jiQZLq7.jpg",rating:H},content:"Can't believe I got cheated out of Pink Elephants on Parade like that. Literally the only reason I watched this. \r\n\r\n_Final rating:★½: - Boring\u002Fdisappointing. Avoid where possible._",created_at:"2019-07-17T03:42:16.609Z",id:"5d2e991827d9cc00127c74f2",updated_at:"2021-06-23T15:58:24.383Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F5d2e991827d9cc00127c74f2"},{author:bM,author_details:{name:m,username:bM,avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002F96c2e0e4ac98450f9e8e3c0a0a40aad8.jpg",rating:r},content:"Straight off the bat: I do not like the 1941 original, which is one of Disney's weakest animated films in my opinion. So that's worth bearing in mind.\r\n\r\n2019's \u003Cem\u003E'Dumbo'\u003C\u002Fem\u003E surpasses the '41 film with ease, it's admittedly a low bar. There's actually a storyline to this one which is pleasing, while the live-action nature really helps suck me into believing in the - obviously ludicrous - plot. With that noted, it isn't perfect. The pacing is off, while the antagonists are a bit irritating - if suitably cast.\r\n\r\nAs for the protagonist, Colin Farrell plays his role nicely. Danny DeVito is an obvious but excellent cast for Max Medici, while Michael Keaton and Eva Green suit their roles. Amusing cameo from Michael Buffer too, by the way. As for the kid actors, not great... There is no real human appearance in the first film, so this one had to create one from scratch and I think they did a good job.\r\n\r\nDumbo is super cute, just as before, and his story is undoubtedly hearty; which are arguably the only things that the 40s film did right.\r\n\r\nOverall, I liked this remake.",created_at:"2020-11-18T03:10:35.738Z",id:"5fb490ab0d5d85003e418ef1",updated_at:"2021-06-23T15:58:47.686Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F5fb490ab0d5d85003e418ef1"},{author:bN,author_details:{name:m,username:bN,avatar_path:"\u002F4KVM1VkqmXLOuwj1jjaSdxbvBDk.jpg",rating:M},content:"_**It looks great and has a fine cast, but the story’s curiously lackluster**_\r\n\r\nAfter WW1, a struggling American circus discovers they have a star attraction on hand, a big-eared baby elephant that can fly! Colin Farrell plays the one-armed elephant trainer, Danny DeVito the circus owner, Michael Keaton a Walt Disney-like entrepreneur and Eva Green his French performer.  \r\n\r\n“Dumbo” (2019) is a live-action remake of the 1941 classic and almost twice as long. Being made by Tim Burton, it LOOKS great and you can’t beat the cast (except for the monotone kids). Unfortunately the story is generally dull. One can’t help but think of the excellent “Water for Elephants” (2011), but this is nowhere near the same league. The flat script by Ehren Kruger needed reworked for more human interest and pizazz. It plays it too safe.\r\n\r\nIt’s strange that a Disney film would feature a Walt Disney-like character (with ‘Dreamland’ standing in for Disneyland), but put a malevolent spin on him. Meanwhile the sharp Green is serviceable as the aerial performer who works with Dumbo, but she seemed to be a tad long-in-the-tooth for the role at 38 during shooting.\r\n\r\nAs a fan of the underrated “Dark Shadows” (2012) I thought I’d like this despite the bad reviews and mediocre box office performance. Wrong. It’s okay, but that’s not good enough for a live-action remake of such an iconic flick.\r\n\r\nThe film runs 1 hour, 57 minutes, and was shot in Cardington, Bedfordshire, England, and Pinewood Studios, which is about an hour south in the west London area.\r\n\r\nGRADE: C",created_at:"2021-03-01T20:22:52.938Z",id:"603d4d1c519bbb00458fd59b",updated_at:"2021-06-23T15:58:52.508Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F603d4d1c519bbb00458fd59b"}],recommendations:[{adult:a,backdrop_path:"\u002FqwgGtdlLMKYvT2tV8hLY22syRHN.jpg",genre_ids:[n,q,k],id:287947,media_type:h,title:"沙贊！",original_language:g,original_title:"Shazam!",overview:"年輕的比利貝特森發現他獲得神秘巫師沙贊的能力，能對抗協惡勢力，每當他喊出「沙贊」(Shazam)，就能變身，擁有所羅門王的智慧、海格力斯的力氣、泰坦神族阿特拉斯的耐力與宙斯操縱雷電的神威、阿基里斯的勇氣、赫爾墨斯的速度。  故事講述，他是十四歲的男孩比利貝特森，輾轉生活在數個寄養家庭之間，校園生活也並不如意，但是他有顆善良的心，被一名俱備神力的巫師選中，並賜予「沙贊」的神力。從此他只要喊出「沙贊！」就會立刻變身成年後的自己，穿上超級英雄的披風與緊身衣，成為另類的超級英雄。",popularity:86.151,poster_path:"\u002FcSo0rX3eGZGRg76D3VDl3V3ZAht.jpg",release_date:"2019-03-29",video:a,vote_average:7.057,vote_count:7451},{adult:a,backdrop_path:"\u002FyJyZRrXaYUjhOrJGga8awbw4Rud.jpg",genre_ids:[i,k,10749,l],id:420817,media_type:h,title:"阿拉丁",original_language:g,original_title:"Aladdin",overview:"擦亮神燈 小心翼翼許下三個願望...  在沙漠中心的古老城市裡，藏著神祕的傳說，只要獲得帶有魔法的神燈，法力無邊的精靈就會實現你的三個願望。機智的窮小子阿拉丁，遇上了勇敢獨立的茉莉公主，對抗邪惡巫師賈方，阻止他密謀叛變奪取國王寶座，藉由幽默調皮的神燈精靈出手相助，譜出一段浪漫的愛情故事。",popularity:89.53,poster_path:"\u002F1fXy2ASWyBR8V6WDG7YoMh5cLuQ.jpg",release_date:"2019-05-22",video:a,vote_average:7.137,vote_count:8470},{adult:a,backdrop_path:"\u002F1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",genre_ids:[i,l,o],id:420818,media_type:h,title:"獅子王",original_language:g,original_title:"The Lion King",overview:"獅子木法沙的兒子、榮耀國的王子辛巴一直希望能夠追隨父親的腳步，而木法沙的弟弟刀疤卻計劃奪取榮耀國的王座，殺害了木法沙，並迫使辛巴流亡。在流亡過程中，辛巴與狐獴丁滿和疣豬彭彭成為好朋友並與牠們長大。辛巴的青梅竹馬雌性獅子娜娜找到了辛巴，在山魈的勸說下辛巴決定在他們幫助下一起奪回王座。最後被擊敗的刀疤被他的鬣狗手下啃食，辛巴成為新的國王，和娜娜生育下一代。",popularity:117.027,poster_path:"\u002Fbby1ZxrptTycWhe0HA3wduNvKwO.jpg",release_date:"2019-07-12",video:a,vote_average:7.145,vote_count:8342},{adult:a,backdrop_path:"\u002FaRVQ1EgTx3vbhK6qls2O834bPQc.jpg",genre_ids:[o,l],id:11360,media_type:h,title:C,original_language:g,original_title:y,overview:"片中主角是隻大耳象-呆寶，跟媽媽一同生活在搭乘火車巡迴表演的馬戲團裡，因為與生俱來的大耳朵成為眾人譏笑嘲弄的對象，媽媽為了保護呆寶跟其他的大象起了衝突，最後居然還因為攻擊觀眾而被關進牢籠裡。少了媽媽的保護，呆寶被旁人欺負的更慘，馬戲團小丑們居然要他從高處跳下，只為了製造笑果！還好有好友老鼠鼓勵，呆寶終於建立自信心和榮譽感，還發現了自己耳朵會飛的潛能，最後不但成為遨翔天空的超級巨星，還從此讓媽媽過著幸福快樂的日子。片中主角呆寶不因為自己的外貌自卑、反而找出自己優點的寓意，使本片充滿教育意味，適合全家一起觀賞！",popularity:78.68,poster_path:"\u002F4x9FmvdJ464Fg7A9XcbYSmxfVw3.jpg",release_date:"1941-10-31",video:a,vote_average:bO,vote_count:4089},{adult:a,backdrop_path:"\u002F18qxSxzAUs7UjZ3dKCkxAOv0yb1.jpg",genre_ids:[s,p,bP],id:458723,media_type:h,title:"我們",original_language:g,original_title:"Us",overview:"故事描述一位女子雅德蕾德威爾森和她的先生蓋博，帶著兩個孩子(莎哈蒂萊特喬瑟夫、伊凡艾利克斯飾)一起到夏天度假住的海濱房子，打算度過一個恬靜的夏天。  但一段過去難以啟口的傷痛卻如鬼魅般出現在眼前，接二連三的怪異巧合也相繼發生，對於家人即將遭遇不幸事件的強烈預感，讓雅德蕾德恐懼到達臨界點。  當他們和朋友泰勒斯一家(艾美獎得主伊莉莎白摩斯、提姆海德克、卡莉薛頓、娜亞薛頓飾) 共度一個令人緊繃的海邊聚會後，雅德蕾德和先生及孩子們回到度假小屋休息，卻在進入黑夜的房子前，看見令人毛骨悚然的四個人影，正手牽手站立在他們的車道上…《我們》描述了一個和樂的美國家庭在一夜之間必須挺身對抗一群難以解釋敵人：他們自己的分身…",popularity:28.528,poster_path:"\u002FuHTpsJNJWW8yj4KsgN1W4EsmXC.jpg",release_date:"2019-03-14",video:a,vote_average:bO,vote_count:5697},{adult:a,backdrop_path:"\u002Fw2PMyoyLU22YvrGK3smVM9fW1jj.jpg",genre_ids:[n,i,t],id:299537,media_type:h,title:"驚奇隊長",original_language:g,original_title:"Captain Marvel",overview:"原是空軍飛行員的卡蘿丹佛斯，在克里星球甦醒並失去了過往所有的記憶，她獲得驚人的超人力量，受軍隊的最高指揮官與導師揚羅格(裘德洛 飾演)指導，以克里人的身分戰鬥，與菁英軍事單位「星際部隊」成員共同對抗史克魯人的侵略；不過在最新的任務中，她為了抵抗外星入侵，意外到訪C-53星球的地球，與神盾局長尼克福瑞一起聯手尋找羅森博士的下落。",popularity:78.161,poster_path:"\u002FlKRNAuhQbn7HmZTbQjQPDAqKnLl.jpg",release_date:"2019-03-06",video:a,vote_average:6.913,vote_count:12855},{adult:a,backdrop_path:"\u002FnDP33LmQwNsnPv29GQazz59HjJI.jpg",genre_ids:[n,i,k],id:447404,media_type:h,title:"名偵探皮卡丘",original_language:g,original_title:"Pokémon Detective Pikachu",overview:"故事敘述一名王牌私家偵探哈利古德曼被萊姆市警方認定車禍意外喪生，他的兒子提姆(賈斯提斯史密斯 飾演)決心要自己查出父親的下落，他與可能是父親的寶可夢搭檔…皮卡丘合作，卻意外發現這隻皮卡丘與眾不同，皮卡丘與提姆二者竟然能夠說話溝通！僅管聽在他人的耳裡，這頭皮卡丘與其他皮卡丘發出的聲音一樣是尖細、可愛的「皮卡、皮卡」；但聽在提姆耳裡卻十足像是個大叔的聲音，然而這個喜歡搞笑、可愛、討喜又不按牌理出牌的的超級偵探與提姆一拍即合。  為了尋找提姆的父親哈利，他們聯手展開一場刺激又瘋狂的冒險旅程，設法解開一個又一個複雜謎團。他們穿梭在萊姆市繁華的霓虹街道中，這是一個略顯雜亂卻又超現實的現代都會，在萊姆市裡，人類與他們喜愛的寶可夢共同生活在一起，在一連串冒險的旅程中，提姆與皮卡丘將遇到各式各樣的寶可夢角色，也將揭露一樁極有可能摧毀寶可夢與人類和平共存現狀的陰謀，甚至可能摧毀整個寶可夢宇宙…。",popularity:100.694,poster_path:"\u002FlBXrQmgIWAY8HLAWWBGfgQV3v2l.jpg",release_date:"2019-05-03",video:a,vote_average:6.993,vote_count:5513},{adult:a,backdrop_path:"\u002FdMWVeuVce8ZLKLI0xpVevihEwm8.jpg",genre_ids:[s,p],id:157433,media_type:h,title:"禁入墳場",original_language:g,original_title:"Pet Sematary",overview:"路易斯克里德博士（傑森克拉克 飾）和他的太太瑞秋（艾美塞梅茲 飾），以及他的一對子女從波士頓搬到緬因州的鄉間之後，發現了一處隱藏在這一家人的新家附近的樹林深處的神秘墓場。當一場悲劇發生之後，路易斯就向他異於常人的鄰居賈德柯蘭鐸（約翰李斯高 飾）求助，觸發了一連串的連鎖反應，並且釋放了一種令人無法想像的邪惡力量，造成了可怕的後果。",popularity:36.882,poster_path:"\u002F7QbyjWSJbjxZIrLNZTDBI7OTsIc.jpg",release_date:"2019-04-04",video:a,vote_average:5.731,vote_count:2656},{adult:a,backdrop_path:"\u002Fm67smI1IIMmYzCl9axvKNULVKLr.jpg",genre_ids:[l,i,o,q,k,v],id:301528,media_type:h,title:"玩具總動員4",original_language:g,original_title:"Toy Story 4",overview:"胡迪的首要任務是照顧他的孩子，無論是安弟還是邦妮。但是當邦妮製造了一個不情願的玩具「叉奇」後，胡迪一行人再度面臨「新生玩具來臨」的議題。叉奇是邦妮現在最愛的玩具，但他卻不願意正視自己莫名而得的身分，試圖逃離並結束自己身為「玩具」的生命。在與胡迪一行人隨著邦妮一家踏上公路旅行中，叉奇成功地逃離並使胡迪不得不跳車找回叉奇。在兩人開始展開一段迷失的旅途期間，卻在一間古董店裡與曾經的舊愛牧羊女寶貝重逢，並引發一連串的麻煩，最後胡迪離開了邦妮。",popularity:130.313,poster_path:"\u002FjkQxZbNopxRRUteBQzM8dyDAjvV.jpg",release_date:"2019-06-19",video:a,vote_average:7.565,vote_count:7871},{adult:a,backdrop_path:"\u002F8RKBHHRqOMOLh5qW3sS6TSFTd8h.jpg",genre_ids:[n,t,i],id:399579,media_type:h,title:"艾莉塔：戰鬥天使",original_language:g,original_title:"Alita: Battle Angel",overview:"未來的幾個世紀後，描述一個名叫「艾莉塔」並且完全喪失記憶的機械合成人，她被充滿熱心的合成人醫師依德在廢鐵鎮一處的廢料場裡拯救出來，並將她從受損的狀態中修護重建；甦醒過來的她，發掘所有的事物對她來說都是全新體驗，正當她開始重新適應這個險惡的廢鐵鎮新生活同時，依德也試著避開讓艾莉塔尋回她神秘的過去，但她的鎮上好友雨果卻起身幫助艾莉塔恢復過往記憶，同時也讓兩人的感情急速加溫，直到致命的威脅到來，危急著她所培養出來的全新感情，這才喚醒了她擁有保護朋友、家人及她的真愛的強大戰鬥功力，這一切更將引導著艾莉塔揭開社會的真相，並對抗黑暗且腐敗世界的不公不義，最後更發現一個少女也可以有改變她所存在世界的力量。",popularity:69.611,poster_path:"\u002FpnSx68RSRBPjfiOcjc6dGX3rEAK.jpg",release_date:"2019-01-31",video:a,vote_average:7.196,vote_count:7373},{adult:a,backdrop_path:"\u002FoGzToOBTRdXVOrHj8r0VgK3d2sU.jpg",genre_ids:[k,l,q],id:400650,media_type:h,title:"愛‧滿人間",original_language:g,original_title:"Mary Poppins Returns",overview:"大蕭條時期的倫敦，人心惶惶，處處可見蕭瑟寂寥，班克斯（Banks）一家更是壟罩在低氣壓之下，三個孩子因為喪親之痛，鬱鬱寡歡，父親麥可班克斯（Ben Whishaw 飾）束手無策，就在他幾乎失去所有希望的時候，神奇的魔法從天而降，麥可兒時的褓母瑪莉包萍（Emily Blunt 飾）驚喜現身！瑪莉開朗樂觀、充滿活力，還有許多古靈精怪的主意，而她的出現，彷彿是一道清新曙光，讓低迷許久的麥可和三個孩子，有機會走出陰霾傷痛，找回笑容重新去愛。",popularity:27.632,poster_path:"\u002F1QzV2uOrSi5rDvDDWtJPypUC5gW.jpg",release_date:"2018-12-13",video:a,vote_average:6.518,vote_count:2821},{adult:a,backdrop_path:"\u002FlFwykSz3Ykj1Q3JXJURnGUTNf1o.jpg",genre_ids:[o,l,i],id:166428,media_type:h,title:"馴龍高手3",original_language:g,original_title:"How to Train Your Dragon: The Hidden World",overview:"小嗝嗝和亞絲翠一起成為博克島的新族長之後，建立了一個既輝煌又混亂的龍之烏托邦。但是當一隻母 “光煞” 出現之後，同時博克島又面臨有史以來最可怕的威脅，小嗝嗝和沒牙就必須離開他們唯一的家園，前往一個大家都以為只存在於神話中的龍國秘境。當他們發現各自的真正使命之後，小嗝嗝這名龍騎士和他的龍沒牙，則將為了捍衛他們這一路走來所珍惜的一切，前往世界的盡頭，共同奮戰到底。",popularity:77.621,poster_path:"\u002FeYBvJfM2Hd3P6y8teMBiNuD8imf.jpg",release_date:bQ,video:a,vote_average:7.777,vote_count:5046},{adult:a,backdrop_path:"\u002F5BkSkNtfrnTuKOtTaZhl8avn4wU.jpg",genre_ids:[k,n,i,t],id:456740,media_type:h,title:"地獄怪客：血后的崛起",original_language:g,original_title:"Hellboy",overview:"「地獄怪客」是美漫中「非傳統」超級英雄；他的身分是死神撒旦之子，具有紅色皮膚、長長的尾巴，因為奇怪的外表，所以輾轉被美國特務收養；地獄怪客並不像外表那樣可怕，為了證明自己不是惡魔，他砍斷頭上的雙角，右手裝著巨大機關槍，打擊世界上的黑暗勢力，這次他將挑戰來自地獄的血皇后，拯救世界免於混亂…",popularity:58.931,poster_path:"\u002F7HUcQr4bItQ1HxKBVYDGCVEbW2W.jpg",release_date:"2019-04-10",video:a,vote_average:5.515,vote_count:2711},{adult:a,backdrop_path:"\u002FqDQEQbgP3v7B9IYLAUcYexNrVYP.jpg",genre_ids:[l,o,q,i],id:404368,media_type:h,title:"無敵破壞王2：網路大暴走",original_language:g,original_title:"Ralph Breaks the Internet",overview:"當雲妮露所處的電玩世界機台──「甜蜜衝刺」的方向盤，被興奮玩樂的女孩們失控拔起，更糟糕的是──「甜蜜衝刺」已經不再生產零件，雲妮露的電玩世界將從此消失不見！破壞王決定要帶著雲妮露闖入網路世界，只為了去eBay買方向盤。 在熱鬧的網路世界，他們遇到各樣的網紅及動畫角色，有賽車遊戲「致命關頭」的賽車手與熱門網站的演算總監讚讚姐幫助，過關斬將籌集購物資金…。雲妮露在「致命關頭」中體會到久未感受的刺激，不確定自己是否想回到機台的世界，兩個好友對未來與夢想的理念分歧，不但考驗彼此的友誼，也體會友情的真諦。",popularity:91.545,poster_path:"\u002FsrWVX86OQjCJhbjQNxAsNnwrP8V.jpg",release_date:"2018-11-20",video:a,vote_average:7.231,vote_count:6138},{adult:a,backdrop_path:"\u002FgNJSXReTcsIRbRoiE3PBqNbBDL0.jpg",genre_ids:[s,p],id:480414,media_type:h,title:"哭泣的女人",original_language:g,original_title:"The Curse of La Llorona",overview:"故事敘述墨西哥一則古老的傳說：美麗的憂羅娜在世時，因為嫉妒的怒火，在河邊親手將自己的孩子們淹死，卻在失去孩子的下一刻感到痛不欲生，遂將自己投入湍急、致命的河流中。從此她的淚水隨著河水沒有停止過，她哭泣的吶喊聲也隨著隆隆的河水留傳了幾個世紀。人們傳說她會在陰暗的角落啜泣，為自己的孩子祈禱，希望自己找到方法代替他們而死，就這樣過了幾百年，她的祈禱沒有被實現。於是她決定…用別人的孩子，代替愛子的死亡，換回愛子的重生，也讓別人的母親嚐嚐這撕心裂肺的痛楚。  1970年代，憂羅娜遊蕩在洛杉磯無人的午夜街頭，聆聽著孩子的哭鬧聲。  故事發生在1973年的洛杉磯，一名還未走出喪夫之痛的社工媽媽安娜(琳達卡迪林尼 飾)帶著兩個孩子，在工作與家庭間努力找尋平衡點，當她發現派翠西亞(派翠西亞薇拉斯奎茲 飾)將兩名年幼的孩子反鎖在衣櫃內，安娜立即將孩子安置於兒童收容所，母親派翠西亞則被送往精神病院。然而，安娜渾然不知這個安置計畫害死了兩個稚齡的孩子，直到她的一對兒女也看見了這個穿著白紗的哭泣女子，安娜這才知道自己的孩子已經身陷危機，她向牧師求助，但牧師竟然建議她去找薩滿巫醫拉斐爾，不信神的安娜對拉斐爾有滿腹的懷疑，但她沒有別的選擇，因為憂羅娜已經在安娜的一對子女手臂上留下印記…。",popularity:51.229,poster_path:"\u002FApYfN1rYexn8us0tBN5JTg2Digl.jpg",release_date:"2019-04-17",video:a,vote_average:5.701,vote_count:1874},{adult:a,backdrop_path:"\u002Fl2ji4YiNSPBV69WjGBgU0gCvRqy.jpg",genre_ids:[k,i,l],id:426543,media_type:h,title:"胡桃鉗與奇幻四國",original_language:g,original_title:"The Nutcracker and the Four Realms",overview:"剛失去母親的少女克拉拉，心急得想找到母親遺留下來的神秘鑰匙，原來母親在過逝後，留下一個鎖上了的音樂盒，克拉拉想知道母親的遺物裡究竟有甚麼秘密？耶誕夜當晚，當眾人在舞會上歡慶佳節，飲酒作樂，克拉拉循著神秘的線索，進入一個奇幻的國度，國度中竟有四個王國，她踏上驚喜的冒險之旅，經過了雪片之地、花卉之地、甜糖之地，發現這個不可思議的世界，竟然是母親一手打造的！壞消息是，第四個王國，被邪惡的黃薑之母佔領。為了找回神祕鑰匙，讓國度恢復平靜，年輕的克拉拉該如何團結王國中的人民，一起對抗龐大的邪惡勢力？胡桃夾子和四個王國，胡桃夾子，胡桃夾子真人版，The Nutcracker And The Four Realms",popularity:31.713,poster_path:"\u002F6k8iNhO6Cz6c1SQirTCnm7EfcUi.jpg",release_date:"2018-10-26",video:a,vote_average:6.091,vote_count:1821},{adult:a,backdrop_path:"\u002FmWLljCmpqlcYQh7uh51BBMwCZwN.jpg",genre_ids:[s,p,bP],id:522681,media_type:h,title:"密弒遊戲",original_language:g,original_title:"Escape Room",overview:"講述6名從不同意外中生還的陌生人，在努力回歸正常生活時，突然收到不明來歷的密室逃脫遊戲邀請。  遊戲中總共有5大關卡：「毒火煉獄」、「冰天雪地」、「顛倒世界」、「毒氣密室」與「迷幻空間」，在不同闖關過程中，他們亦被迫面對自我最黑暗的過往瘡疤，他們也才意識到這不只是場遊戲，為求生存與贏取高達百萬美元的獎金，所有人不僅需互相幫助，還必須賭上性命互相傷害，因為最後只能有一位贏家倖存…",popularity:112.301,poster_path:"\u002Fu5xRnBP6fjRyZEsw6IKMM12nW59.jpg",release_date:bQ,video:a,vote_average:6.541,vote_count:3684},{adult:a,backdrop_path:"\u002FngBFDOsx13sFXiMweDoL54XYknR.jpg",genre_ids:[p,v,t],id:450465,media_type:h,title:"異裂",original_language:g,original_title:"Glass",overview:"印度裔美國導演奈沙馬蘭《分裂》、《驚心動魄》共同續集，卡司布魯斯威利、山繆傑克森、詹姆斯麥艾維。描述大衛開始尋找與調查「野獸」凱文的一切，而「玻璃先生」手上則握有這兩位異能者極關鍵的秘密…異能仨，玻璃先生，Glass",popularity:47.678,poster_path:"\u002Fgf3rpYe7rCkhNAq5eYs2PR44f18.jpg",release_date:bR,video:a,vote_average:6.681,vote_count:6870},{adult:a,backdrop_path:"\u002FUxGdlGzCx5R5FdY8BDM0FQkyKi.jpg",genre_ids:[i,o,q,l],id:412117,media_type:h,title:"寵物當家2",original_language:g,original_title:"The Secret Life of Pets 2",overview:"《寵物當家》續集，克里斯雷納德繼續執掌導演筒，原班人馬2度冒險！狗狗麥斯這次要面對一些重大的生活改變，主人凱蒂結婚了，而且有一個小幼兒！當這一家人前往農場旅行，他們能找到內心的勇氣與平靜嗎？",popularity:66.601,poster_path:"\u002FufMWBO5vJVOZ6utdoIGcnspJCFh.jpg",release_date:"2019-05-24",video:a,vote_average:r,vote_count:2435},{adult:a,backdrop_path:"\u002FjbR8Yu0UWd1aj3Hg9Bj57ekDiQs.jpg",genre_ids:[n,i,k,l],id:454294,media_type:h,title:"魔劍少年",original_language:g,original_title:"The Kid Who Would Be King",overview:"長久以來，平凡的亞歷山大（路易斯阿什伯恩瑟克 飾）都認為自己是社會上另一個邊緣人，直到一天，他在躲避校園惡霸的霸凌追逐時，意外跌在了一座插在石頭裡的石中劍旁-王者之劍，好奇之心驅使他將劍從石中拔起，而這個舉動卻也同時撼動了沉寂許久的邪惡之魔。現在，他必須召集他的朋友與敵人組成一個騎士軍團，他們將與傳奇巫師梅林（派崔克史都華 飾）一同對抗邪惡頑強的魔甘娜（蕾貝卡弗格森 飾）。當世界的未來危在旦夕，亞歷山大必須要奮力起身，成為他從未幻想過的領導者。",popularity:29.677,poster_path:"\u002Fx8YwE4aHadYzV0ZVoAK6FKU3OvK.jpg",release_date:bR,video:a,vote_average:6.086,vote_count:575},{adult:a,backdrop_path:"\u002F9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",genre_ids:[n,i,k],id:297802,media_type:h,title:"水行俠",original_language:g,original_title:"Aquaman",overview:"人類與亞特蘭提斯人混血的後裔亞瑟庫瑞（ Jason Momoa 飾），他的母親亞特蘭提斯女王（ Nicole Kidman 飾）深信他將來一定能為海平面上下帶來和平與共榮。在大臣武爾科的幫助與教育下，亞瑟逐漸成為深海的守護者，暗中保護著人類與海底的亞特蘭提斯人民，戮力讓雙方不起衝突，但他卻不知道生命中有更深一層的使命在等待著他…。 另一方面，與亞瑟同母異父的弟弟：歐姆國王（ Patrick Wilson 飾）一心想要征服陸地上的人類，蓄意挑起海底人對地表人類的仇恨，藉以集合所有的力量揮軍攻向人類。為了阻止這場災難，亞瑟必須在梅拉（ Amber Heard 飾）的幫助下快速找到傳說中的三叉戟，以超越七海國王之姿，成為維護世界和平的英雄，只是這趟尋找三叉戟的旅程將會比他想像中還要兇險許多…。",popularity:67.347,poster_path:"\u002FuORC4yQpOcGIdch4Gt20WHayKRP.jpg",release_date:"2018-07-06",video:a,vote_average:6.911,vote_count:11574}]}],fetch:{},error:c,state:{images:{origin:"https:\u002F\u002Fimage.tmdb.org\u002Ft\u002Fp\u002Foriginal\u002F",cast:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw138_and_h175_face\u002F",screen:"https:\u002F\u002Fimage.tmdb.org\u002Ft\u002Fp\u002Fw1920_and_h800_face\u002F",card:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw250_and_h141_face\u002F",post:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw300_and_h450_bestv2\u002F",profile:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw45_and_h45_face\u002F"},nowPlayingMovie:[],topMovie:[],popularMovie:[]},serverRendered:true,routePath:"\u002FMovie\u002F329996",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:c}}}}(false,"Acting",null,2,0,.6,"en","movie",12,1,14,10751,"",28,16,53,35,7,27,878,6,18,"Joplin Man","Joplin Woman","Dumbo","US","GB","English","小飛象","Colin Farrell","Michael Keaton","Danny DeVito","Eva Green",3,"Alan Arkin",10,"Nico Parker",20,5,"Finley Hobbins",21,"Roshan Seth",13,"Deobia Oparei","Joseph Gatt",9,"Miguel Muñoz Segura",45,"Sharon Rooney",11,"Zenaida Alcalde",46,"Michael Buffer",42,"Phil Zimmerman",47,"Ragevan Vasan",49,"Frank Bourke",48,"Edd Osmond","Zelda Rosset Colon","Benjamin French",19,"Jana Posna","Jo Osmond","Jewels Good",22,"Lars Eidinger",24,"Tom Seekings",36,"Douglas Reith","Sandy Martin",50,"Heather Rome",37,"Scott Haney",38,"Rancher","Erick Hayden",39,"Greg Canestrari",40,"Heckler","Chris Rogers",41,"Max Gill",51,"Mean Teen","Peter Brookes",52,"Simon Connolly","Nick Bartlett",54,"Harry Taylor",55,"Vincent Andriano",56,"Liam Bewley",57,"Ben Crowe",58,"Josef Davies",59,"Clive Brunt",60,"Richard Leeming",61,"Angela Ashton",62,43,"Alice Bonifacio",63,44,"Philip Rosch",64,"Reporter","Joseph Macnab",65,"Rob Heanley",66,"Amerjit Deu","Lucy DeVito","Richard James-Clarke","Matthew Castle","Bret Jones","Zee Asha","Carol Been","Jessica Barker-Wren","Arabella Neale","Woman","Rosie Akerman","Tim Southgate","Anatoli Akerman","Kamil Lemieszewski","Lampros Kalfuntzos","Zoë Scott","Suan-Li Ong","Bern Collaço","Paul Riddell","Will Rowlands","garethmb","MSB","Myles","Gimly","r96sk","Wuchak",6.994,9648,"2019-01-03","2019-01-16"));</script><script src="/_nuxt/e77e378.js" defer></script><script src="/_nuxt/62087d8.js" defer></script><script src="/_nuxt/9792ad0.js" defer></script><script src="/_nuxt/02331da.js" defer></script><script src="/_nuxt/d9d54d2.js" defer></script><script src="/_nuxt/58da8b5.js" defer></script>
+  </body>
+</html>

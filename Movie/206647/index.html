@@ -1,0 +1,869 @@
+<!doctype html>
+<html data-n-head-ssr lang="zh-TW" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22zh-TW%22%7D%7D">
+  <head >
+    <title>007：惡魔四伏 - TMDB</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="歡迎來到電影基地，我們提供多部電影的影評資料，希望你喜歡！"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="preload" href="/_nuxt/e77e378.js" as="script"><link rel="preload" href="/_nuxt/02331da.js" as="script"><link rel="preload" href="/_nuxt/d9d54d2.js" as="script"><link rel="preload" href="/_nuxt/58da8b5.js" as="script"><link rel="preload" href="/_nuxt/62087d8.js" as="script"><link rel="preload" href="/_nuxt/9792ad0.js" as="script"><style data-vue-ssr-id="65b97e00:0 2c6794ac:0 63e2dbec:0 771aba7f:0 add73248:0 703a6812:0 05ec5855:0 a0e5a038:0 39784872:0 44551948:0 509c5d8f:0 0c9d9bb0:0 fad283f2:0 e5c03b90:0">/*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;}.relative{position:relative;}.z-10{z-index:10;}.m-auto{margin:auto;}.my-20{margin-top:5rem;margin-bottom:5rem;}.mt-2{margin-top:0.5rem;}.mt-10{margin-top:2.5rem;}.ml-5{margin-left:1.25rem;}.mt-5{margin-top:1.25rem;}.mb-5{margin-bottom:1.25rem;}.mr-10{margin-right:2.5rem;}.flex{display:flex;}.w-full{width:100%;}.w-1\/2{width:50%;}.w-20{width:5rem;}.flex-1{flex:1 1 0%;}.flex-col{flex-direction:column;}.flex-wrap{flex-wrap:wrap;}.items-start{align-items:flex-start;}.items-center{align-items:center;}.justify-start{justify-content:flex-start;}.justify-center{justify-content:center;}.justify-between{justify-content:space-between;}.justify-self-center{justify-self:center;}.overflow-hidden{overflow:hidden;}.p-20{padding:5rem;}.pb-5{padding-bottom:1.25rem;}.text-left{text-align:left;}.text-center{text-align:center;}.text-2xl{font-size:1.5rem;line-height:2rem;}.text-4xl{font-size:2.25rem;line-height:2.5rem;}.text-3xl{font-size:1.875rem;line-height:2.25rem;}.text-5xl{font-size:3rem;line-height:1;}.font-bold{font-weight:700;}.leading-normal{line-height:1.5;}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity));}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity));}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity));}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+/*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;}.relative{position:relative;}.z-10{z-index:10;}.m-auto{margin:auto;}.my-20{margin-top:5rem;margin-bottom:5rem;}.mt-2{margin-top:0.5rem;}.mt-10{margin-top:2.5rem;}.ml-5{margin-left:1.25rem;}.mt-5{margin-top:1.25rem;}.mb-5{margin-bottom:1.25rem;}.mr-10{margin-right:2.5rem;}.flex{display:flex;}.w-full{width:100%;}.w-1\/2{width:50%;}.w-20{width:5rem;}.flex-1{flex:1 1 0%;}.flex-col{flex-direction:column;}.flex-wrap{flex-wrap:wrap;}.items-start{align-items:flex-start;}.items-center{align-items:center;}.justify-start{justify-content:flex-start;}.justify-center{justify-content:center;}.justify-between{justify-content:space-between;}.justify-self-center{justify-self:center;}.overflow-hidden{overflow:hidden;}.p-20{padding:5rem;}.pb-5{padding-bottom:1.25rem;}.text-left{text-align:left;}.text-center{text-align:center;}.text-2xl{font-size:1.5rem;line-height:2rem;}.text-4xl{font-size:2.25rem;line-height:2.5rem;}.text-3xl{font-size:1.875rem;line-height:2.25rem;}.text-5xl{font-size:3rem;line-height:1;}.font-bold{font-weight:700;}.leading-normal{line-height:1.5;}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity));}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity));}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity));}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.bg-gradient{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1)}html{font-size:10px}a, span{display:inline-block;}body{min-width:960px;margin:auto;--tw-bg-opacity:1;background-color:rgb(13 37 63 / var(--tw-bg-opacity));--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity))}img{vertical-align:middle}input,select{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;outline:none;font-size:2rem;background-color:hsla(0,0%,100%,.5)}input, select{border-radius:0.375rem;}button,input:focus,select:focus{outline:none}button{border:none}.banner{position:relative;display:flex;width:100%;align-items:center;justify-content:center;--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity));height:500px;background-size:cover;background-position:50%;background-attachment:fixed;}.banner:after{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;background-color:rgb(51 65 85 / 0.7);--tw-backdrop-blur:blur(4px);--tw-backdrop-grayscale:grayscale(100%);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.slider .swiper-lazy-preloader{position:absolute;top:0px;left:0px;margin:0px;height:100%;width:100%;border-radius:0px;border-width:0px;--tw-bg-opacity:1;background-color:rgb(156 163 175 / var(--tw-bg-opacity));-webkit-animation:none;animation:none;background-repeat:no-repeat;background-position:50%;background-size:80% auto;background-image:url(/_nuxt/img/logo-primary-short.bb8aa70.svg);}.slideLeft-enter{transform:translateX(10px);opacity:0}.slideLeft-enter-active{transition:all 1s}.fadeIn-enter{opacity:0}.fadeIn-enter-active{transition:all .5s}@-webkit-keyframes shinny{0%{opacity:1}to{opacity:.3}}@keyframes shinny{0%{opacity:1}to{opacity:.3}}@-webkit-keyframes shift-to-left{0%{left:0}50%{left:3000px}to{left:3000px}}@keyframes shift-to-left{0%{left:0}50%{left:3000px}to{left:3000px}}
+@font-face{font-family:"swiper-icons";src:url("data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA") format("woff");font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-container-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{transform:translateZ(0)}.swiper-container-multirow>.swiper-wrapper{flex-wrap:wrap}.swiper-container-multirow-column>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.swiper-container-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform}.swiper-slide-invisible-blank{visibility:hidden}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{height:auto}.swiper-container-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-container-3d{perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:linear-gradient(270deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-right{background-image:linear-gradient(90deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-top{background-image:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent)}.swiper-container-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-container-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-container-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-container-horizontal.swiper-container-css-mode>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-container-vertical.swiper-container-css-mode>.swiper-wrapper{scroll-snap-type:y mandatory}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:calc(44px/44*27);width:calc(var(--swiper-navigation-size)/44*27);height:44px;height:var(--swiper-navigation-size);margin-top:calc(44px*-1/2);margin-top:calc(var(--swiper-navigation-size)*-1/2);z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-theme-color);color:var(--swiper-navigation-color,var(--swiper-theme-color))}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-next:after,.swiper-button-prev:after{font-family:swiper-icons;font-size:44px;font-size:var(--swiper-navigation-size);letter-spacing:0;text-transform:none;font-variant:normal;line-height:1}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{left:10px;right:auto}.swiper-button-prev:after,.swiper-container-rtl .swiper-button-next:after{content:"prev"}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{right:10px;left:auto}.swiper-button-next:after,.swiper-container-rtl .swiper-button-prev:after{content:"next"}.swiper-button-next.swiper-button-white,.swiper-button-prev.swiper-button-white{--swiper-navigation-color:#fff}.swiper-button-next.swiper-button-black,.swiper-button-prev.swiper-button-black{--swiper-navigation-color:#000}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;transition:opacity .3s;transform:translateZ(0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:10px;left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active,.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet-active{opacity:1;background:var(--swiper-theme-color);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.swiper-container-vertical>.swiper-pagination-bullets{right:10px;top:50%;transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:6px 0;display:block}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:transform .2s,top .2s}.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 4px}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:transform .2s,left .2s}.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:transform .2s,right .2s}.swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-theme-color);background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progressbar,.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-container-vertical>.swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}.swiper-pagination-white{--swiper-pagination-color:#fff}.swiper-pagination-black{--swiper-pagination-color:#000}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.swiper-slide-zoomed{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;animation:swiper-preloader-spin 1s linear infinite;box-sizing:border-box;border-radius:50%;border:4px solid var(--swiper-theme-color);border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-top:4px solid transparent}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{to{transform:rotate(1turn)}}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-container-fade.swiper-container-free-mode .swiper-slide{transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none;transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-container-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-cube.swiper-container-rtl .swiper-slide{transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-container-flip{overflow:visible}.swiper-container-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right,.swiper-container-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.nuxt-progress{position:fixed;top:0;left:0;right:0;height:5px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#90cea1;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}
+.app-container{max-width:2000px;width:100%;margin:auto;display:flex;min-height:100vh;flex-direction:column;align-items:flex-start;justify-content:flex-start}.app-content{width:100%;flex:1 1 0%}
+.header[data-v-8f99df62]{position:fixed;top:0px;left:0px;z-index:20;display:flex;width:100%;align-items:center;justify-content:space-between;padding-left:2rem;padding-right:2rem;padding-top:2.5rem;padding-bottom:2.5rem;transition:.3s}.header-left[data-v-8f99df62]{position:relative;z-index:10;display:flex;align-items:flex-end;justify-content:flex-start}.header.active[data-v-8f99df62]{background-color:rgb(13 37 63 / .5)}.header.active[data-v-8f99df62]:before{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.logo[data-v-8f99df62]{width:20rem}.logo .wrap[data-v-8f99df62]{width:100%;padding-bottom:13.0098522167%;background-image:url(/_nuxt/img/logo-alt-short.bf7f470.svg);background-size:100% 100%}.menu[data-v-8f99df62]{margin-left:2.5rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;line-height:2rem}.menu li[data-v-8f99df62]{font-weight:700;--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity));transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.menu li[data-v-8f99df62]:hover{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))}.menu li+li[data-v-8f99df62]{margin-left:2rem}
+.tabs li .nuxt-link-active[data-v-78f47c59]{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1);-webkit-background-clip:text;color:transparent}.tabs[data-v-78f47c59]{display:flex;align-items:flex-end;justify-content:center;font-size:1.875rem;line-height:2.25rem;font-weight:700}.tabs li[data-v-78f47c59]{padding-left:2.5rem;padding-right:2.5rem;--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))}.tabs li[data-v-78f47c59]:hover{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity))}
+.vote-average[data-v-1cb37e65],.vote-line[data-v-1cb37e65]{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1)}.vote-average[data-v-1cb37e65]{-webkit-background-clip:text;color:transparent}.main[data-v-1cb37e65]{margin:auto;width:91.666667%;max-width:1280px}.info[data-v-1cb37e65]{position:relative;z-index:10;display:flex;align-items:flex-start;justify-content:center;margin-top:-400px}.video-post[data-v-1cb37e65]{width:300px;margin-right:2.5rem;overflow:hidden;border-radius:0.375rem}.vote-average[data-v-1cb37e65]{font-size:3rem;line-height:1;font-weight:700}.vote-average span[data-v-1cb37e65]{font-weight:700;line-height:1;font-size:9rem}.pic-bar[data-v-1cb37e65]{position:relative;height:100vh;width:100%}.pic-bar[data-v-1cb37e65]:after{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity));background-color:hsla(0,0%,100%,.5);-webkit-animation:shinny .5s linear infinite alternate;animation:shinny .5s linear infinite alternate}.pic-bar[data-v-1cb37e65]:before{content:"";position:absolute;top:0px;left:0px;z-index:0;height:100%;width:100%;--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity));background-image:url(/_nuxt/img/logo-primary-full.de1a664.svg);background-repeat:no-repeat;background-size:40% auto;background-position:50%;background-attachment:fixed}.pic-bar div[data-v-1cb37e65]{position:absolute;top:0px;left:0px;z-index:10;height:100%;width:100%;background-size:cover;background-attachment:fixed;background-position:center}.vote-line[data-v-1cb37e65]{position:absolute;bottom:0px;left:0px;height:0.5rem;overflow:hidden;border-radius:9999px}.vote-line[data-v-1cb37e65]:after{content:"";position:absolute;top:0px;left:0px;height:100%;background-color:rgb(255 255 255 / .2);-webkit-animation:shift-to-left 4s linear infinite;animation:shift-to-left 4s linear infinite;width:200px}
+.type[data-v-5a0e3ca0]{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start}.type li+li[data-v-5a0e3ca0]{margin:0.5rem}.type-list[data-v-5a0e3ca0]{margin-right:0.75rem;border-radius:0.375rem;--tw-border-opacity:1;border-color:rgb(144 206 161 / var(--tw-border-opacity));padding-left:1.25rem;padding-right:1.25rem;padding-top:0.5rem;padding-bottom:0.5rem;font-size:1.5rem;line-height:2rem;--tw-text-opacity:1;color:rgb(144 206 161 / var(--tw-text-opacity));border-width:1px}
+.companies[data-v-545b7ed0]{margin-top:1.25rem;display:flex;align-items:flex-start;justify-content:flex-start;border-radius:0.375rem;background-color:rgb(243 244 246 / .5);padding:0.75rem}.logo-list[data-v-545b7ed0]{width:10rem;height:7.5rem;text-align:center;margin:0.75rem;display:flex;align-items:center;justify-content:center}.logo-list img[data-v-545b7ed0]{max-width:100%;max-height:100%}
+.slider[data-v-da975202]{width:100%}.cast-item[data-v-da975202]{width:138px}.cast-image[data-v-da975202]{position:relative;overflow:hidden;border-radius:0.375rem;width:138px;height:175px}
+.reviews[data-v-5c50ff08]{padding:10rem 0}.reviews ul li[data-v-5c50ff08]:not(:first-child){margin-top:10rem}.avatar[data-v-5c50ff08]{display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:9999px;--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity));width:40px;height:40px}.vote-ball[data-v-5c50ff08]{width:5rem;height:5rem;text-shadow:.2rem .2rem .2rem rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;border-radius:9999px}
+.recommendations[data-v-02596022]{width:100%;max-width:900px;margin:10rem auto;font-size:0}.recommendations li[data-v-02596022]{width:33.3333333333%}.recommendations .video-post[data-v-02596022]{width:100%}
+.appFooter[data-v-5025bf52]:after,.appFooter a[data-v-5025bf52]{background:#90cea1;background:linear-gradient(135deg,#90cea1,#01b4e4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#90cea1",endColorstr="#01b4e4",GradientType=1)}.appFooter a[data-v-5025bf52]{-webkit-background-clip:text;color:transparent}.appFooter[data-v-5025bf52]{position:relative;margin-top:5rem;width:100%;padding-top:2rem;padding-bottom:2rem}.appFooter[data-v-5025bf52]:after{content:"";position:absolute;top:0px;width:500px;height:1px;left:50%;transform:translateX(-50%)}.appFooter a[data-v-5025bf52]{margin-left:0.5rem;margin-right:0.5rem}</style>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="app-container"><header class="header" data-v-8f99df62><div class="header-left" data-v-8f99df62><a href="/" class="logo nuxt-link-active" data-v-8f99df62><div class="wrap" data-v-8f99df62></div></a> <ul class="tabs" data-v-78f47c59 data-v-8f99df62><li data-v-78f47c59><a href="/Overview/now" data-v-78f47c59><span data-v-78f47c59>現正熱映</span></a></li><li data-v-78f47c59><a href="/Overview/top" data-v-78f47c59><span data-v-78f47c59>高評價</span></a></li><li data-v-78f47c59><a href="/Overview/popular" data-v-78f47c59><span data-v-78f47c59>高人氣</span></a></li></ul></div></header> <div class="app-content"><div class="_id" data-v-1cb37e65><div class="banner" style="background-image:url(\n        https://image.tmdb.org/t/p/w1920_and_h800_face//tcf8WL3Lf1nWkOOT7SdhbS2kU6E.jpg\n      );" data-v-1cb37e65></div> <div class="main" data-v-1cb37e65><div class="info" data-v-1cb37e65><div class="video-post" data-v-1cb37e65><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//A24yPLfm6TOihPTPbWws0tOjJFH.jpg" alt="007：惡魔四伏" data-v-1cb37e65></div> <div class="flex-1 text-3xl overflow-hidden" data-v-1cb37e65><div class="relative flex justify-start items-start pb-5" data-v-1cb37e65><div class="flex-1 mr-10" data-v-1cb37e65><h1 class="font-bold text-5xl" data-v-1cb37e65>
+              007：惡魔四伏
+              <span class="text-3xl text-gray-300" data-v-1cb37e65>
+                2015
+              </span></h1> <ul class="type mt-5" data-v-5a0e3ca0 data-v-1cb37e65><li class="type-list" data-v-5a0e3ca0>
+    动作
+  </li><li class="type-list" data-v-5a0e3ca0>
+    冒险
+  </li><li class="type-list" data-v-5a0e3ca0>
+    惊悚
+  </li></ul></div> <div class="vote-average" data-v-1cb37e65><span class="vote-average" data-v-1cb37e65>0</span>%
+          </div> <span class="vote-line" style="width:0%;" data-v-1cb37e65></span></div> <p class="mt-5 leading-normal" data-v-1cb37e65>《007：惡魔四伏》將交代龐德身世秘密，揭開他不可告人的過去。劇情描述一則由前任M遺留下的神秘訊息，促使龐德開始追查一個名叫「魔鬼黨」的國際犯罪組織，在新任M（雷夫范恩斯）努力保全MI6時，龐德已抽絲剝繭，發現惡魔黨隱藏在層層謊言下的恐怖真相。</p> <ul class="companies" data-v-545b7ed0 data-v-1cb37e65><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//71BqEFAF4V3qjjMPCpLuyJFB9A.png" alt="Columbia Pictures" data-v-545b7ed0></li><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//aOWKh4gkNrfFZ3Ep7n0ckPhoGb5.png" alt="Metro-Goldwyn-Mayer" data-v-545b7ed0></li><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//oYcUi1byZ312Z3xiz5ojz9RQLND.png" alt="Eon Productions" data-v-545b7ed0></li><li class="logo-list" data-v-545b7ed0><img src="https://image.tmdb.org/t/p/original//5jNRqXspCmQ3XkHNzuZIbvnHOWw.png" alt="Sony Pictures Releasing" data-v-545b7ed0></li></ul> <div class="slider mt-5 w-full" data-v-da975202 data-v-1cb37e65><ul class="cast-list swiper-wrapper" data-v-da975202><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg" alt="Daniel Craig" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Daniel Craig</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//2Hhztd4mUEV9Y25rfkXDwzL9QI9.jpg" alt="Christoph Waltz" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Christoph Waltz</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//tUfoM95x70Qsb1ElClPSpSrZQ2v.jpg" alt="Léa Seydoux" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Léa Seydoux</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg" alt="Ralph Fiennes" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Ralph Fiennes</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//pDFs4gSeKSyIF8PditvtHqAq687.jpg" alt="Naomie Harris" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Naomie Harris</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//2GBtQ6scGeSHkX1urOP1EJbmksx.jpg" alt="Ben Whishaw" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Ben Whishaw</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//k0GJCAfBNCFKamJ56pBPk9gqhLy.jpg" alt="Monica Bellucci" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Monica Bellucci</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ymn6iQBJbQZN6BYI60YJDXVP4gF.jpg" alt="Dave Bautista" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Dave Bautista</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//akbGBP3RI4siNLPr8Pa6YcD2NJt.jpg" alt="Andrew Scott" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Andrew Scott</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//8aEABMeHXOozwE5DrMxUlCM9mpG.jpg" alt="Rory Kinnear" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Rory Kinnear</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//7GZSh6GABd4OpCOPAJWs1stZAee.jpg" alt="Jesper Christensen" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Jesper Christensen</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//dd6nC7HoQmLC5utt7H2ZwS0w49o.jpg" alt="Alessandro Cremona" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Alessandro Cremona</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//9ZOVeNIGXziOXBSDNu60pvzuKrs.jpg" alt="Stephanie Sigman" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Stephanie Sigman</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//5qoAmQpcPCjf4Pd6aTZOeINGYzk.jpg" alt="Tenoch Huerta" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Tenoch Huerta</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//aUBNKmudV1CCMUHskWemg58vc3n.jpg" alt="Adriana Paz" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Adriana Paz</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//8zbTUTCYi01rjlAfXw2AaAglUjL.jpg" alt="Marco Zingaro" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Marco Zingaro</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//n77hqqUOLvUU4li9VuXxs2NeejJ.jpg" alt="Ian Bonar" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Ian Bonar</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//IcDsytdwVl8WcLjNz1LezKkNbK.jpg" alt="Pip Carter" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Pip Carter</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//gHX0eakDGXnfgh7GeaKKDN9rn67.jpg" alt="Simon Lenagan" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Simon Lenagan</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//htcsjd0FVBorC69sRFbcoxgNbGa.jpg" alt="Alessandro Bressanello" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Alessandro Bressanello</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//miVqu4QMnwX4EkLM1HnDmyKsudo.jpg" alt="Marc Zinga" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Marc Zinga</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//xjRbpfeQl1YkVcqoET8UG29roGf.jpg" alt="Brigitte Millar" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Brigitte Millar</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//q4Cp7a7LQ95azSlT5NqDXkR23qN.jpg" alt="Adel Bencherif" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Adel Bencherif</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//h6VkTUhcbGwmdWFPvfhMhajG7n5.jpg" alt="Peppe Lanzetta" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Peppe Lanzetta</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//x7BhdPACClTEhEMH3OKpUR6dpCC.jpg" alt="Matteo Taranto" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Matteo Taranto</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//kH9HwKOEnSKAJeMYSrxpJkcDzrv.jpg" alt="Emilio Aniba" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Emilio Aniba</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//xwKUAlPJgBfoD3STXavuVeiO7Hi.jpg" alt="Dai Tabuchi" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Dai Tabuchi</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//vIfBzNhjOrmvubovIutWibvhoRO.jpg" alt="George Lasha" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>George Lasha</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//9nRdPKeHZ78B4yP1ikFM1xYcfFn.jpg" alt="Sargon Yelda" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Sargon Yelda</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//nLz6lePlHNQ7WDT9mRN8MTJ1BnB.jpg" alt="Antonio Salines" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Antonio Salines</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//x28iFuA9LUBMxpWatTdUFPEXSIC.jpg" alt="Nigel Barber" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Nigel Barber</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ftbR9VQIwiiFjtwx9FTImWCxXhr.jpg" alt="Patrice Naiambana" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Patrice Naiambana</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//4RlyQn1NkoAn5izaWPqXBC6BZTv.jpg" alt="Stephane Cornicard" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Stephane Cornicard</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//93KIHd00iHFotZz3uTdCugNke7o.jpg" alt="Gary Fannin" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Gary Fannin</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//5HxIjJpOHc3XDvS3FV7ozWlgXnq.jpg" alt="Sadao Ueda" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Sadao Ueda</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//aZBRrj6vEcQt10Kc9vYrEZZ4eYm.jpg" alt="Wai Wong" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Wai Wong</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//8BwRFsXzWD25dPih6IePcRD3EjT.jpg" alt="Joseph Balderrama" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Joseph Balderrama</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//znmKzcUlwetzhXSvtjpNN5esdVJ.jpg" alt="Eiji Mihara" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Eiji Mihara</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//wxKhKGxhcUy0aYXWQWWyECAkpnY.jpg" alt="Junichi Kajioka" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Junichi Kajioka</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//imlMAKdnIjMBqNwyXXlQ8kLANBz.jpg" alt="Tristan Matthiae" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Tristan Matthiae</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//zhyY3UItsuekeNYqUkauLOGqnsd.jpg" alt="Detlef Bothe" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Detlef Bothe</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//bHor8UdG5x1Pp4H95bcsYGciXO9.jpg" alt="Bodo Friesecke" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Bodo Friesecke</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//pHj0zrUaoFbxQFmgTA1PiAM3jgW.jpg" alt="Noah Saavedra" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Noah Saavedra</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//aGzxhw6n2Ns6X1Y9q97Tdiu9Ehk.jpg" alt="Francis Attakpah" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Francis Attakpah</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//aLZWFHcDgBI3FbJj1GtfN5wTjFZ.jpg" alt="Michael Glantschnig" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Michael Glantschnig</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//mNhpOs2Z641nVoVtdbHvtZIwmvl.jpg" alt="Marlon Boess" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Marlon Boess</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//eu9OgC5KyJiRuM9dAYY8PBeND9I.jpg" alt="Lara Parmiani" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Lara Parmiani</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//kZGOAcIk59ERmgJZbAeiPBmDpPv.jpg" alt="Amra Mallassi" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Amra Mallassi</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//2wWZUE8CWkANDL1AKaeUet2gu1k.jpg" alt="Ziad Abaza" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Ziad Abaza</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//j1rQTztSeQFT7NeOqwPesUgBB4P.jpg" alt="Derek Horsham" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Derek Horsham</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//tKs0EF548UZorFvMFoHRLZZBF9e.jpg" alt="Nari Blair-Mangat" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Nari Blair-Mangat</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//gopMHw0KfXMatsZzudCHhrm6ols.jpg" alt="Pezhmaan Alinia" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Pezhmaan Alinia</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//cpna5VGvAxuKuC31xJPBKy9zbnv.jpg" alt="Judi Dench" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Judi Dench</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//1tT9HYwy0lTw4UWtTJC0RexcKgo.jpg" alt="Kim Adis" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Kim Adis</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//jZoBtHSq44OGQ6gsSWRgVsX2mt2.jpg" alt="Steve Barnett" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Steve Barnett</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//qOzSQ4KjJizJQ9Vo8KlQFwFs4E2.jpg" alt="Romeo Visca" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Romeo Visca</p> <p class="text-gray-400" data-v-da975202></p></div></li><li class="cast-item swiper-slide" data-v-da975202><div class="cast-image" data-v-da975202><img data-src="https://www.themoviedb.org/t/p/w138_and_h175_face//ktYraVamronDbMWFArEcNQQAxdA.jpg" alt="Daniel Westwood" class="swiper-lazy" data-v-da975202> <div class="swiper-lazy-preloader" data-v-da975202></div></div> <div class="text-2xl mt-2 text-left" data-v-da975202><p class="text-gray-100" data-v-da975202>Daniel Westwood</p> <p class="text-gray-400" data-v-da975202></p></div></li></ul></div> <div class="reviews" data-v-5c50ff08 data-v-1cb37e65><ul data-v-5c50ff08><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/4a9a45f974f2a8d87aa8c22c2d9c6ac2.jpg" alt="cutprintchris" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              cutprintchris
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2015-11-07T14:09:25.776Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>0</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08><a href="http://www.cutprintfilm.com/reviews/spectre/"</a>
+
+In hindsight my excitement for Spectre seems a bit foolish. After Skyfall, director Sam Mendes openly stated that he wouldn’t direct another Bond movie. And even so, Skyfall wasn’t the best of the new Bond films by any measure – dragging on for much too long. But somehow I got sucked into the hype of Mendes’ vision for an homage to the classic Bond, with that somewhat iconic poster of Craig mimicking Roger Moore, and trailers the emphasized a kind of retro re-visitation of some old villains and themes. But Spectre is none of those things, instead it is a film where everyone involved feels like they are just going through the motions. Spectre tries very hard to be an homage to the vintage James Bond classics, but instead ends up feeling more like a mockery of the series.
+
+For starters the script is outrageously weak and predictable. Bond goes from shootout, to chase, to sex scene, saying and doing the exact same things he has done for the last 23 movies. Instead of a complete story, the film is just a collection of set pieces and scenes loosely stitched together. And while some of them work well on their own, by the second or third fight scene, you won’t be able to stop yourself from yawning. When you aren’t yawning you’ll be laughing, and not in a good way. The dialogue is downright cheesy. Gone is all of Bond’s smooth charm and ability to sting his opponent’s with his tongue just as much as with his gun. Instead at one point, he throws a watch bomb and says: “Time flies!”
+
+Bond is one a secret mission, assigned to him by M (Judi Dench) via a video message delivered after her death. The film doesn’t ever attempt to invest the audience in this mission, or in Bond’s motivation for seeking out Oberhauser (Christoph Waltz) – which apparently has something to do with his foster-father and his childhood, again – but it never seems important to the story or to James. Meanwhile, a new joint secretary, Max or C as he is known (Andrew Scott), is attempting to unite the world’s intelligence under one surveillance network – and through doing so making the Double-0 program obsolete. Lucky for him, Sam Mendes is already doing that for him.
+
+However, Spectre is a beautiful film. There are about five or six huge set pieces, all of which are wonderfully filmed. And if you are just in the mood the veg out and watch Bond cruise through the streets of Rome in a prototype Aston Martin, than this is the movie for you. But things go on for entirely too long, which would be fine if something of interest were happening. But almost nothing does. Bond gets in a situation and gets out, all while throwing a few pithy, laughable, lines out.
+
+Daniel Craig has never been more disconnected from the character James Bond, than he is in Spectre. I must say first, that I love Craig as an actor and as James Bond – he is my favorite of all the Bonds. But here, he is uncharacteristically not James Bond. A scene for instance where bond throws his gun into the river, is done in such a fancy foppish way that I cringed. It is tough to properly convey how Craig misses the mark in Spectre, but when you see it, you won’t be able to help feeling the same way.
+
+Maybe Sam Mendes and screenwriter John Logan did succeed at creating a perfect homage to the Roger Moore era Bond films? Because in reality, none of those films standout as great movies. From start to finish, Spectre feels like someone filling out a madlibs of Bond scenes, and praying that when they read it back, it makes some sense.</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/d0204b6265e0cf3cc7cd80809df35ba2.jpg" alt="Frank Ochieng" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              Frank Ochieng
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2015-11-08T04:47:53.765Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>0</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>Well, cinema’s most treasured and resilient British spy guy is back as the legendary James Bond makes his twenty-fourth outing on the big screen in the highly anticipated and slickly-made Spectre. Worldwide Agent 007 fans understandably maintain their embedded expectations and vision as to what calculating and cunning mission their suave and sophisticated gun-toting, martini-sipping espionage thrill-seeker will encounter in his latest globe-trotting episode. Whatever Bond enthusiasts have in mind for the future twenty-fifth entry of the “licensed to kill” Lothario they should simply settle for the present stimulating currents that trickle as mind-bending material in the polished and percolating Spectre.
+
+As for the dynamic performer that have served his time with action-oriented cinematic sensibilities through three previous super-charged James Bond installments, the steely-jawed and diligent Daniel Craig is back on the saddle again for his fourth stint as the crafty 007. Naturally both ardent and casual Bond followers can rattle off the filmography of Craig’s on-screen tour of duty as the debonair and daring secret service operative and even rate the previous films as they compare and contrast each edition.  Some may give special attention to Craig’s first foray into stepping inside Bond’s explosive shoes for 2006’s Casino Royale that is considered a spectacular introduction for the dramatically trained actor. In 2008’s Quantum of Solace, it was a mixed bag at best as Bond followers for the most part gave this second 007 rendition an ambivalent sign of approval (not too many were thrilled with the awkward movie title either). Thankfully, 2012’s Skyfall bounced back for Craig’s take on the roguish Bond and made for some exceptional brownie points as the cagey spy returning to creative prominence. Now 2015’s Spectre hopes to make some hearty tie-ins to Craig’s past big screen adventures as the stoic jet-setting dynamo ridding the world of masterful riff raff.
+
+In actuality, Spectre is serviceable in that it is an elaborate and excitable reminder of the preceding Bond films where bits of nostalgic elements from yesteryear are sprinkled throughout its presentation. Sure, some wily 007 fanatics may spot a few of the tossed in nods to the aforementioned Casino Royale and Quantum of Solace in particular as the proceedings unfold. For the most part, Spectre acts as a mere bridge to the launching of the upcoming 25th Bond actioner in waiting. To be fair the other Bond films have served as a welcome mat to the next chapter of the late Ian Fleming’s engaging and charismatic man of action so why should not Spectre be any different in this regard? Still, this spy caper has its signature swagger that Bond aficionados relish with familiarity: heart-pumping action sequences, exquisite locales, desirable and devious Bond women, majestic car chases, larger-than-life villains and their loyal henchmen, imaginative gadgets and inventive technology and yes…the indomitable James Bond at your service. Nevertheless. the minor knock on Spectre is that it could have risen to the occasion more than it did as it occasionally feels as if it is going through the mischievous motions. It never resorts to the levels of Bond-ish drudgery in Quantum of Solace so that certainly is a relief in that aspect.
+
+Spectre does incorporate its share of opulence, mystery, suspense, shadowy tension and perilous plight. However, where the standard Bond film-making characteristics are somewhat consistent and captivating (i.e. the breathtaking opening sequence of the Day of the Dead celebration in Mexico City) there is also a questionable consideration for the weak-kneed Bond theme song in Sam Smith’s “Writing’s on the Wall” which seems so inadequately suited for a James Bond signature tune. Even the indifferent observers of the James Bond film franchise for the last five decades can attest to the two most important stamps of a Bond film–its opening scene and surging theme song.  Thankfully, Spectre’s grand opening sequence obeys traditional Bond practices but Smith’s doggedly tired-sounding “Writing’s on the Wall” feels as it belongs attached to an old televised After School special from the mid-70s. Wouldn’t you give your kingdom for Paul McCartney and Wings’ “Live and Let Die” or Carly Simon’s “Nobody Does It Better” or perhaps even Sheena Easton’s “For Your Eyes Only”?
+
+One thing that can be said about Craig’s Bond in Spectre and that is his image transformation has been elevated to that of a fashion plate whose GQ stylized look has taken quite a step up. Not since Roger Moore’s Bond has there been a clear case of dazzling attire on display for Agent 007 to strut his stuff in spiffy clothing accessories throughout his ventured travels. Craig, billed as a “blue-collar” Bond whose demeanor is more blunt and workman-like, takes comfort in basking in the finesse shadows of a classic Agent 007 almost foreign to his distinctive spin on the iconic spy. In fact, the overall vibe for Spectre seems to lie in the middle of old school and new school James Bond mythology where the shading suits both camps of the ever-lasting film franchise.
+
+Director Sam Mendes, who handled the direction for the previous Skyfall, finds the right tone and temple for Spectre that certainly shows off its lavish and ambitious production values as the set designs, scenic locations, fabulous pre-credits action sequence are all indescribable in majestic scope. No one can accuse Spectre as to not holding its own in visual functionality. Wisely, Mendes does not forget his Skyfall background players as they reunite with Craig’s Bond and partake in the sensationalized cat-and-mouse caper. It is refreshing to see Ralph Fiennes back as “M” not to mention Ben Wishaw’s “Q” front and center. And a Craig-fronted Bond film would not be the same without Naomie Harris as Miss Moneypenny.
+
+Agent 007 fans will find a common "Bond" with Daniel Craig and his fourth outing as the licensed to kill Lothario in the stunning and kinettic SPECTRE
+Agent 007 fans will find a common “Bond” with Daniel Craig and his fourth outing as the licensed to kill Lothario in the stunning and kinetic SPECTRE
+It is a given that the diabolical criminal network known as SPECTRE has always had its affiliation with the Bond universe especially in the classic Sean Connery Bond-age years. Instinctively, SPECTRE’s evil heart and soul was pumped continuously by that organization’s dastardly mastermind Ernst Stavro Blofeld. Oscar winner Christoph Waltz does the sordid honors of taking the reins as Bond’s nemesis Franz Oberhauser in Spectre with devilish delight and is more colorfully corrupt thanks to his handy go-to muscular minion Mr. Hinx (ex-professional WWE wrestler and “Guardians of the Galaxy” star Dave Bautista) echoing the memories of beloved brute Jaws (played by the late Richard Kiel) from The Spy Who Loved Me and Moonraker). 
+
+We can never forget that along with Agent 007 folklore comes the responsibility of being labeled a treasured Bond babe. And although the latest sultry women represented in Spectre will never make us forget the iconic likes of Dr. No’s Ursula Andress (Honey Ryder) or Casino Royale’s Eva Green (Vesper Lynd) for that matter they still hold their own and give a measure of titillation to both Bond and the vast amount of male admirers wishing they carried a gun and wore expensive tuxedos while being at the receiving end of a provocative smooch by these vibrant vixens. Lea Seydoux’s Madelene Swann and Italian siren Monica Bellucci’s Lucia are on board as the Bond bombshells for hire.
+
+As a whole, Spectre has its up and down moments and never is quite sure about standing alone as an independent Bond story or being dismissed as a pit stop for 007-related flashbacks and reference bits ode to yesteryear’s glory of the super spy’s engaging and raging exploits. The verdict is that Spectre ultimately satisfies one’s craving for the invincible James Bond whether you can to relive his vintage reputation or look forward to a millennium-enhanced production that will grow with the ageless wonderment pertaining to Fleming’s literary ladies man-turned movie-making mainstay of action-packed cinema for half a century. As one-time Bond songbird Carly Simon would attest in her soothing lyrics, “nobody does it better…”  Yet in the dimensional escapist world of James Bond this particular go-around could have been a tad bit better.
+
+Spectre (2015)
+
+Sony Pictures
+
+2 hrs 28 mins.
+
+Starring: Daniel Craig, Christoph Waltz, Lea Seydoux, Naomie Harris, Ben Whishaw, Dave Bautista, Monica Bellucci, Andrew Scott
+
+Directed by: Sam Mendes
+
+MPAA Rating: PG-13
+
+Genre: Spy-Espionage Caper/Action & Adventure/Suspense Thriller
+
+Critic’s rating: ** 1/2 stars (out of 4 stars)
+
+(c) Frank Ochieng (2015)</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/03a53cd53b8254fe582d4fe1acc26c4e.jpg" alt="Andres Gomez" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              Andres Gomez
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2015-11-16T16:05:38.566Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>60</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>A "correct" Bond movie. All the expected stereotypes are included, Waltz is an OK bad guy and the intro scene is something really impressive.
+
+Nothing else really new ...</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.themoviedb.org/t/p/w45_and_h45_face//6ZpVUJzqXMzH35VprEtnX0sNI3.jpg" alt="Reno" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              Reno
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2016-02-14T14:48:05.502Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>70</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>> Not your usual Bond movie, but still a good entertainer.
+
+What I liked from a couple of last Bond movies was they were off the regular 007 style, like not overly rely on spy's special gadgets. This change has been since the day one of Daniel Craig as a famous British spy, James Bond. Anyway, he's the most fittest (muscular) Bond I've ever seen and he's celebrating 10 year anniversary with this film release. But the question is whether he to do another film or done with the franchise. The doubt after the confusing end of this film.
+
+The end was quite clear on the story perspective, so I kind of felt it was a farewell for Craig. But, later I came to know that the official source says Bond25 will be his fifth and so on till he opts out himself. 'Spectre' was a very simple Bond movie I have ever seen, but I can say the production quality was so good that you can't resist the enjoyment. The actors, they were also good, but not as I anticipated. Maybe many scenes were very ordinary for a Bond movie, that's comparable with the nowadays action movies, otherwise it was not as bad as critics expressing their disappointment.
+
+You can't believe what I was disappointed, you know when they say what the C stands for - is that the best word they come up with against the M for Moron? Anyway, James Bond movies have always had ups and downs, the last film 'Skyfall' was a mega hit and now this has not stood up to that standard. But very entertaining with all the actions and unexpected turns in the narration. As a spy movie, it was okay, but as a Bond movie is what might upset you, so its upto you how you look at it. But to be honest, I enjoyed it.
+
+7/10</p></li><li data-v-5c50ff08><div class="flex justify-between items-center" data-v-5c50ff08><div class="flex justify-start items-center" data-v-5c50ff08><div class="avatar" data-v-5c50ff08><img src="https://www.gravatar.com/avatar/992eef352126a53d7e141bf9e8707576.jpg" alt="MSB" data-v-5c50ff08></div> <div class="ml-5" data-v-5c50ff08><p class="text-4xl font-bold text-gray-100" data-v-5c50ff08>
+              MSB
+            </p> <p class="text-2xl text-gray-400" data-v-5c50ff08>2021-09-29T16:19:20.125Z</p></div></div> <div class="vote-ball bg-gradient" data-v-5c50ff08><p class="text-4xl" data-v-5c50ff08>70</p></div></div> <p class="text-3xl leading-normal mt-5" data-v-5c50ff08>FULL SPOILER-FREE REVIEW @ https://www.msbreviews.com/movie-reviews/spectre-spoiler-free-review
+
+"Spectre fails to reach the tremendous potential of its intriguing narrative and fascinating antagonist, but Sam Mendes still pulls off a decent James Bond flick.
+
+The screenplay raises significant issues with an incredibly dull subplot that deeply affects the pacing of a bloated runtime. In addition to this, Christoph Waltz's lack of impactful screentime is disappointing, to say the least, despite a brilliant performance from the actor.
+
+Fortunately, the jaw-dropping action set pieces elevate the overall film, which also benefits from gorgeous cinematography (Hoyte van Hoytema) and exceptional acting across the board. Daniel Craig and Léa Seydoux's characters relationship is emotionally compelling, making Bond's mission feel more like an interesting personal journey.
+
+One of the best movies of the franchise is buried somewhere under the messy screenplay, but what can be found at the surface has much to appreciate."
+
+Rating: B</p></li></ul></div></div></div></div> <div class="pic-bar" data-v-1cb37e65><div style="background-image:url(\n        https://image.tmdb.org/t/p/w1920_and_h800_face//tcf8WL3Lf1nWkOOT7SdhbS2kU6E.jpg\n      );" data-v-1cb37e65></div></div> <div class="recommendations" data-v-02596022 data-v-1cb37e65><h2 class="text-4xl font-bold" data-v-02596022>為您推薦</h2> <ul class="flex justify-start items-start flex-wrap mt-10" data-v-02596022><li data-v-02596022><a href="/Movie/37724" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//vEPZB8upmcHiL3YnDL4O26DuJTf.jpg" alt="007：空降危機" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/10764" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//y4Soh6fEfqKlVJaLmhMEGQz6pj.jpg" alt="007：量子危機" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/36557" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//tcwOHLGgTSqtF5nZnMLSevYTkZC.jpg" alt="007首部曲：皇家夜總會" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/140607" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//wNdrXBAFbfgpKgprtTFnoePn86x.jpg" alt="星際大戰七部曲：原力覺醒" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/177677" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//glzi3sDVg96A7pJD4eR6wSULn0x.jpg" alt="不可能的任務：失控國度" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/286217" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//5HUENHVv7wlqwptGkBmEmQkIBAV.jpg" alt="絕地救援" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/131634" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//bTLC6ghTfn3rZYdzVPaSXzlly14.jpg" alt="飢餓遊戲3：自由幻夢終結戰" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/87101" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//l047uMUzvXKcK2yU1jr1orAvBmW.jpg" alt="魔鬼終結者：創世契機" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/135397" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//edBEPUqnfKFzVQdWpvHGUR1fXO6.jpg" alt="侏羅紀世界" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/207703" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//ycWsWIlZMhcHUast6DtEZvDSXOa.jpg" alt="金牌特務" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/710" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//5qD5eSKi1uCpgPcdjtZsaXy5rVX.jpg" alt="007：黃金眼" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/36669" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//b63hw5cUm3dBvEy8oowf0kg6fO.jpg" alt="007：誰與爭鋒" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/122917" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//pc8IPgkc3GFztHkcu85SlT6sOjh.jpg" alt="哈比人：五軍之戰" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/102899" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//f5z4gdZsmtXPsMw3kFFQ228FhLM.jpg" alt="蟻人" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/281957" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//xIuLuV9JJOgD4wB41AC88ZoQwQa.jpg" alt="神鬼獵人" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/36643" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//qtJsbZ9vISsI9nZzqreXolAKJpz.jpg" alt="007：縱橫天下" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/168259" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//tUO7TJ0CxMpAI1zcbiojOOmleXr.jpg" alt="玩命關頭7" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/714" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//5xF1rWo5v7S7jILyJKmeQhcvu1k.jpg" alt="007：明日帝國" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/76341" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//vdCuNjhq72YrKZkOpGYQMtlXfde.jpg" alt="瘋狂麥斯：憤怒道" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/127585" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//cEa0ebJoGZ30Tioy9gwg3VNnert.jpg" alt="X戰警：未來昔日" data-v-02596022></div></a></li><li data-v-02596022><a href="/Movie/99861" data-v-02596022><div class="video-post" data-v-02596022><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2//7pRypZrAoCMApk7iy29ZifqMfne.jpg" alt="復仇者聯盟2：奧創紀元" data-v-02596022></div></a></li></ul></div></div></div> <div class="appFooter" data-v-5025bf52><p class="text-center text-2xl" data-v-5025bf52>
+    本網站由<a href="https://www.themoviedb.org/?language=zh-TW" target="_blank" data-v-5025bf52>The Movie Database</a>提供資料
+  </p></div></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,_,$,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao,ap,aq,ar,as,at,au,av,aw,ax,ay,az,aA,aB,aC,aD,aE,aF,aG,aH,aI,aJ,aK,aL,aM,aN,aO,aP,aQ,aR,aS,aT,aU,aV,aW,aX,aY,aZ,a_,a$,ba,bb,bc,bd,be){return {layout:"default",data:[{detail:{adult:a,backdrop_path:"\u002Ftcf8WL3Lf1nWkOOT7SdhbS2kU6E.jpg",belongs_to_collection:{id:645,name:"007詹姆士龐德（系列）",poster_path:"\u002FHORpg5CSkmeQlAolx3bKMrKgfi.jpg",backdrop_path:"\u002FdOSECZImeyZldoq0ObieBE0lwie.jpg"},budget:245000000,genres:[{id:f,name:"动作"},{id:d,name:"冒险"},{id:h,name:"惊悚"}],homepage:"https:\u002F\u002Fwww.mgm.com\u002Fmovies\u002Fspectre",id:206647,imdb_id:"tt2379713",original_language:e,original_title:"Spectre",overview:"《007：惡魔四伏》將交代龐德身世秘密，揭開他不可告人的過去。劇情描述一則由前任M遺留下的神秘訊息，促使龐德開始追查一個名叫「魔鬼黨」的國際犯罪組織，在新任M（雷夫范恩斯）努力保全MI6時，龐德已抽絲剝繭，發現惡魔黨隱藏在層層謊言下的恐怖真相。",popularity:44.547,poster_path:"\u002FA24yPLfm6TOihPTPbWws0tOjJFH.jpg",production_companies:[{id:v,logo_path:"\u002F71BqEFAF4V3qjjMPCpLuyJFB9A.png",name:"Columbia Pictures",origin_country:o},{id:w,logo_path:"\u002FaOWKh4gkNrfFZ3Ep7n0ckPhoGb5.png",name:"Metro-Goldwyn-Mayer",origin_country:o},{id:7576,logo_path:"\u002FoYcUi1byZ312Z3xiz5ojz9RQLND.png",name:"Eon Productions",origin_country:x},{id:3045,logo_path:"\u002F5jNRqXspCmQ3XkHNzuZIbvnHOWw.png",name:"Sony Pictures Releasing",origin_country:o}],production_countries:[{iso_3166_1:x,name:"United Kingdom"},{iso_3166_1:o,name:"United States of America"}],release_date:"2015-10-26",revenue:880674609,runtime:148,spoken_languages:[{english_name:"French",iso_639_1:"fr",name:"Français"},{english_name:y,iso_639_1:e,name:y},{english_name:"Spanish",iso_639_1:"es",name:"Español"},{english_name:"Italian",iso_639_1:"it",name:"Italiano"},{english_name:"German",iso_639_1:"de",name:"Deutsch"}],status:"Released",tagline:z,title:"007：惡魔四伏",video:a,vote_average:6.5,vote_count:8987},casts:[{adult:a,gender:c,id:8784,known_for_department:b,name:A,original_name:A,popularity:14.727,profile_path:"\u002FiFerDZUmC5Fu26i4qI8xnUVEHc7.jpg",cast_id:i,character:"James Bond",credit_id:"52fe4d22c3a368484e1d8d6b",order:k},{adult:a,gender:c,id:27319,known_for_department:b,name:B,original_name:B,popularity:11.129,profile_path:"\u002F2Hhztd4mUEV9Y25rfkXDwzL9QI9.jpg",cast_id:n,character:"Franz Oberhauser \u002F Ernst Stavro Blofeld",credit_id:"54805866c3a36829ab002592",order:i},{adult:a,gender:i,id:121529,known_for_department:b,name:C,original_name:C,popularity:17.406,profile_path:"\u002FtUfoM95x70Qsb1ElClPSpSrZQ2v.jpg",cast_id:D,character:"Dr. Madeleine Swann",credit_id:"546f934fc3a3682f9a002ca5",order:c},{adult:a,gender:c,id:5469,known_for_department:b,name:E,original_name:E,popularity:27.412,profile_path:"\u002FtJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg",cast_id:F,character:"M",credit_id:"53e86503c3a368399c0031f0",order:3},{adult:a,gender:i,id:2038,known_for_department:b,name:G,original_name:G,popularity:9.787,profile_path:"\u002FpDFs4gSeKSyIF8PditvtHqAq687.jpg",cast_id:H,character:"Eve Moneypenny",credit_id:"53e8650cc3a368399c0031f4",order:4},{adult:a,gender:c,id:17064,known_for_department:b,name:I,original_name:I,popularity:20.454,profile_path:"\u002F2GBtQ6scGeSHkX1urOP1EJbmksx.jpg",cast_id:J,character:"Q",credit_id:"52fe4d22c3a368484e1d8d87",order:v},{adult:a,gender:i,id:28782,known_for_department:b,name:K,original_name:K,popularity:26.456,profile_path:"\u002Fk0GJCAfBNCFKamJ56pBPk9gqhLy.jpg",cast_id:17,character:"Lucia Sciarra",credit_id:"54805920c3a36829ae0022c5",order:L},{adult:a,gender:c,id:543530,known_for_department:b,name:M,original_name:M,popularity:25.978,profile_path:"\u002Fymn6iQBJbQZN6BYI60YJDXVP4gF.jpg",cast_id:N,character:"Mr. Hinx",credit_id:"5480590f9251416e7b0022f4",order:r},{adult:a,gender:c,id:125660,known_for_department:b,name:O,original_name:O,popularity:11.745,profile_path:"\u002FakbGBP3RI4siNLPr8Pa6YcD2NJt.jpg",cast_id:15,character:"Max Denbigh \u002F C",credit_id:"548058ffc3a36829a7002511",order:J},{adult:a,gender:c,id:139549,known_for_department:b,name:P,original_name:P,popularity:8.675,profile_path:"\u002F8aEABMeHXOozwE5DrMxUlCM9mpG.jpg",cast_id:19,character:"Bill Tanner",credit_id:"5480593cc3a36829ae0022ca",order:9},{adult:a,gender:c,id:2244,known_for_department:b,name:Q,original_name:Q,popularity:4.363,profile_path:"\u002F7GZSh6GABd4OpCOPAJWs1stZAee.jpg",cast_id:R,character:"Mr. White",credit_id:"5517b3849251416f0d0032c8",order:F},{adult:a,gender:k,id:1381616,known_for_department:b,name:S,original_name:S,popularity:1.052,profile_path:"\u002Fdd6nC7HoQmLC5utt7H2ZwS0w49o.jpg",cast_id:T,character:"Marco Sciarra",credit_id:"5517b398c3a36862fc002df6",order:H},{adult:a,gender:i,id:929937,known_for_department:b,name:U,original_name:U,popularity:9.027,profile_path:"\u002F9ZOVeNIGXziOXBSDNu60pvzuKrs.jpg",cast_id:V,character:"Estrella",credit_id:"5517b3c49251412c1e00180b",order:d},{adult:a,gender:c,id:87265,known_for_department:b,name:W,original_name:W,popularity:7.703,profile_path:"\u002F5qoAmQpcPCjf4Pd6aTZOeINGYzk.jpg",cast_id:X,character:"Mexican Man in Lift",credit_id:"5664561cc3a3682bd0007fc8",order:D},{adult:a,gender:i,id:983710,known_for_department:b,name:Y,original_name:Y,popularity:5.503,profile_path:"\u002FaUBNKmudV1CCMUHskWemg58vc3n.jpg",cast_id:Z,character:"Mexican Woman in Lift",credit_id:"5664561dc3a3682be9008dc6",order:n},{adult:a,gender:k,id:1545546,known_for_department:b,name:_,original_name:_,popularity:.916,profile_path:"\u002F8zbTUTCYi01rjlAfXw2AaAglUjL.jpg",cast_id:$,character:"Gallo's Accomplice",credit_id:"5664561dc3a3682bd8008fbe",order:N},{adult:a,gender:k,id:122556,known_for_department:b,name:aa,original_name:aa,popularity:4.795,profile_path:"\u002Fn77hqqUOLvUU4li9VuXxs2NeejJ.jpg",cast_id:181,character:"Q's Assistant",credit_id:"56fddc319251412a4d0009f9",order:s},{adult:a,gender:c,id:230681,known_for_department:b,name:ab,original_name:ab,popularity:2.081,profile_path:"\u002FIcDsytdwVl8WcLjNz1LezKkNbK.jpg",cast_id:184,character:"SC019 Police Commander",credit_id:"56fddccf9251412a4b000b5d",order:w},{adult:a,gender:c,id:30446,known_for_department:b,name:ac,original_name:ac,popularity:1.476,profile_path:"\u002FgHX0eakDGXnfgh7GeaKKDN9rn67.jpg",cast_id:185,character:"SC019 Police Officer",credit_id:"56fddce6c3a36821ae000b45",order:22},{adult:a,gender:c,id:48377,known_for_department:b,name:ad,original_name:ad,popularity:1.643,profile_path:"\u002Fhtcsjd0FVBorC69sRFbcoxgNbGa.jpg",cast_id:27,character:"Priest",credit_id:"5517b4f69251416efe003370",order:R},{adult:a,gender:k,id:578512,known_for_department:b,name:ae,original_name:ae,popularity:3.557,profile_path:"\u002FmiVqu4QMnwX4EkLM1HnDmyKsudo.jpg",cast_id:38,character:"Moreau",credit_id:"56486811c3a3682605006adc",order:T},{adult:a,gender:i,id:1093974,known_for_department:b,name:af,original_name:af,popularity:1.4,profile_path:"\u002FxjRbpfeQl1YkVcqoET8UG29roGf.jpg",cast_id:ag,character:"Vogel",credit_id:"56486820c3a368261a006de7",order:V},{adult:a,gender:c,id:89624,known_for_department:b,name:ah,original_name:ah,popularity:3.075,profile_path:"\u002Fq4Cp7a7LQ95azSlT5NqDXkR23qN.jpg",cast_id:41,character:"Abrika",credit_id:"564868a09251413ad7006da5",order:26},{adult:a,gender:c,id:226388,known_for_department:b,name:ai,original_name:ai,popularity:1.412,profile_path:"\u002Fh6VkTUhcbGwmdWFPvfhMhajG7n5.jpg",cast_id:aj,character:"Lorenzo",credit_id:"564868c5c3a368260c006ee4",order:f},{adult:a,gender:c,id:1299312,known_for_department:b,name:ak,original_name:ak,popularity:3.275,profile_path:l,cast_id:187,character:"Francesco",credit_id:"56fddd9cc3a36821a4000b5b",order:29},{adult:a,gender:c,id:124628,known_for_department:b,name:al,original_name:al,popularity:1.553,profile_path:"\u002Fx7BhdPACClTEhEMH3OKpUR6dpCC.jpg",cast_id:188,character:"Marco",credit_id:"56fdddb79251412a50000aad",order:30},{adult:a,gender:c,id:1562103,known_for_department:b,name:am,original_name:am,popularity:.706,profile_path:"\u002FkH9HwKOEnSKAJeMYSrxpJkcDzrv.jpg",cast_id:189,character:"Palazzo Security",credit_id:"56fdddd69251412a56000ac6",order:an},{adult:a,gender:c,id:1247684,known_for_department:b,name:ao,original_name:ao,popularity:1.416,profile_path:"\u002FxwKUAlPJgBfoD3STXavuVeiO7Hi.jpg",cast_id:191,character:p,credit_id:"56fdde0d9251416cc200004c",order:33},{adult:a,gender:c,id:1599245,known_for_department:b,name:ap,original_name:ap,popularity:.998,profile_path:"\u002FvIfBzNhjOrmvubovIutWibvhoRO.jpg",cast_id:192,character:p,credit_id:"56fdde1bc3a36821b1000ba8",order:34},{adult:a,gender:c,id:1599247,known_for_department:b,name:aq,original_name:aq,popularity:2.339,profile_path:"\u002F9nRdPKeHZ78B4yP1ikFM1xYcfFn.jpg",cast_id:193,character:p,credit_id:"56fdde259251412a42000b93",order:ar},{adult:a,gender:c,id:1599251,known_for_department:b,name:as,original_name:as,popularity:1.135,profile_path:l,cast_id:194,character:p,credit_id:"56fdde9fc3a36821b6000ba0",order:36},{adult:a,gender:c,id:123548,known_for_department:b,name:at,original_name:at,popularity:2.707,profile_path:"\u002FnLz6lePlHNQ7WDT9mRN8MTJ1BnB.jpg",cast_id:197,character:"Fiat Driver",credit_id:"56fddef89251412a47000a79",order:ag},{adult:a,gender:c,id:1404403,known_for_department:b,name:au,original_name:au,popularity:1.455,profile_path:"\u002Fx28iFuA9LUBMxpWatTdUFPEXSIC.jpg",cast_id:200,character:m,credit_id:"56fddf69c3a36821a7000b12",order:aj},{adult:a,gender:c,id:74415,known_for_department:b,name:av,original_name:av,popularity:.972,profile_path:"\u002FftbR9VQIwiiFjtwx9FTImWCxXhr.jpg",cast_id:201,character:m,credit_id:"56fddf7fc3a36821b1000c0d",order:43},{adult:a,gender:c,id:1599256,known_for_department:b,name:aw,original_name:aw,popularity:1.579,profile_path:"\u002F4RlyQn1NkoAn5izaWPqXBC6BZTv.jpg",cast_id:202,character:m,credit_id:"56fddf89c3a368219d000adb",order:44},{adult:a,gender:c,id:1599257,known_for_department:b,name:ax,original_name:ax,popularity:.608,profile_path:"\u002F93KIHd00iHFotZz3uTdCugNke7o.jpg",cast_id:203,character:m,credit_id:"56fddf929251412a56000b29",order:45},{adult:a,gender:c,id:1599258,known_for_department:b,name:ay,original_name:ay,popularity:.794,profile_path:"\u002F5HxIjJpOHc3XDvS3FV7ozWlgXnq.jpg",cast_id:204,character:m,credit_id:"56fddf9cc3a36821ae000be1",order:46},{adult:a,gender:c,id:1599260,known_for_department:b,name:az,original_name:az,popularity:1.048,profile_path:"\u002FaZBRrj6vEcQt10Kc9vYrEZZ4eYm.jpg",cast_id:206,character:m,credit_id:"56fddfef9251412a54000ba8",order:48},{adult:a,gender:c,id:1477143,known_for_department:b,name:aA,original_name:aA,popularity:2.53,profile_path:"\u002F8BwRFsXzWD25dPih6IePcRD3EjT.jpg",cast_id:207,character:m,credit_id:"56fde0179251412a47000ac2",order:X},{adult:a,gender:c,id:1599261,known_for_department:b,name:aB,original_name:aB,popularity:.988,profile_path:"\u002FznmKzcUlwetzhXSvtjpNN5esdVJ.jpg",cast_id:208,character:aC,credit_id:"56fde0809251416cc20000cb",order:Z},{adult:a,gender:c,id:1168129,known_for_department:b,name:aD,original_name:aD,popularity:1.314,profile_path:"\u002FwxKhKGxhcUy0aYXWQWWyECAkpnY.jpg",cast_id:209,character:aC,credit_id:"56fde0a49251412a47000ae0",order:$},{adult:a,gender:c,id:48393,known_for_department:b,name:aE,original_name:aE,popularity:.757,profile_path:l,cast_id:40,character:"Clinic Barman",credit_id:"56486850c3a368260c006ecf",order:52},{adult:a,gender:c,id:1599262,known_for_department:b,name:aF,original_name:aF,popularity:1.272,profile_path:"\u002FimlMAKdnIjMBqNwyXXlQ8kLANBz.jpg",cast_id:211,character:"Clinic Security Guard",credit_id:"56fde118c3a36821a4000c3c",order:54},{adult:a,gender:c,id:14637,known_for_department:b,name:aG,original_name:aG,popularity:1.82,profile_path:"\u002FzhyY3UItsuekeNYqUkauLOGqnsd.jpg",cast_id:177,character:aH,credit_id:"5696db21c3a3683af90002d6",order:55},{adult:a,gender:c,id:1599263,known_for_department:b,name:aI,original_name:aI,popularity:1.242,profile_path:"\u002FbHor8UdG5x1Pp4H95bcsYGciXO9.jpg",cast_id:212,character:aH,credit_id:"56fde128c3a368219d000b4f",order:56},{adult:a,gender:c,id:1599266,known_for_department:b,name:aJ,original_name:aJ,popularity:5.53,profile_path:"\u002FpHj0zrUaoFbxQFmgTA1PiAM3jgW.jpg",cast_id:215,character:q,credit_id:"56fde18dc3a36821b6000c4f",order:59},{adult:a,gender:c,id:1599267,known_for_department:b,name:aK,original_name:aK,popularity:.728,profile_path:"\u002FaGzxhw6n2Ns6X1Y9q97Tdiu9Ehk.jpg",cast_id:216,character:q,credit_id:"56fde1989251412a54000c16",order:60},{adult:a,gender:c,id:1599268,known_for_department:b,name:aL,original_name:aL,popularity:1.318,profile_path:"\u002FaLZWFHcDgBI3FbJj1GtfN5wTjFZ.jpg",cast_id:217,character:q,credit_id:"56fde1a39251412a42000c58",order:61},{adult:a,gender:c,id:1599269,known_for_department:b,name:aM,original_name:aM,popularity:.92,profile_path:"\u002FmNhpOs2Z641nVoVtdbHvtZIwmvl.jpg",cast_id:218,character:q,credit_id:"56fde1aec3a36821ab000cbf",order:62},{adult:a,gender:i,id:1102369,known_for_department:b,name:aN,original_name:aN,popularity:.917,profile_path:"\u002Feu9OgC5KyJiRuM9dAYY8PBeND9I.jpg",cast_id:222,character:"L'Americain Manater",credit_id:"56fde24c9251412a45000bfb",order:66},{adult:a,gender:c,id:1363060,known_for_department:b,name:aO,original_name:aO,popularity:1.103,profile_path:"\u002FkZGOAcIk59ERmgJZbAeiPBmDpPv.jpg",cast_id:224,character:"Train Waiter",credit_id:"56fde2869251412a50000bf1",order:68},{adult:a,gender:c,id:1599275,known_for_department:b,name:aP,original_name:aP,popularity:1.361,profile_path:"\u002F2wWZUE8CWkANDL1AKaeUet2gu1k.jpg",cast_id:225,character:"Train Barman",credit_id:"56fde2969251412a45000c15",order:69},{adult:a,gender:c,id:1599277,known_for_department:b,name:aQ,original_name:aQ,popularity:aR,profile_path:"\u002Fj1rQTztSeQFT7NeOqwPesUgBB4P.jpg",cast_id:227,character:aS,credit_id:"56fde2eb9251416cc200015b",order:71},{adult:a,gender:c,id:229320,known_for_department:b,name:aT,original_name:aT,popularity:1.021,profile_path:"\u002FtKs0EF548UZorFvMFoHRLZZBF9e.jpg",cast_id:228,character:aS,credit_id:"56fde3059251412a47000b6a",order:72},{adult:a,gender:c,id:1599280,known_for_department:b,name:aU,original_name:aU,popularity:.98,profile_path:"\u002FgopMHw0KfXMatsZzudCHhrm6ols.jpg",cast_id:232,character:"Blofeld's Chief Analyst",credit_id:"56fde37f9251412a4b000cf7",order:76},{adult:a,gender:i,id:5309,known_for_department:b,name:aV,original_name:aV,popularity:8.231,profile_path:"\u002Fcpna5VGvAxuKuC31xJPBKy9zbnv.jpg",cast_id:an,character:"M (uncredited)",credit_id:"562f218fc3a3681b5200c9e5",order:77},{adult:a,gender:i,id:1682535,known_for_department:b,name:aW,original_name:aW,popularity:4.167,profile_path:"\u002F1tT9HYwy0lTw4UWtTJC0RexcKgo.jpg",cast_id:246,character:"Lair Staff (uncredited)",credit_id:"57e124d992514104530055ec",order:79},{adult:a,gender:c,id:2341042,known_for_department:b,name:aX,original_name:aX,popularity:2.582,profile_path:"\u002FjZoBtHSq44OGQ6gsSWRgVsX2mt2.jpg",cast_id:331,character:"Russian Bodyguard (uncredited)",credit_id:"5e81fd68e04aca00140355d8",order:81},{adult:a,gender:k,id:1754600,known_for_department:b,name:aY,original_name:aY,popularity:aR,profile_path:"\u002FqOzSQ4KjJizJQ9Vo8KlQFwFs4E2.jpg",cast_id:335,character:"Bodyguard (uncredited)",credit_id:"5fa54c969ac5350040b20def",order:82},{adult:a,gender:k,id:1371439,known_for_department:b,name:aZ,original_name:aZ,popularity:4.257,profile_path:"\u002FktYraVamronDbMWFArEcNQQAxdA.jpg",cast_id:337,character:"Police Marksman (uncredited)",credit_id:"610c5f37a1353300478c6441",order:83}],reviews:[{author:a_,author_details:{name:z,username:a_,avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002F4a9a45f974f2a8d87aa8c22c2d9c6ac2.jpg",rating:l},content:"\u003Ca href=\"http:\u002F\u002Fwww.cutprintfilm.com\u002Freviews\u002Fspectre\u002F\"\u003C\u002Fa\u003E\r\n\r\nIn hindsight my excitement for Spectre seems a bit foolish. After Skyfall, director Sam Mendes openly stated that he wouldn’t direct another Bond movie. And even so, Skyfall wasn’t the best of the new Bond films by any measure – dragging on for much too long. But somehow I got sucked into the hype of Mendes’ vision for an homage to the classic Bond, with that somewhat iconic poster of Craig mimicking Roger Moore, and trailers the emphasized a kind of retro re-visitation of some old villains and themes. But Spectre is none of those things, instead it is a film where everyone involved feels like they are just going through the motions. Spectre tries very hard to be an homage to the vintage James Bond classics, but instead ends up feeling more like a mockery of the series.\r\n\r\nFor starters the script is outrageously weak and predictable. Bond goes from shootout, to chase, to sex scene, saying and doing the exact same things he has done for the last 23 movies. Instead of a complete story, the film is just a collection of set pieces and scenes loosely stitched together. And while some of them work well on their own, by the second or third fight scene, you won’t be able to stop yourself from yawning. When you aren’t yawning you’ll be laughing, and not in a good way. The dialogue is downright cheesy. Gone is all of Bond’s smooth charm and ability to sting his opponent’s with his tongue just as much as with his gun. Instead at one point, he throws a watch bomb and says: “Time flies!”\r\n\r\nBond is one a secret mission, assigned to him by M (Judi Dench) via a video message delivered after her death. The film doesn’t ever attempt to invest the audience in this mission, or in Bond’s motivation for seeking out Oberhauser (Christoph Waltz) – which apparently has something to do with his foster-father and his childhood, again – but it never seems important to the story or to James. Meanwhile, a new joint secretary, Max or C as he is known (Andrew Scott), is attempting to unite the world’s intelligence under one surveillance network – and through doing so making the Double-0 program obsolete. Lucky for him, Sam Mendes is already doing that for him.\r\n\r\nHowever, Spectre is a beautiful film. There are about five or six huge set pieces, all of which are wonderfully filmed. And if you are just in the mood the veg out and watch Bond cruise through the streets of Rome in a prototype Aston Martin, than this is the movie for you. But things go on for entirely too long, which would be fine if something of interest were happening. But almost nothing does. Bond gets in a situation and gets out, all while throwing a few pithy, laughable, lines out.\r\n\r\nDaniel Craig has never been more disconnected from the character James Bond, than he is in Spectre. I must say first, that I love Craig as an actor and as James Bond – he is my favorite of all the Bonds. But here, he is uncharacteristically not James Bond. A scene for instance where bond throws his gun into the river, is done in such a fancy foppish way that I cringed. It is tough to properly convey how Craig misses the mark in Spectre, but when you see it, you won’t be able to help feeling the same way.\r\n\r\nMaybe Sam Mendes and screenwriter John Logan did succeed at creating a perfect homage to the Roger Moore era Bond films? Because in reality, none of those films standout as great movies. From start to finish, Spectre feels like someone filling out a madlibs of Bond scenes, and praying that when they read it back, it makes some sense.",created_at:"2015-11-07T14:09:25.776Z",id:"563e06159251413b1300c821",updated_at:"2021-06-23T15:57:38.376Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F563e06159251413b1300c821"},{author:t,author_details:{name:t,username:t,avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002Fd0204b6265e0cf3cc7cd80809df35ba2.jpg",rating:l},content:"Well, cinema’s most treasured and resilient British spy guy is back as the legendary James Bond makes his twenty-fourth outing on the big screen in the highly anticipated and slickly-made Spectre. Worldwide Agent 007 fans understandably maintain their embedded expectations and vision as to what calculating and cunning mission their suave and sophisticated gun-toting, martini-sipping espionage thrill-seeker will encounter in his latest globe-trotting episode. Whatever Bond enthusiasts have in mind for the future twenty-fifth entry of the “licensed to kill” Lothario they should simply settle for the present stimulating currents that trickle as mind-bending material in the polished and percolating Spectre.\r\n\r\nAs for the dynamic performer that have served his time with action-oriented cinematic sensibilities through three previous super-charged James Bond installments, the steely-jawed and diligent Daniel Craig is back on the saddle again for his fourth stint as the crafty 007. Naturally both ardent and casual Bond followers can rattle off the filmography of Craig’s on-screen tour of duty as the debonair and daring secret service operative and even rate the previous films as they compare and contrast each edition.  Some may give special attention to Craig’s first foray into stepping inside Bond’s explosive shoes for 2006’s Casino Royale that is considered a spectacular introduction for the dramatically trained actor. In 2008’s Quantum of Solace, it was a mixed bag at best as Bond followers for the most part gave this second 007 rendition an ambivalent sign of approval (not too many were thrilled with the awkward movie title either). Thankfully, 2012’s Skyfall bounced back for Craig’s take on the roguish Bond and made for some exceptional brownie points as the cagey spy returning to creative prominence. Now 2015’s Spectre hopes to make some hearty tie-ins to Craig’s past big screen adventures as the stoic jet-setting dynamo ridding the world of masterful riff raff.\r\n\r\nIn actuality, Spectre is serviceable in that it is an elaborate and excitable reminder of the preceding Bond films where bits of nostalgic elements from yesteryear are sprinkled throughout its presentation. Sure, some wily 007 fanatics may spot a few of the tossed in nods to the aforementioned Casino Royale and Quantum of Solace in particular as the proceedings unfold. For the most part, Spectre acts as a mere bridge to the launching of the upcoming 25th Bond actioner in waiting. To be fair the other Bond films have served as a welcome mat to the next chapter of the late Ian Fleming’s engaging and charismatic man of action so why should not Spectre be any different in this regard? Still, this spy caper has its signature swagger that Bond aficionados relish with familiarity: heart-pumping action sequences, exquisite locales, desirable and devious Bond women, majestic car chases, larger-than-life villains and their loyal henchmen, imaginative gadgets and inventive technology and yes…the indomitable James Bond at your service. Nevertheless. the minor knock on Spectre is that it could have risen to the occasion more than it did as it occasionally feels as if it is going through the mischievous motions. It never resorts to the levels of Bond-ish drudgery in Quantum of Solace so that certainly is a relief in that aspect.\r\n\r\nSpectre does incorporate its share of opulence, mystery, suspense, shadowy tension and perilous plight. However, where the standard Bond film-making characteristics are somewhat consistent and captivating (i.e. the breathtaking opening sequence of the Day of the Dead celebration in Mexico City) there is also a questionable consideration for the weak-kneed Bond theme song in Sam Smith’s “Writing’s on the Wall” which seems so inadequately suited for a James Bond signature tune. Even the indifferent observers of the James Bond film franchise for the last five decades can attest to the two most important stamps of a Bond film–its opening scene and surging theme song.  Thankfully, Spectre’s grand opening sequence obeys traditional Bond practices but Smith’s doggedly tired-sounding “Writing’s on the Wall” feels as it belongs attached to an old televised After School special from the mid-70s. Wouldn’t you give your kingdom for Paul McCartney and Wings’ “Live and Let Die” or Carly Simon’s “Nobody Does It Better” or perhaps even Sheena Easton’s “For Your Eyes Only”?\r\n\r\nOne thing that can be said about Craig’s Bond in Spectre and that is his image transformation has been elevated to that of a fashion plate whose GQ stylized look has taken quite a step up. Not since Roger Moore’s Bond has there been a clear case of dazzling attire on display for Agent 007 to strut his stuff in spiffy clothing accessories throughout his ventured travels. Craig, billed as a “blue-collar” Bond whose demeanor is more blunt and workman-like, takes comfort in basking in the finesse shadows of a classic Agent 007 almost foreign to his distinctive spin on the iconic spy. In fact, the overall vibe for Spectre seems to lie in the middle of old school and new school James Bond mythology where the shading suits both camps of the ever-lasting film franchise.\r\n\r\nDirector Sam Mendes, who handled the direction for the previous Skyfall, finds the right tone and temple for Spectre that certainly shows off its lavish and ambitious production values as the set designs, scenic locations, fabulous pre-credits action sequence are all indescribable in majestic scope. No one can accuse Spectre as to not holding its own in visual functionality. Wisely, Mendes does not forget his Skyfall background players as they reunite with Craig’s Bond and partake in the sensationalized cat-and-mouse caper. It is refreshing to see Ralph Fiennes back as “M” not to mention Ben Wishaw’s “Q” front and center. And a Craig-fronted Bond film would not be the same without Naomie Harris as Miss Moneypenny.\r\n\r\nAgent 007 fans will find a common \"Bond\" with Daniel Craig and his fourth outing as the licensed to kill Lothario in the stunning and kinettic SPECTRE\r\nAgent 007 fans will find a common “Bond” with Daniel Craig and his fourth outing as the licensed to kill Lothario in the stunning and kinetic SPECTRE\r\nIt is a given that the diabolical criminal network known as SPECTRE has always had its affiliation with the Bond universe especially in the classic Sean Connery Bond-age years. Instinctively, SPECTRE’s evil heart and soul was pumped continuously by that organization’s dastardly mastermind Ernst Stavro Blofeld. Oscar winner Christoph Waltz does the sordid honors of taking the reins as Bond’s nemesis Franz Oberhauser in Spectre with devilish delight and is more colorfully corrupt thanks to his handy go-to muscular minion Mr. Hinx (ex-professional WWE wrestler and “Guardians of the Galaxy” star Dave Bautista) echoing the memories of beloved brute Jaws (played by the late Richard Kiel) from The Spy Who Loved Me and Moonraker). \r\n\r\nWe can never forget that along with Agent 007 folklore comes the responsibility of being labeled a treasured Bond babe. And although the latest sultry women represented in Spectre will never make us forget the iconic likes of Dr. No’s Ursula Andress (Honey Ryder) or Casino Royale’s Eva Green (Vesper Lynd) for that matter they still hold their own and give a measure of titillation to both Bond and the vast amount of male admirers wishing they carried a gun and wore expensive tuxedos while being at the receiving end of a provocative smooch by these vibrant vixens. Lea Seydoux’s Madelene Swann and Italian siren Monica Bellucci’s Lucia are on board as the Bond bombshells for hire.\r\n\r\nAs a whole, Spectre has its up and down moments and never is quite sure about standing alone as an independent Bond story or being dismissed as a pit stop for 007-related flashbacks and reference bits ode to yesteryear’s glory of the super spy’s engaging and raging exploits. The verdict is that Spectre ultimately satisfies one’s craving for the invincible James Bond whether you can to relive his vintage reputation or look forward to a millennium-enhanced production that will grow with the ageless wonderment pertaining to Fleming’s literary ladies man-turned movie-making mainstay of action-packed cinema for half a century. As one-time Bond songbird Carly Simon would attest in her soothing lyrics, “nobody does it better…”  Yet in the dimensional escapist world of James Bond this particular go-around could have been a tad bit better.\r\n\r\nSpectre (2015)\r\n\r\nSony Pictures\r\n\r\n2 hrs 28 mins.\r\n\r\nStarring: Daniel Craig, Christoph Waltz, Lea Seydoux, Naomie Harris, Ben Whishaw, Dave Bautista, Monica Bellucci, Andrew Scott\r\n\r\nDirected by: Sam Mendes\r\n\r\nMPAA Rating: PG-13\r\n\r\nGenre: Spy-Espionage Caper\u002FAction & Adventure\u002FSuspense Thriller\r\n\r\nCritic’s rating: ** 1\u002F2 stars (out of 4 stars)\r\n\r\n(c) Frank Ochieng (2015)",created_at:"2015-11-08T04:47:53.765Z",id:"563ed3f9c3a3681b4d034302",updated_at:"2021-06-23T15:57:38.386Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F563ed3f9c3a3681b4d034302"},{author:a$,author_details:{name:a$,username:"tanty",avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002F03a53cd53b8254fe582d4fe1acc26c4e.jpg",rating:L},content:"A \"correct\" Bond movie. All the expected stereotypes are included, Waltz is an OK bad guy and the intro scene is something really impressive.\r\n\r\nNothing else really new ...",created_at:"2015-11-16T16:05:38.566Z",id:"5649fed29251413ad500b5ac",updated_at:"2021-06-23T15:57:39.103Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F5649fed29251413ad500b5ac"},{author:ba,author_details:{name:ba,username:"Rangan",avatar_path:"\u002F6ZpVUJzqXMzH35VprEtnX0sNI3.jpg",rating:r},content:"\u003E Not your usual Bond movie, but still a good entertainer.\r\n\r\nWhat I liked from a couple of last Bond movies was they were off the regular 007 style, like not overly rely on spy's special gadgets. This change has been since the day one of Daniel Craig as a famous British spy, James Bond. Anyway, he's the most fittest (muscular) Bond I've ever seen and he's celebrating 10 year anniversary with this film release. But the question is whether he to do another film or done with the franchise. The doubt after the confusing end of this film.\r\n\r\nThe end was quite clear on the story perspective, so I kind of felt it was a farewell for Craig. But, later I came to know that the official source says Bond25 will be his fifth and so on till he opts out himself. 'Spectre' was a very simple Bond movie I have ever seen, but I can say the production quality was so good that you can't resist the enjoyment. The actors, they were also good, but not as I anticipated. Maybe many scenes were very ordinary for a Bond movie, that's comparable with the nowadays action movies, otherwise it was not as bad as critics expressing their disappointment.\r\n\r\nYou can't believe what I was disappointed, you know when they say what the C stands for - is that the best word they come up with against the M for Moron? Anyway, James Bond movies have always had ups and downs, the last film 'Skyfall' was a mega hit and now this has not stood up to that standard. But very entertaining with all the actions and unexpected turns in the narration. As a spy movie, it was okay, but as a Bond movie is what might upset you, so its upto you how you look at it. But to be honest, I enjoyed it.\r\n\r\n7\u002F10",created_at:"2016-02-14T14:48:05.502Z",id:"56c093a59251412be0000529",updated_at:"2021-06-23T15:57:45.254Z",url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F56c093a59251412be0000529"},{author:bb,author_details:{name:bb,username:"msbreviews",avatar_path:"\u002Fhttps:\u002F\u002Fwww.gravatar.com\u002Favatar\u002F992eef352126a53d7e141bf9e8707576.jpg",rating:r},content:"FULL SPOILER-FREE REVIEW @ https:\u002F\u002Fwww.msbreviews.com\u002Fmovie-reviews\u002Fspectre-spoiler-free-review\r\n\r\n\"Spectre fails to reach the tremendous potential of its intriguing narrative and fascinating antagonist, but Sam Mendes still pulls off a decent James Bond flick.\r\n\r\nThe screenplay raises significant issues with an incredibly dull subplot that deeply affects the pacing of a bloated runtime. In addition to this, Christoph Waltz's lack of impactful screentime is disappointing, to say the least, despite a brilliant performance from the actor.\r\n\r\nFortunately, the jaw-dropping action set pieces elevate the overall film, which also benefits from gorgeous cinematography (Hoyte van Hoytema) and exceptional acting across the board. Daniel Craig and Léa Seydoux's characters relationship is emotionally compelling, making Bond's mission feel more like an interesting personal journey.\r\n\r\nOne of the best movies of the franchise is buried somewhere under the messy screenplay, but what can be found at the surface has much to appreciate.\"\r\n\r\nRating: B",created_at:bc,id:"6154920881c7be008e08b3f8",updated_at:bc,url:"https:\u002F\u002Fwww.themoviedb.org\u002Freview\u002F6154920881c7be008e08b3f8"}],recommendations:[{adult:a,backdrop_path:"\u002FtLHx93pJL00XmAQsjGuW4PFsJq9.jpg",genre_ids:[f,d,h],id:37724,media_type:g,title:"007：空降危機",original_language:e,original_title:"Skyfall",overview:"詹姆士龐德(丹尼爾克雷格飾)在伊斯坦堡的任務失敗後而失去蹤影，外界推測他已身亡，北約臥底探員資料竟因而外洩，身為龐德上司的M夫人(茱蒂丹契飾)因此受到情報安全委員會新主席馬洛利(雷夫范恩斯飾)的強烈質疑，遂成為政府調查的對象。  而總部MI6竟遭攻擊，被眾人以為殉職的龐德秘密現身協助M夫人，她要龐德追查一名極度危險的罪犯，於是他循著線索前往澳門與上海。在神秘女子賽菲茵(貝荷妮絲瑪洛赫飾)與探員伊芙(娜歐蜜哈里斯飾)的協助下，龐德追蹤到在背後搞鬼的神秘人物洛烏西法(哈維爾巴登飾)，更意外發現M夫人不為人知的秘密。為了拯救總部，龐德是否能再次不顧一切出面化解危機？",popularity:61.752,poster_path:"\u002FvEPZB8upmcHiL3YnDL4O26DuJTf.jpg",release_date:"2012-10-25",video:a,vote_average:7.197,vote_count:13349},{adult:a,backdrop_path:"\u002F3CqMIX3ZlrD0pU3fpBL6DM0Cneb.jpg",genre_ids:[d,f,h,u],id:10764,media_type:g,title:"007：量子危機",original_language:e,original_title:"Quantum of Solace",overview:"遭摯愛薇絲朋背叛後，龐德憤怒得將最新任務化為私人恩怨。為了追查真相，龐德和M夫人（茱蒂丹契 飾）審問了白先生（賈斯柏克里斯汀森 飾），發現恐嚇薇絲朋的組織，複雜而危險的程度遠遠超過任何人想像。  因為一個M16叛徒在海地銀行帳號的情報，讓龐德隻身前往並意外遇見了美艷而強悍的卡蜜兒，一個正在進行復仇計畫的女子。而卡蜜兒（歐嘉柯瑞蘭寇 飾）的出現，也引導龐德認識了多明尼克格林（馬修亞瑪希 飾），一個冷血商人和他神秘組織的強大勢力。  在前往奧地利、義大利和南美洲的任務中，龐德發現密謀掌控一個全球重要自然資源的格林，正與流亡的麥卓諾將軍（喬昆柯西諾 飾）進行一項交易。格林利用其組織的關係、操控中情局和英國政府中的有效門路，答應幫將軍推翻玻利維亞政權，用這個國家的控制權，交換一塊看似一文不值的土地。  穿梭在背叛、謀殺和謊言中，龐德與幾位並肩作戰的盟友共同揭發真相。當龐德步步逼近迫使薇絲朋背叛他的男人前，他必須更敏銳地搶先中情局、恐怖份子和M夫人一步，才能破壞格林的邪惡計畫、阻止量子危機的發生！",popularity:37.275,poster_path:"\u002Fy4Soh6fEfqKlVJaLmhMEGQz6pj.jpg",release_date:"2008-10-31",video:a,vote_average:6.3,vote_count:6482},{adult:a,backdrop_path:"\u002F125H5AszmtAt0mYl2vpfChMFofv.jpg",genre_ids:[d,f,h],id:36557,media_type:g,title:"007首部曲：皇家夜總會",original_language:e,original_title:"Casino Royale",overview:"《007首部曲：皇家夜總會》描述詹姆斯龐德(丹尼爾克雷格 飾)成為英國特務之前的故事。 雖然初出茅廬，但是龐德已具備高超的情報員能力，在連續完成兩項稱職的刺殺行動之後，他也晉升為 “00” 情報員的地位。  龐德成為第七號情報員的第一趟任務來到了馬達加斯加島，負責監視恐怖份子默拉卡的活動。 然而一切情況不如預期計劃般順利，因此龐德決定不聽從 MI6 的指示而獨自進行調查，以便找出恐怖份子其餘的巢穴。 龐德循線追蹤到巴哈馬，並在那裡遇到迪米特歐斯和老婆索蘭奇。 龐德發現迪米特歐斯與涉及世界恐怖組織的銀行家契夫軻有所牽連。  而英國機密部門的情報顯示，契夫軻因為要參加在蒙特尼哥羅的皇家夜總會所舉行的高籌碼撲克大賽而正在積極籌款。 MI6 指派 007 與契夫軻進行撲克比賽，因為假使契夫軻未能獲勝，他的組織將因此而瓦解。  M夫人要求龐德特別留意美艷而迷人的薇斯朋琳德(伊娃葛林 飾)。 起初龐德不認為薇斯朋能夠提供什麼有用的情報，但是隨著他們共同經歷許多危險，甚至遭受契夫軻的嚴刑拷問之後，龐德對於薇斯朋的好感也日益加深。在芒特尼格羅，龐德與 MI6 當地的情報員馬提斯和代表美國中央情報局利益的菲利斯萊特攜手合作。 在馬拉松式漫長的賭局競爭中，卑劣手段與暴力行為亦將層出不窮，持續升高的賭注中暗藏邪惡的金錢遊戲，將本片帶入令人驚悚無比的高潮。",popularity:45.073,poster_path:"\u002FtcwOHLGgTSqtF5nZnMLSevYTkZC.jpg",release_date:"2006-11-14",video:a,vote_average:7.5,vote_count:8791},{adult:a,backdrop_path:"\u002Fk6EOrckWFuz7I4z4wiRwz8zsj4H.jpg",genre_ids:[f,d,j,n],id:140607,media_type:g,title:"星際大戰七部曲：原力覺醒",original_language:e,original_title:"Star Wars: The Force Awakens",overview:"路克·天行者消失了。\r 邪惡的第一軍團於這段時間，已經從帝國的廢墟中崛起，他們不會休息，直到消滅路克最後的絕地武士。  莉亞·歐嘉納將軍帶領著共和國頑強的在抵抗。她急切地希望找到路克以獲取他的幫助去恢復銀河的和平與正義。  在老戰友的線索下，莉亞派出了一個秘密任務予最大膽的飛行員去沙漠星賈庫，找尋有關路克的下落....",popularity:70.395,poster_path:"\u002FwNdrXBAFbfgpKgprtTFnoePn86x.jpg",release_date:"2015-12-15",video:a,vote_average:bd,vote_count:16843},{adult:a,backdrop_path:"\u002FeR20N1flPCQyp9HzpxlTcxgDAO7.jpg",genre_ids:[f,d],id:177677,media_type:g,title:"不可能的任務：失控國度",original_language:e,original_title:"Mission: Impossible - Rogue Nation",overview:"敘述從事深入臥底任務的IMF已為千夫所指，即使對自由世界最可怕的威脅正在醞釀，他們正面臨全面解散的危機。造成威脅的 “辛迪加”，是一個無法突破、由一群受過精良訓練的叛逃間諜組成的組織，他們為了自己的理想離鄉背井——企圖瓦解文明世界的基礎。在諜報世界裡，辛迪加長期以來只被視為空穴來風，但伊森韓特揭露眾人不願面對的現實，他發現這個秘密組織真的存在，如果再不行動，將會在全球引爆一連串災難。中情局不肯相信，伊森韓特自己的團隊命運岌岌可危，但在盡所有努力之前，他絕不會放棄。  伊森韓特面對他的終極對手，他所有無可取代的特質立刻面臨考驗：在危急時刻從容不迫的脫身能力、穿梭遊走全球各地的技巧、與邪不勝正的渴望。從維也納到卡薩布蘭加，從軍機上的一髮千鈞到深水危機，伊森韓特將用盡手段，抵抗他出生入死的間諜生涯中最嚴峻的危險。但最重要的是，他將企圖達成最具意義的任務：堅持對朋友的忠心，並維繫創造不可能的理想。",popularity:40.303,poster_path:"\u002Fglzi3sDVg96A7pJD4eR6wSULn0x.jpg",release_date:"2015-07-23",video:a,vote_average:7.164,vote_count:7217},{adult:a,backdrop_path:"\u002F3dPhs7hUnQLphDFzdkD407VZDYo.jpg",genre_ids:[s,d,j],id:286217,media_type:g,title:"絕地救援",original_language:e,original_title:"The Martian",overview:"太空人馬克瓦特尼（麥特戴蒙 飾）和太空小組首次登陸火星執行任務時，意外遭受強烈的暴風侵襲，一行人被迫放棄任務即刻撤退，馬克卻遭暴風中的物體高速擊中，並與成員分散，組員們誤以為他已不幸殉職便直接折返地球。清醒後的馬克，發現自己孤伶伶的受困在火星上，他必須運用有限的資源和他擁有的知識努力存活下來，並設法傳送訊息，告訴地球上的組員們他還活著。而地球上的團隊又將如何突破重重困難，並在分秒必爭的限制下重返火星救回馬克？",popularity:56.982,poster_path:"\u002F5HUENHVv7wlqwptGkBmEmQkIBAV.jpg",release_date:"2015-09-30",video:a,vote_average:7.671,vote_count:16819},{adult:a,backdrop_path:"\u002Fm3FqHMPjYByzVv9ZzOlwo3kqMPS.jpg",genre_ids:[f,d,j],id:131634,media_type:g,title:"飢餓遊戲3：自由幻夢終結戰",original_language:e,original_title:"The Hunger Games: Mockingjay - Part 2",overview:"劇情接續前集，施惠國已進入全國性戰爭狀態，凱妮絲挺身對抗都城的史諾總統（唐納蘇德蘭 飾），決心展開最後殊死戰。她與親密夥伴蓋爾（連恩漢斯沃 飾）、芬尼克（山姆克萊弗林 飾）和比德（喬許哈契遜 飾）攜手反攻，集結第13區反抗軍前進都城。他們冒著生命危險，發動刺殺史諾總統行動，誓命解放施惠國各區公民。當然，在都城衛軍層層保下的史諾，也一心想要置她於死地而後快。  　  在此最後一役，凱妮絲將面臨致命陷阱、陰險敵人和道德抉擇，身心遭逢的巨大考驗，將比任何飢餓遊戲競技場上的挑戰，都更加危險萬分。",popularity:77.655,poster_path:"\u002FbTLC6ghTfn3rZYdzVPaSXzlly14.jpg",release_date:"2015-11-18",video:a,vote_average:be,vote_count:10458},{adult:a,backdrop_path:"\u002Fg4a5YLWwi6OCp8TcvxsUNrXMbN5.jpg",genre_ids:[j,f,h,d],id:87101,media_type:g,title:"魔鬼終結者：創世契機",original_language:e,original_title:"Terminator Genisys",overview:"2029年的未來世界，在與超級電腦「天網」的戰爭中，人類反抗者進行頑強抵抗，領袖約翰康納(傑森克拉克 飾)將他忠實的戰士凱爾雷斯(傑寇特尼)派回1984年，以保護自己的母親莎拉康納(艾蜜莉克拉克 飾)不被機器人殺害。  而莎拉康納−救世主（約翰康納）之母在年僅9歲時就因為成為孤兒而被一個魔鬼終結者收養。從那時起，她就被阿諾史瓦辛格所扮演的T-800撫養長大，這個機器人的程式設計是用來防衛而不是殺戮。也因此，讓莎拉康納成為了一個擅長使用狙擊槍且不喜與人交涉的反社會人格，但是卻無法深刻體會人類細微情感變化。  兩派人馬在洛杉磯，激烈戰鬥，時間軸破碎，莎拉和凱爾瑞斯全裸搭乘時光機來到2017年的舊金山，試圖阻止「天網」啟動飛彈防禦系統，造成30億人死亡的審判日發生。",popularity:114.211,poster_path:"\u002Fl047uMUzvXKcK2yU1jr1orAvBmW.jpg",release_date:"2015-06-23",video:a,vote_average:5.901,vote_count:7124},{adult:a,backdrop_path:"\u002FyOCRqvrRrxbs5FYq2pX1KtLJwmR.jpg",genre_ids:[f,d,j,h],id:135397,media_type:g,title:"侏羅紀世界",original_language:e,original_title:"Jurassic World",overview:"《侏羅紀世界》的背景設定在《侏羅紀公園》故事發生22年後，努布拉島已經發展成為一個龐大的主題公園和度假勝地——侏羅紀世界。遊客可以乘著船、駕著車，或者坐在透明的旋轉球裡欣賞身邊的恐龍，優美的景色和寧靜的氣氛令人們流連忘返，如同公園曾經的創始人約翰·哈蒙德所期望的那樣。但是這一派熱鬧之中似乎暗藏危機，如今的國際基因公司（InGen）在製造恐龍的同時還力圖打造「混血兒」，將不同種類甚至不同物種的DNA相結合，最終意外製造出可怕的帝王暴龍。以歐文（克里斯·普瑞特飾）為首的研究小組來到這裡研究迅猛龍，卻接連發生意外。",popularity:105.603,poster_path:"\u002FedBEPUqnfKFzVQdWpvHGUR1fXO6.jpg",release_date:"2015-06-06",video:a,vote_average:6.663,vote_count:17802},{adult:a,backdrop_path:"\u002F1ZIeGwD2lMlLMr4u6IIR302jqhD.jpg",genre_ids:[u,ar,f,d],id:207703,media_type:g,title:"金牌特務",original_language:e,original_title:"Kingsman: The Secret Service",overview:"本片改編自漫畫家馬克米勒的同名漫畫，由《特攻聯盟》《X戰警: 第一戰》導演馬修范恩執導。《金牌特務》講述一個英國的秘密情報組織，派出金牌特務員，在街頭招募一名遊手好閒卻又有潛力的年輕小子進入機構的故事，並安排一連串的培訓計畫，訓練成為超級特務，協助組織拯救一個擁有科技技術的全球性威脅。",popularity:83.667,poster_path:"\u002FycWsWIlZMhcHUast6DtEZvDSXOa.jpg",release_date:"2014-12-13",video:a,vote_average:7.641,vote_count:14216},{adult:a,backdrop_path:"\u002FzIOG3SV5OTa0J0RMEekQ82GZQdU.jpg",genre_ids:[d,f,h],id:710,media_type:g,title:"007：黃金眼",original_language:e,original_title:"GoldenEye",overview:"007情報員龐德又被賦予艱鉅危險的任務了。在這一次的冒險行動裏，龐德必須前往蘇俄，尋找被叛軍所偷取的高科技武器「黃金眼」。  這項原本輕而易舉的特別行動中，龐德要對付的居然是昔日共同奮戰的同僚：英國籍的探員006（由西恩賓飾演）。006因不滿之前任職情報員的付出，不但詐死、還陰謀策劃蘇聯核武爆炸，計劃使用「黃金眼」這項武器，引起全球金融動亂，以謀取居間的暴利。  為了讓龐德順利的達成任務，007總部特別設計了裝置精巧的各種工具：一條內藏暗扣，可以射出75公尺長鐵絲的皮帶(該皮帶的承受力可以支撐住一名彪形大漢)；一隻看似正常，連按三下就可以搖身變成手榴彈的原子筆；一個附置了放射光，暗藏了X掃描器的功能的手錶；一部身兼數種功能的BMW Z3敞篷跑車……  當然為了符合007系列的一貫風格特色，智謀雙全的俄國的任務中，龐德遇到了美艷迷人的電腦程式設計師娜塔亞新摩諾瓦，兩人陷入熱戀，並經由她的協助，得以掌握先機，在陌生的俄國，和006展開一場激烈的間諜戰。  本片是007系列停拍了六年之後，重新選定皮爾斯布洛斯南，演出片中靈魂007情報員龐德一角。",popularity:27.614,poster_path:"\u002F5qD5eSKi1uCpgPcdjtZsaXy5rVX.jpg",release_date:"1995-11-16",video:a,vote_average:be,vote_count:3066},{adult:a,backdrop_path:"\u002FgJ9YtYGT9cZaPNzE66kj4bTsphq.jpg",genre_ids:[d,f,h],id:36669,media_type:g,title:"007：誰與爭鋒",original_language:e,original_title:"Die Another Day",overview:"007諜報電影系列第20集，皮爾斯布洛斯南、奧斯卡影后荷莉貝瑞主演。  詹姆斯龐德奉派前往南北韓交界出任務，沒想到有叛徒變節導致任務失敗，龐德於是遭北韓軍隊囚禁。期間美國國家安全局在北韓的情報員全數遭殺害，因懷疑是龐德於刑求時鬆口指認，於是安全局北韓叛軍大將趙，作為交換龐德的人質...  自北韓獲釋的詹姆斯龐德被英國MI6情報局以變節罪名，撤銷英國情報員身份。為證明自己的清白，龐德一路從香港、中國、古巴再回到英國，並結識冰島鑽石工業鉅子古斯塔夫，受邀前往冰島參觀他利用基因轉植研發的生化科技。  此時龐德與趙在冰島再次對決，也發現事件背後更大的陰謀，一切都必須重回韓國將任務完成，眼看時間已所剩無多…",popularity:23.476,poster_path:"\u002Fb63hw5cUm3dBvEy8oowf0kg6fO.jpg",release_date:"2002-11-17",video:a,vote_average:5.946,vote_count:2793},{adult:a,backdrop_path:"\u002Fzn13a7U9eMTJq8sHthe3bCgsVm4.jpg",genre_ids:[f,d,n],id:122917,media_type:g,title:"哈比人：五軍之戰",original_language:e,original_title:"The Hobbit: The Battle of the Five Armies",overview:"他們雖然收復了被惡龍史矛革長期佔領的祖國，卻也在不經意的情況下，將惡龍釋放出來，在狂暴的盛怒下，史矛革襲擊了完全沒有防備的長湖鎮居民。在此同時，強大的敵人索倫已經派出半獸人大軍，準備偷襲孤山。只是一心一意只想維持家園的索林王子，完全聽不進別人的意見，導致所有人都將面臨更大的危機。",popularity:138.187,poster_path:"\u002Fpc8IPgkc3GFztHkcu85SlT6sOjh.jpg",release_date:"2014-12-10",video:a,vote_average:bd,vote_count:11840},{adult:a,backdrop_path:"\u002Fa7sAqMKv5tkAdMzFfIhPqIBmQ9g.jpg",genre_ids:[j,f,d],id:102899,media_type:g,title:"蟻人",original_language:e,original_title:"Ant-Man",overview:"職業騙子史考特·朗恩在擁有身體變小、力量增大的超能力後，必須接受自己的英雄身分並幫助他的導師生化學家漢克皮姆保護他所發明的蟻人裝備。在強大敵人的威脅下，皮姆跟朗恩必須精心策畫餅執行一場驚天騙局，才能拯救世界。",popularity:72.018,poster_path:"\u002Ff5z4gdZsmtXPsMw3kFFQ228FhLM.jpg",release_date:"2015-07-14",video:a,vote_average:7.089,vote_count:16880},{adult:a,backdrop_path:"\u002FhEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",genre_ids:[37,s,d],id:281957,media_type:g,title:"神鬼獵人",original_language:e,original_title:"The Revenant",overview:"19世紀初的美國拓荒年代，在文明邊境遊蕩著一群靠動物皮毛賺錢的獵人，在安德魯隊長（多姆納爾格里森 飾演）的率領下，終日與敵對的印第安部落、殘酷的地形氣候、山林猛獸對抗，而一次遭遇野生灰熊攻擊的意外，讓獵人休格拉斯（李奧納多狄卡皮歐 飾演）身受重傷，礙於種種環境的限制，安德魯隊長迫於無奈，只好派兩名隊員約翰（湯姆哈迪 飾演）與吉姆（威爾普爾特 飾演）留下來照料休格拉斯。  沒想到，恐懼印地安人攻擊的約翰與吉姆，竟拋下垂死的休格拉斯，並搶走他所有的防身武器，匆匆逃亡，還向隊長謊稱休格拉斯已死。奇蹟生還的休格拉斯，靠著求生的欲望與復仇的決心，爬行超過三千英哩，回到文明世界，誓言要找到拋下他的同伴，為自己討回公道。",popularity:58.015,poster_path:"\u002FxIuLuV9JJOgD4wB41AC88ZoQwQa.jpg",release_date:"2015-12-25",video:a,vote_average:7.507,vote_count:15639},{adult:a,backdrop_path:"\u002Fn2jVDMcBEWsLFooO7W1ZkcMUtWS.jpg",genre_ids:[d,f,h],id:36643,media_type:g,title:"007：縱橫天下",original_language:e,original_title:"The World Is Not Enough",overview:"石油是現代社會最珍貴的材料,但是正當千禧年即將來臨,全球的原油產量卻面臨短缺的空前危機,這時全世界最大的內海--裏海卻發現蘊藏了極大的原油含量,來自各國實力雄厚、勢力龐大的跨國際石油公司,竭力想分這一塊大餅,在互不相讓的情況下,一場空前絕後的石油大戰可以說是一觸即發。  這時英國最大的輸油管公司,金恩企業的總裁羅伯金恩慘遭刺殺,而一名神秘女子則對進行調查的詹姆斯龐德開槍射擊。後來英國情報局發現,該神秘女子原來是惡名昭彰的恐怖份子雷納的手下。羅伯金恩死後,他美麗的女兒伊莉翠繼承了他龐大的事業,並且決心要完成父親的遺志,當龐德查看她的檔案時,發現她於數年前曾遭雷納綁架,並自行逃出綁匪手中,於是英國情報局的女局長M便決定派007情報員龐德前往金恩企業在高加索山的大本營,以便保護伊莉翠的安全,並且找出刺殺她父親的兇手。  他們倆在會面後隨即便遭到恐怖份子的攻擊,龐德憑著情報局機關高手Q的巧妙道具,在躲開一場大雪崩後, 把伊莉翠救出險境,逃到裏海海岸的一個叫巴庫的城市。當晚他們前往當地的一家賭場,龐德竟然遇到他的宿敵,前KGB魏倫汀蘇考斯基,由於蘇考斯基和俄國、土耳其以及中國大陸的黑道都有密切往來,所以龐德相信蘇考斯基一定和雷納互相勾結,於是他馬上展開調查,無意間竟然在一處地下彈庫發現一枚核子彈頭,而且大壞蛋雷納正意圖偷取致命核彈。雖然龐德得到一名美麗的核武專案克莉莫絲博士的協助,他還是讓雷納把核彈偷走了。不過龐德毫不氣餒,他和情報局長M以及克莉莫絲博士發現雷納將核彈裝置在土耳其的油管控制中心,但是龐德和克莉莫絲博士正準備拆除核彈之際,卻發現雷納的目的其實是想要盜取珍貴的鐪元素, 這時他才知道雷納的計畫是炸毀西方世界四條主要輸油管其中的三條,讓他掌握餘下的最後一條油管, 藉以控制整個西方世界。這次數度出生入死的007情報員詹姆斯龐得,又會如何擊敗野心勃勃的恐怖份子,拯救整個世界呢?",popularity:26.631,poster_path:"\u002FqtJsbZ9vISsI9nZzqreXolAKJpz.jpg",release_date:"1999-11-17",video:a,vote_average:6.249,vote_count:2269},{adult:a,backdrop_path:"\u002FcHkhb5A4gQRK6zs6Pv7zorHs8Nk.jpg",genre_ids:[f,h,u,d],id:168259,media_type:g,title:"玩命關頭7",original_language:e,original_title:"Furious 7",overview:"故事發生在唐老大（馮迪索）和布萊恩（保羅沃克）重獲自由一年多後，他們擺脫暗無天日的亡命生活，卻發現這個家脫離現實。唐老大忙著和莉蒂（蜜雪兒羅卓奎茲 飾）重新培養感情，布萊恩則努力跟蜜雅（喬丹娜布魯斯特 飾）和兒子適應郊區生活，泰吉（路達克里斯 飾）和羅曼（泰瑞斯喬布森）倒是實現花花公子的夢想，大肆慶祝得來不易的自由。  可怕的是，他們都沒發現危機伺伏。英國特種部隊殺手戴克蕭（傑森史塔森 飾），正準備為弟弟歐文蕭（路克伊凡斯 飾）報仇。東京的韓哥（姜成 飾）先遭到謀殺，洛杉磯的哈柏（巨石強森 飾）緊接遭暗算。戴克蕭炸了唐老大的家。那個家是玩命團隊重獲自由後，全家人所重返的避風港。在面對戴克蕭的獵殺下，唐需要奪回主動權，此時美國政府的神秘特務(寇特羅素 飾)提出一項任務，讓彼此之間都能取得共同利益。  這些英雄們打算重操舊業，為美國政府奪回天眼系統，此裝置可以幫他們找到戴克蕭的下落，以免家人再度遭到毒手。玩命團隊再度出擊，有唐老大、布萊恩、哈柏、莉蒂、羅曼、泰吉，他們在片中面臨前所未見的威脅，並遠征阿布達比和亞塞拜然，當然還有他們最熟悉的—洛杉磯街頭。",popularity:128.041,poster_path:"\u002FtUO7TJ0CxMpAI1zcbiojOOmleXr.jpg",release_date:"2015-04-01",video:a,vote_average:7.247,vote_count:9018},{adult:a,backdrop_path:"\u002FyUHP5AectnhcG4dWJ53L3uQvOgu.jpg",genre_ids:[d,f,h],id:714,media_type:g,title:"007：明日帝國",original_language:e,original_title:"Tomorrow Never Dies",overview:"007系列影片中，這是第二部由皮爾斯布洛斯南飾演龐德的電影。  英國舞台及電影演員強納森普萊斯在《明日帝國》中飾演一名媒體大亨，他擁有一份全球發行量高達一億份的日報「明日報」以及遍及各地的衛星系統，為了爭取中國大陸衛星轉播一百年代理權，增加收視率，不惜準備引發第三次世界大戰，而這也正是詹姆斯龐德這次要解決的任務！  在007系列影片中，由皮爾斯布洛斯南飾演最新的龐德，在1995年《黃金眼》，創下有史以來最賣座的龐德票房紀錄，並將詹姆斯龐德系列影片帶到另一個高峰。《明日帝國》延續過去龐德影片的傳統，以老將新帥的策略，全片充滿廣受歡迎的新舊臉孔。  成熟睿智的皮爾斯布洛斯南續任智勇雙全的007情報員龐德，以百老匯劇《西貢小姐》獲得東尼獎的強納森普萊斯飾媒體大壞蛋艾略特卡佛；性感女星泰莉海契飾演龐德前任妻子與卡佛的現任嬌妻；楊紫瓊則是飾演007情報員的左右手。  戴斯蒙陸威林第十六度飾演Q先生，提供龐德各種精密的小道具，英國的情報頭頭M夫人由茱蒂丹契飾演，她將率領情報員拯救世界。片中有許多先進的通訊設備，例如龐德的行動電話，可以搖控指揮汽車行動，有大螢幕顯示，手機底端可放出雷射，首端可掃描指紋，竊入密鎖。女情報員楊紫瓊不僅會玩繩索、鐵勾，她的耳環更是別出心裁，是個獨特設計的萬能鑰匙。  《明日帝國》拍攝地點包括世界各地，有法國庇里牛斯山、泰國曼谷、普吉島及可平甘島、德國漢堡國際機場、墨西哥、美國佛羅里達州海岸的拉格小島、英國倫敦北部的布倫特交叉購物中心的立體停車場等。  片中有許多驚險的戲包括：片中在越南鬧市街頭的機車追逐；和卡弗的兇險打手斯坦柏決一死戰；從攝氏零下54度的三萬呎高空用降落傘垂直落下五英哩；以時速三十英哩的速度掉入大海（這如同直接跳到鋼筋水泥上面，有四成的機率會摔斷脊椎骨）....",popularity:25.173,poster_path:"\u002F5xF1rWo5v7S7jILyJKmeQhcvu1k.jpg",release_date:"1997-12-11",video:a,vote_average:6.312,vote_count:2408},{adult:a,backdrop_path:"\u002FnlCHUWjY9XWbuEUQauCBgnY8ymF.jpg",genre_ids:[f,d,j],id:76341,media_type:g,title:"瘋狂麥斯：憤怒道",original_language:e,original_title:"Mad Max: Fury Road",overview:"放逐自己的麥斯(湯姆哈迪 飾)，一個人在荒漠中流浪，卻被不死老喬的黨羽抓去當奴隸，他碰巧遭遇芙莉歐莎指揮官(莎莉賽隆 飾)要逃離不死老喬統治的突發事件，為了尋找一片適合生存的新天地，芙莉歐莎指揮官冒著生命危險，帶著一小群人逃離不死老喬的控制，但可想而知「不死老喬」不會允許這樣的事情發生，於是率領大軍追殺這群叛徒，陰錯陽差捲入這場瘋狂沙漠追逐的麥斯，選擇幫助芙莉歐莎逃亡，但是他們要怎麼面對不死老喬手下那群視死如歸的瘋狂戰士呢？！",popularity:116.964,poster_path:"\u002FvdCuNjhq72YrKZkOpGYQMtlXfde.jpg",release_date:"2015-05-13",video:a,vote_average:7.548,vote_count:19181},{adult:a,backdrop_path:"\u002FaTePu9roKsDH7miwC78EHTsT8lw.jpg",genre_ids:[f,d,n,j],id:127585,media_type:g,title:"X戰警：未來昔日",original_language:e,original_title:"X-Men: Days of Future Past",overview:"結合了兩代X戰警的戰力，展開有史以來最浩大的抗爭。包含魔形女、暴風女、小淘氣、野獸等全員到齊。而延續《X戰警：第一戰》之後的發展，他們必須改變過去的歷史，以拯救未來變種族群的存活。  在萬磁王與X教授兩派陣營分裂後，因戰役而失去雙腿及義妹魔形女的X教授從此失魂落魄。為阻擋變種人面臨被趕盡殺絕的命運，X教授與萬磁王派金鋼狼穿越時空回到過去，企圖讓當時落魄的X教授振作起來，並由兩派變種人團結合力改變過去，共同對抗造成變種人未來最大威脅的頭號公敵─崔斯克。",popularity:66.806,poster_path:"\u002FcEa0ebJoGZ30Tioy9gwg3VNnert.jpg",release_date:"2014-05-15",video:a,vote_average:7.525,vote_count:13244},{adult:a,backdrop_path:"\u002Fxnqust9Li4oxfhXD5kcPi3UC8i4.jpg",genre_ids:[f,d,j],id:99861,media_type:g,title:"復仇者聯盟2：奧創紀元",original_language:e,original_title:"Avengers: Age of Ultron",overview:"「鋼鐵人」東尼史塔克為了維護地球和平安全，神盾局瓦解後，把史塔克大樓改成新的復仇者基地。鋼鐵人在圍剿九頭蛇時，中了緋紅女巫的幻覺魔法，認為地球無力抵抗外星人入侵，於是打造人工智慧機器人「奧創」，不料奧創自行進化，卻認為唯有殲滅人類，才能維護世界和平。  而後奧創與緋紅女巫結盟，黑寡婦、美國隊長與雷神索爾接連中了緋紅女巫的幻術，心中的夢魘陰影化成幻覺浮現眼前，浩克大搞破壞，鋼鐵人只好穿上「反浩克裝甲」反制。復仇者們遭逢前所未見的心理戰猛攻，潰不成軍。他們要如何克服自己的陰影，重新集結，打敗奧創呢?",popularity:145.216,poster_path:"\u002F7pRypZrAoCMApk7iy29ZifqMfne.jpg",release_date:"2015-04-22",video:a,vote_average:7.296,vote_count:19583}]}],fetch:{},error:l,state:{images:{origin:"https:\u002F\u002Fimage.tmdb.org\u002Ft\u002Fp\u002Foriginal\u002F",cast:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw138_and_h175_face\u002F",screen:"https:\u002F\u002Fimage.tmdb.org\u002Ft\u002Fp\u002Fw1920_and_h800_face\u002F",card:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw250_and_h141_face\u002F",post:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw300_and_h450_bestv2\u002F",profile:"https:\u002F\u002Fwww.themoviedb.org\u002Ft\u002Fp\u002Fw45_and_h45_face\u002F"},nowPlayingMovie:[],topMovie:[],popularMovie:[]},serverRendered:true,routePath:"\u002FMovie\u002F206647",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:l}}}}(false,"Acting",2,12,"en",28,"movie",53,1,878,0,null,"Head of Nation",14,"US","Businessman","Snowboarder",7,18,"Frank Ochieng",80,5,21,"GB","English","","Daniel Craig","Christoph Waltz","Léa Seydoux",13,"Ralph Fiennes",10,"Naomie Harris",11,"Ben Whishaw",8,"Monica Bellucci",6,"Dave Bautista",16,"Andrew Scott","Rory Kinnear","Jesper Christensen",23,"Alessandro Cremona",24,"Stephanie Sigman",25,"Tenoch Huerta",49,"Adriana Paz",50,"Marco Zingaro",51,"Ian Bonar","Pip Carter","Simon Lenagan","Alessandro Bressanello","Marc Zinga","Brigitte Millar",39,"Adel Bencherif","Peppe Lanzetta",42,"Francesco Arca","Matteo Taranto","Emilio Aniba",31,"Dai Tabuchi","George Lasha","Sargon Yelda",35,"Andy Cheung","Antonio Salines","Nigel Barber","Patrice Naiambana","Stephane Cornicard","Gary Fannin","Sadao Ueda","Wai Wong","Joseph Balderrama","Eiji Mihara","Aide","Junichi Kajioka","Victor Schefé","Tristan Matthiae","Detlef Bothe","Cable Car Heavy","Bodo Friesecke","Noah Saavedra","Francis Attakpah","Michael Glantschnig","Marlon Boess","Lara Parmiani","Amra Mallassi","Ziad Abaza","Derek Horsham",.6,"Blofeld's Guard","Nari Blair-Mangat","Pezhmaan Alinia","Judi Dench","Kim Adis","Steve Barnett","Romeo Visca","Daniel Westwood","cutprintchris","Andres Gomez","Reno","MSB","2021-09-29T16:19:20.125Z",7.3,6.9));</script><script src="/_nuxt/e77e378.js" defer></script><script src="/_nuxt/62087d8.js" defer></script><script src="/_nuxt/9792ad0.js" defer></script><script src="/_nuxt/02331da.js" defer></script><script src="/_nuxt/d9d54d2.js" defer></script><script src="/_nuxt/58da8b5.js" defer></script>
+  </body>
+</html>
