@@ -33,7 +33,6 @@ export const actions = {
     return http
       .getSearchMovie(searchText, page)
       .then((res) => {
-        console.log(res.data)
         return res.data
       })
       .catch((err) => {
