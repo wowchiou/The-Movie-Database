@@ -13,7 +13,7 @@
     "test": "jest",
     "cf": "node createFile.js",
     "deploy": "sh deploy.sh",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "cacheDirectories": [
     "node_modules"
