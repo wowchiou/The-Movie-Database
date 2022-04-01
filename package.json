@@ -2,6 +2,9 @@
   "name": "the-movie-database",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "12.14.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
