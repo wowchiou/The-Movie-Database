@@ -12,8 +12,12 @@
     "lintfix": "prettier --write --list-different .",
     "test": "jest",
     "cf": "node createFile.js",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "heroku-postbuild": "npm install && npm run build"
   },
+  "cacheDirectories": [
+    "node_modules"
+  ],
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.19.3",
