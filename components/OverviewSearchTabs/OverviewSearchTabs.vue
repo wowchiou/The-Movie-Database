@@ -1,7 +1,12 @@
 <template>
   <ul class="tabs">
     <li v-for="tab in tabs" :key="tab.search">
-      <nuxt-link :to="{ name: tab.name, params: { search: tab.search } }">
+      <nuxt-link
+        :to="{
+          name: tab.name,
+          params: { search: tab.search },
+        }"
+      >
         <span>{{ tab.label }}</span>
       </nuxt-link>
     </li>

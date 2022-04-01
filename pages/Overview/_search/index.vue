@@ -1,6 +1,5 @@
 <template>
   <div class="_search">
-    <OverviewSearchTabs :tabs="overviewTabs" />
     <MoviesList
       :movies="movies"
       :busy="busy"
@@ -11,13 +10,19 @@
 </template>
 
 <script>
-import http from '@/services'
-import OVERVIEW_TABS from '@/data/overview-search-tabs.json'
-import OverviewSearchTabs from '@/components/OverviewSearchTabs'
+import OVERVIEW_SEARCH_TABS from '@/data/overview-search-tabs.json'
 import MoviesList from '@/components/MoviesList'
 
 export default {
-  components: { OverviewSearchTabs, MoviesList },
+  components: { MoviesList },
+  head() {
+    const page = OVERVIEW_SEARCH_TABS.find(
+      (itm) => this.$route.params.search === itm.search
+    )
+    return {
+      title: `${page.label}電影`,
+    }
+  },
   async asyncData({ params, store }) {
     const searchType = params.search
     let movies = await store.dispatch('getMovies', { searchType, page: 1 })
@@ -29,7 +34,6 @@ export default {
   },
   data() {
     return {
-      overviewTabs: OVERVIEW_TABS,
       movieTotalPage: 0,
       moviePage: 0,
       movies: [],

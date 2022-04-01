@@ -1,0 +1,41 @@
+%bg-gradient {
+  background: rgb(144, 206, 161);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(144, 206, 161, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(144, 206, 161, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(144, 206, 161, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90cea1', endColorstr='#01b4e4',GradientType=1 );
+}
+
+%text-gradient {
+  background: rgb(144, 206, 161);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(144, 206, 161, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(144, 206, 161, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(144, 206, 161, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90cea1', endColorstr='#01b4e4',GradientType=1 );
+  -webkit-background-clip: text;
+  color: transparent;
+}

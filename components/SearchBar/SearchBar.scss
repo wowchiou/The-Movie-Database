@@ -1,0 +1,11 @@
+.search-bar {
+  @apply flex justify-start items-stretch w-full mt-5;
+  input {
+    @apply flex-1 rounded-l-full text-4xl text-gray-100;
+    padding: 1rem 2rem;
+  }
+  button {
+    @apply text-3xl px-10 rounded-r-full;
+    text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+  }
+}

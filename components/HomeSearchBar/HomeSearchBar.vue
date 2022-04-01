@@ -20,14 +20,14 @@ export default {
   methods: {
     searchMovie() {
       if (!this.searchText) return
+
+      if (this.$route.name === 'Search') {
+      }
+
       this.$router.push({
         name: 'Search',
         query: { searchText: this.searchText },
       })
-      if (this.$route.name === 'Search' && process.browser) {
-        // this.$router.go(0)
-        window.reload()
-      }
     },
   },
 }

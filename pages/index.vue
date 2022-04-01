@@ -6,7 +6,12 @@
         backgroundImage: `url(${$store.state.images.screen}${nowPlayingMovie[0].poster_path})`,
       }"
     >
-      <HomeSearchBar class="relative z-10" />
+      <div class="relative z-10 w-full flex justify-center items-center">
+        <div class="search-wrap">
+          <p class="text-4xl font-bold">從這裡開始尋找電影吧...</p>
+          <SearchBar :searchHandler="searchHandler" />
+        </div>
+      </div>
     </div>
     <div class="mt-10">
       <div>
@@ -26,13 +31,15 @@
 </template>
 
 <script>
-import IMAGES from '@/data/images-src.json'
-import HomeSearchBar from '@/components/HomeSearchBar'
+import SearchBar from '@/components/SearchBar'
 import HomeSliderTitle from '@/components/HomeSliderTitle'
 import VideoSlider from '@/components/VideoSlider'
 
 export default {
-  components: { HomeSearchBar, HomeSliderTitle, VideoSlider },
+  components: { SearchBar, HomeSliderTitle, VideoSlider },
+  head() {
+    return { title: '電影基地' }
+  },
   async asyncData({ store }) {
     try {
       const nowPlayingMovie = await store.dispatch('fetchNowPlayingMovie', 1)
@@ -47,6 +54,15 @@ export default {
     } catch (error) {
       console.log(error)
     }
+  },
+  methods: {
+    searchHandler(searchText) {
+      if (!searchText) return
+      this.$router.push({
+        name: 'Search',
+        query: { searchText },
+      })
+    },
   },
 }
 </script>

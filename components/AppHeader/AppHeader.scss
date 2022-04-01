@@ -1,7 +1,15 @@
 .header {
-  @apply flex justify-between items-center px-8 py-10;
+  @apply fixed w-full top-0 left-0 flex justify-between items-center px-8 py-10 z-20;
+  transition: 0.3s;
   &-left {
-    @apply flex justify-start items-end;
+    @apply relative flex justify-start items-end z-10;
+  }
+  &.active {
+    @apply bg-iColor-dark/[.5];
+    &::before {
+      content: '';
+      @apply absolute w-full h-full top-0 left-0 z-0 backdrop-blur-md;
+    }
   }
 }
 

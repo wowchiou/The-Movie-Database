@@ -1,14 +1,18 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'the-movie-database',
+    title: 'TMDB',
     htmlAttrs: {
       lang: 'zh-TW',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: '歡迎來到電影基地，我們提供多部電影的影評資料，希望你喜歡！',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
@@ -20,7 +24,7 @@ export default {
     ],
   },
 
-  loading: { color: '#90cea1' },
+  loading: { color: '#90cea1', height: '5px' },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/scss/main.scss', 'swiper/css/swiper.css'],

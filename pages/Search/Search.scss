@@ -1,3 +1,9 @@
 .search {
+  margin-top: 10rem;
   padding-bottom: 10rem;
+}
+
+.search-wrap {
+  width: 50rem;
+  @apply m-auto;
 }

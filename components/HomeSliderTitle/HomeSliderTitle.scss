@@ -1,2 +1,11 @@
+@import '~@/assets/scss/index.scss';
+
 .homeSliderTitle {
+  h2 {
+    @apply pl-8 text-4xl font-bold;
+    transition: 0.3s;
+    &:hover {
+      @extend %text-gradient;
+    }
+  }
 }

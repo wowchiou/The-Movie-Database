@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './index.scss';
+
 html {
   font-size: 10px;
 }
@@ -39,23 +41,7 @@ button {
 }
 
 .bg-gradient {
-  background: rgb(144, 206, 161);
-  background: -moz-linear-gradient(
-    -45deg,
-    rgba(144, 206, 161, 1) 0%,
-    rgba(1, 180, 228, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgba(144, 206, 161, 1) 0%,
-    rgba(1, 180, 228, 1) 100%
-  );
-  background: linear-gradient(
-    135deg,
-    rgba(144, 206, 161, 1) 0%,
-    rgba(1, 180, 228, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90cea1', endColorstr='#01b4e4',GradientType=1 );
+  @extend %bg-gradient;
 }
 
 .banner {
@@ -77,4 +63,40 @@ button {
   background-position: center center;
   background-size: 80% auto;
   background-image: url(~@/assets/images/logo-primary-short.svg);
+}
+
+.slideLeft-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.slideLeft-enter-active {
+  transition: all 1s;
+}
+
+.fadeIn-enter {
+  opacity: 0;
+}
+.fadeIn-enter-active {
+  transition: all 0.5s;
+}
+
+@keyframes shinny {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes shift-to-left {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 3000px;
+  }
+  100% {
+    left: 3000px;
+  }
 }

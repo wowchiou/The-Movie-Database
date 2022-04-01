@@ -1,6 +1,6 @@
 <template>
   <div class="recommendations">
-    <h2 class="text-center text-5xl font-bold">為您推薦</h2>
+    <h2 class="text-4xl font-bold">為您推薦</h2>
     <ul class="flex justify-start items-start flex-wrap mt-10">
       <li v-for="recommendation in recommendations" :key="recommendation.id">
         <nuxt-link

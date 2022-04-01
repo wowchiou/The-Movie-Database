@@ -18,7 +18,7 @@
           />
         </div>
         <div class="flex-1 text-3xl overflow-hidden">
-          <div class="flex justify-start items-start">
+          <div class="relative flex justify-start items-start pb-5">
             <div class="flex-1 mr-10">
               <h1 class="font-bold text-5xl">
                 {{ detail.title }}
@@ -28,33 +28,41 @@
               </h1>
               <GenresList class="mt-5" :genres="detail.genres" />
             </div>
-            <div class="text-5xl font-bold">
-              <span class="vote-average">{{ detail.vote_average * 10 }}</span
+            <div class="vote-average">
+              <span class="vote-average">{{ tweenVoteAverage.toFixed(0) }}</span
               >%
             </div>
+            <span
+              class="vote-line"
+              :style="{
+                width: `${tweenVoteAverage.toFixed(0)}%`,
+              }"
+            ></span>
           </div>
           <p class="mt-5 leading-normal" v-html="detail.overview.trim()"></p>
           <CompaniesList
+            v-if="detail.production_companies.length > 0"
             :companies="detail.production_companies"
             :componyPic="images.origin"
           />
           <CastSlider class="mt-5 w-full" :casts="casts" />
+          <ReviewList :reviews="reviews" :profilePic="images.profile" />
         </div>
       </div>
     </div>
 
-    <ReviewList :reviews="reviews" :profilePic="images.profile" />
-
-    <div
-      class="pic-bar"
-      :style="{
-        backgroundImage: `url(
+    <div v-if="detail.backdrop_path" class="pic-bar">
+      <div
+        :style="{
+          backgroundImage: `url(
           ${images.screen}${detail.backdrop_path}
         )`,
-      }"
-    ></div>
+        }"
+      ></div>
+    </div>
 
     <RecommendationsCard
+      v-if="recommendations.length > 0"
       :recommendations="recommendations"
       :picURL="images.post"
     />
@@ -64,6 +72,7 @@
 <script>
 import { mapState } from 'vuex'
 import http from '@/services'
+import gsap from 'gsap'
 import GenresList from '@/components/GenresList'
 import CompaniesList from '@/components/CompaniesList'
 import CastSlider from '@/components/CastSlider'
@@ -77,6 +86,11 @@ export default {
     CastSlider,
     ReviewList,
     RecommendationsCard,
+  },
+  head() {
+    return {
+      title: this.detail.title,
+    }
   },
   async asyncData({ params }) {
     try {
@@ -98,8 +112,26 @@ export default {
       console.log(error)
     }
   },
+  data() {
+    return {
+      voteAverage: 0,
+      tweenVoteAverage: 0,
+    }
+  },
   computed: {
     ...mapState(['images']),
+  },
+  watch: {
+    voteAverage(newValue) {
+      gsap.to(this.$data, {
+        duration: 1,
+        ease: 'circ.out',
+        tweenVoteAverage: newValue,
+      })
+    },
+  },
+  mounted() {
+    this.voteAverage = this.detail.vote_average * 10
   },
 }
 </script>
