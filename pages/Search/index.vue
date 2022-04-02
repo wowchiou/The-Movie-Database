@@ -28,16 +28,20 @@ export default {
     }
   },
   async asyncData({ app, store, query }) {
-    store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
-    const searchText = encodeURIComponent(query.searchText)
-    const searchResult = await store.dispatch('getSearchMovie', {
-      searchText,
-      page: 1,
-    })
-    return {
-      movies: searchResult.results.filter((itm) => itm.poster_path),
-      moviePage: 1,
-      movieTotalPage: searchResult.total_pages,
+    try {
+      store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
+      const searchText = encodeURIComponent(query.searchText)
+      const searchResult = await store.dispatch('getSearchMovie', {
+        searchText,
+        page: 1,
+      })
+      return {
+        movies: searchResult.results.filter((itm) => itm.poster_path),
+        moviePage: 1,
+        movieTotalPage: searchResult.total_pages,
+      }
+    } catch (error) {
+      console.log(error)
     }
   },
   data() {

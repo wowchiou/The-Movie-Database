@@ -12,6 +12,12 @@
   "recommendedTitle": "당신을 위해 추천 된",
   "noReviewText": "아직 댓글이 없습니다",
 
+  "backHomeButtonText": "홈으로",
+
+  "404Text": "이 페이지는 존재하지 않습니다",
+  "503movieText1": "",
+  "503movieText2": "영화 데이터를 찾을 수 없습니다.",
+
   "footerText1": "이 사이트는",
   "footerText2": "에서 제공합니다."
 }

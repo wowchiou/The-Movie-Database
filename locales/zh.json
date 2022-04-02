@@ -12,6 +12,12 @@
   "recommendedTitle": "為您推薦",
   "noReviewText": "尚無留言評論",
 
+  "backHomeButtonText": "返回首頁",
+
+  "404Text": "此頁面不存在",
+  "503movieText1": "未找到",
+  "503movieText2": "電影資料",
+
   "footerText1": "本網站由",
   "footerText2": "提供資料"
 }

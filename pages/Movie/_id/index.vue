@@ -111,7 +111,12 @@ export default {
         ),
       }
     } catch (err) {
-      error({ statusCode: 503, message: `未找到 ${params.id} 電影資料` })
+      error({
+        statusCode: 503,
+        message: `${app.i18n.t('503movieText1')} ${params.id} ${app.i18n.t(
+          '503movieText2'
+        )}`,
+      })
     }
   },
   data() {

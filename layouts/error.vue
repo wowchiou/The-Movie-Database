@@ -3,12 +3,12 @@
     <div class="bg-gray-300/[.5] max-w-screen-md m-auto rounded-md p-10">
       <h1 class="text-5xl font-bold">Oops! Something went wrong!</h1>
       <div class="mt-5 text-3xl text-gray-300">
-        <p v-if="statusCode === 404">此頁面不存在</p>
+        <p v-if="statusCode === 404">{{ $t('404Text') }}</p>
         <p v-else>{{ message }}</p>
       </div>
-      <nuxt-link :to="localePath({ name: 'index' })" class="back-home"
-        >返回首頁</nuxt-link
-      >
+      <nuxt-link :to="localePath({ name: 'index' })" class="back-home">{{
+        $t('backHomeButtonText')
+      }}</nuxt-link>
     </div>
   </div>
 </template>

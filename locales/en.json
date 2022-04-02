@@ -6,11 +6,17 @@
 
   "navNowPlaying": "Showing now",
   "navTop": "High praise",
-  "navPopular": "high popularity",
+  "navPopular": "High popularity",
 
   "searchButtonText": "search",
   "recommendedTitle": "Recommended for you",
   "noReviewText": "No comments yet",
+
+  "backHomeButtonText": "Back to Home",
+
+  "404Text": "This page does not exist",
+  "503movieText1": "",
+  "503movieText2": "movie data not found",
 
   "footerText1": "This site is powered by",
   "footerText2": ""

@@ -12,6 +12,12 @@
   "recommendedTitle": "あなたにおすすめ",
   "noReviewText": "コメントはまだありません",
 
+  "backHomeButtonText": "ホームページに戻る",
+
+  "404Text": "このページは存在しません",
+  "503movieText1": "",
+  "503movieText2": "の映画データが見つかりません",
+
   "footerText1": "このサイトは",
   "footerText2": "を利用しています"
 }
