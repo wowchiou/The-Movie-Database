@@ -92,7 +92,11 @@ export default {
       title: this.detail.title,
     }
   },
+<<<<<<< HEAD
   async asyncData({ params }) {
+=======
+  async asyncData({ params, error }) {
+>>>>>>> 896e952e1abd935e08c9b370d49e30d47209d422
     try {
       const movieID = params.id
       const detailResult = await http.getDetailMovie(movieID)
@@ -108,8 +112,13 @@ export default {
           (itm) => itm.poster_path
         ),
       }
+<<<<<<< HEAD
     } catch (error) {
       console.log(error)
+=======
+    } catch (err) {
+      error({ statusCode: 503, message: `未找到 ${params.id} 電影資料` })
+>>>>>>> 896e952e1abd935e08c9b370d49e30d47209d422
     }
   },
   data() {

@@ -23,6 +23,7 @@ export default {
       title: `${page.label}電影`,
     }
   },
+<<<<<<< HEAD
   async asyncData({ params, store }) {
     const searchType = params.search
     let movies = await store.dispatch('getMovies', { searchType, page: 1 })
@@ -30,6 +31,19 @@ export default {
       moviePage: 1,
       movieTotalPage: movies.total_pages,
       movies: movies.results,
+=======
+  async asyncData({ params, store, error }) {
+    try {
+      const searchType = params.search
+      let movies = await store.dispatch('getMovies', { searchType, page: 1 })
+      return {
+        moviePage: 1,
+        movieTotalPage: movies.total_pages,
+        movies: movies.results,
+      }
+    } catch (err) {
+      error({ statusCode: 404 })
+>>>>>>> 896e952e1abd935e08c9b370d49e30d47209d422
     }
   },
   data() {
