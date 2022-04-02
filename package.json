@@ -1,0 +1,55 @@
+{
+  "name": "the-movie-database",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "12.14.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:prettier",
+    "lintfix": "prettier --write --list-different .",
+    "test": "jest",
+    "cf": "node createFile.js",
+    "deploy": "sh deploy.sh",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.19.3",
+    "gsap": "^3.10.2",
+    "nuxt": "^2.15.8",
+    "swiper": "^5.4.5",
+    "vue": "^2.6.14",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-infinite-scroll": "^2.0.2",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@nuxt/postcss8": "^1.1.3",
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@vue/test-utils": "^1.3.0",
+    "autoprefixer": "^10.4.4",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^27.4.4",
+    "enquirer": "^2.3.6",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.4.4",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.4.12",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^7.4.3",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.9",
+    "sass-loader": "10.1.1",
+    "tailwindcss": "^3.0.23",
+    "vue-jest": "^3.0.4"
+  }
+}

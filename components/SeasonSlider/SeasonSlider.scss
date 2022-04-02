@@ -1,0 +1,13 @@
+.swiper-slide {
+  width: 170px;
+}
+
+.slider-image {
+  width: 170px;
+  height: 255px;
+  @apply mr-10 w-full rounded-md overflow-hidden bg-gray-300 flex justify-center items-center;
+}
+
+.logo-image {
+  width: 60%;
+}

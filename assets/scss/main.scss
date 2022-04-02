@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './index.scss';
+
+html {
+  font-size: 10px;
+}
+
+a,
+span {
+  @apply inline-block;
+}
+
+body {
+  min-width: 960px;
+  @apply bg-iColor-dark text-gray-100 m-auto;
+}
+
+img {
+  vertical-align: middle;
+}
+
+input,
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  @apply rounded-md;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.bg-gradient {
+  @extend %bg-gradient;
+}
+
+.banner {
+  @apply relative flex justify-center items-center w-full bg-slate-300;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  &::after {
+    content: '';
+    @apply absolute w-full h-full top-0 left-0  backdrop-blur-sm backdrop-grayscale bg-slate-700/70 z-0;
+  }
+}
+
+.slider .swiper-lazy-preloader {
+  @apply absolute w-full h-full bg-gray-400 top-0 left-0 m-0 rounded-none border-0;
+  animation: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% auto;
+  background-image: url(~@/assets/images/logo-primary-short.svg);
+}
+
+.slideLeft-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.slideLeft-enter-active {
+  transition: all 1s;
+}
+
+.fadeIn-enter {
+  opacity: 0;
+}
+.fadeIn-enter-active {
+  transition: all 0.5s;
+}
+
+@keyframes shinny {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes shift-to-left {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 3000px;
+  }
+  100% {
+    left: 3000px;
+  }
+}

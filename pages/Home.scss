@@ -1,0 +1,23 @@
+.search-wrap {
+  width: 50rem;
+}
+
+.slider {
+  width: 100%;
+  @apply m-auto;
+}
+
+.vote-average {
+  @apply w-14 h-14 rounded-full text-gray-200 text-2xl font-bold flex justify-center items-center;
+  text-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.video-list {
+  width: 250px;
+  @apply inline-block;
+}
+
+.video-title {
+  @apply text-2xl font-bold;
+  word-break: break-word;
+}

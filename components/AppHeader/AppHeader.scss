@@ -1,0 +1,35 @@
+.header {
+  @apply fixed w-full top-0 left-0 flex justify-between items-center px-8 py-10 z-20;
+  transition: 0.3s;
+  &-left {
+    @apply relative flex justify-start items-end z-10;
+  }
+  &.active {
+    @apply bg-iColor-dark/[.5];
+    &::before {
+      content: '';
+      @apply absolute w-full h-full top-0 left-0 z-0 backdrop-blur-md;
+    }
+  }
+}
+
+.logo {
+  width: 20rem;
+  .wrap {
+    width: 100%;
+    padding-bottom: calc(132.05 / 1015 * 100%);
+    background-image: url(~@/assets/images/logo-alt-short.svg);
+    background-size: 100% 100%;
+  }
+}
+
+.menu {
+  @apply flex justify-center items-center text-2xl ml-10;
+  li {
+    @apply text-gray-100 font-bold transition-colors;
+    @apply hover:text-gray-300;
+    & + li {
+      @apply ml-8;
+    }
+  }
+}

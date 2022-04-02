@@ -1,0 +1,57 @@
+@import '~@/assets/scss/index.scss';
+
+.main {
+  @apply w-11/12 max-w-screen-xl m-auto;
+}
+
+.info {
+  @apply relative z-10 flex justify-center items-start;
+  margin-top: -400px;
+}
+
+.video-post {
+  width: 300px;
+  @apply mr-10 rounded-md overflow-hidden;
+}
+
+.vote-average {
+  @extend %text-gradient;
+  @apply text-5xl font-bold;
+  span {
+    @apply leading-none font-bold;
+    font-size: 9rem;
+  }
+}
+
+.pic-bar {
+  @apply relative w-full h-screen;
+  &::after {
+    content: '';
+    @apply absolute w-full h-full bg-gray-300 top-0 left-0 z-0;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: shinny 0.5s infinite alternate linear;
+  }
+  &::before {
+    content: '';
+    @apply absolute w-full h-full bg-gray-300 top-0 left-0 z-0;
+    background-image: url(~@/assets/images/logo-primary-full.svg);
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  div {
+    @apply bg-cover bg-center bg-fixed absolute w-full h-full z-10 top-0 left-0;
+  }
+}
+
+.vote-line {
+  @apply absolute h-2 bottom-0 left-0 rounded-full overflow-hidden;
+  @extend %bg-gradient;
+  &::after {
+    content: '';
+    @apply absolute h-full top-0 left-0 bg-white/[.2];
+    animation: shift-to-left 4s infinite linear;
+    width: 200px;
+  }
+}

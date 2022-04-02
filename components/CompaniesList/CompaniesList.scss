@@ -1,0 +1,14 @@
+.companies {
+  @apply mt-5 flex justify-start items-start bg-gray-100/[.5] rounded-md p-3;
+}
+
+.logo-list {
+  width: 10rem;
+  height: 7.5rem;
+  text-align: center;
+  @apply flex justify-center items-center m-3;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
