@@ -6,7 +6,9 @@
         <p v-if="statusCode === 404">此頁面不存在</p>
         <p v-else>{{ message }}</p>
       </div>
-      <nuxt-link :to="{ name: 'index' }" class="back-home">返回首頁</nuxt-link>
+      <nuxt-link :to="localePath({ name: 'index' })" class="back-home"
+        >返回首頁</nuxt-link
+      >
     </div>
   </div>
 </template>

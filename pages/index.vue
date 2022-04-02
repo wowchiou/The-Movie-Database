@@ -8,22 +8,22 @@
     >
       <div class="relative z-10 w-full flex justify-center items-center">
         <div class="search-wrap">
-          <p class="text-4xl font-bold">從這裡開始尋找電影吧...</p>
+          <p class="text-4xl font-bold">{{ $t('homeSearchText') }}</p>
           <SearchBar :searchHandler="searchHandler" />
         </div>
       </div>
     </div>
     <div class="mt-10">
       <div>
-        <HomeSliderTitle label="現正熱映電影" type="now" class="mb-5" />
+        <HomeSliderTitle label="navNowPlaying" type="now" class="mb-5" />
         <VideoSlider videoType="Movie" :video="nowPlayingMovie" />
       </div>
       <div class="mt-10">
-        <HomeSliderTitle label="高好評電影" type="top" class="mb-5" />
+        <HomeSliderTitle label="navTop" type="top" class="mb-5" />
         <VideoSlider videoType="Movie" :video="topMovie" />
       </div>
       <div class="mt-10">
-        <HomeSliderTitle label="高人氣電影" type="popular" class="mb-5" />
+        <HomeSliderTitle label="navPopular" type="popular" class="mb-5" />
         <VideoSlider videoType="Movie" :video="popularMovie" />
       </div>
     </div>
@@ -38,9 +38,10 @@ import VideoSlider from '@/components/VideoSlider'
 export default {
   components: { SearchBar, HomeSliderTitle, VideoSlider },
   head() {
-    return { title: '電影基地' }
+    return { title: this.$t('metaTitleIndex') }
   },
-  async asyncData({ store }) {
+  async asyncData({ app, store }) {
+    store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
     try {
       const nowPlayingMovie = await store.dispatch('fetchNowPlayingMovie', 1)
       const topMovie = await store.dispatch('fetchTopMovie', 1)
@@ -58,10 +59,12 @@ export default {
   methods: {
     searchHandler(searchText) {
       if (!searchText) return
-      this.$router.push({
-        name: 'Search',
-        query: { searchText },
-      })
+      this.$router.push(
+        this.localePath({
+          name: 'Search',
+          query: { searchText },
+        })
+      )
     },
   },
 }

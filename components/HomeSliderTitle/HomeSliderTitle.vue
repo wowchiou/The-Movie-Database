@@ -3,7 +3,7 @@
     class="homeSliderTitle"
     :to="{ name: 'Overview-search', params: { search: type } }"
   >
-    <h2>{{ label }}</h2>
+    <h2>{{ $t(label) }}</h2>
   </nuxt-link>
 </template>
 

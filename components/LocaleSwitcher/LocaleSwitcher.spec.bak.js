@@ -2,25 +2,25 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { createVuexStore } from '@/store'
 import { routes } from '@/router'
-import SeasonSlider from './SeasonSlider.vue'
+import LocaleSwitcher from './LocaleSwitcher.vue'
 
 let wrapper
 let store
 let router
 
-describe('SeasonSlider', () => {
+describe('LocaleSwitcher', () => {
   beforeEach(() => {
     store = createVuexStore()
     router = createRouter({
       history: createWebHashHistory(process.env.BASE_URL),
       routes,
     })
-    wrapper = mount(SeasonSlider, {
+    wrapper = mount(LocaleSwitcher, {
       global: { plugins: [store, router] },
     })
   })
 
-  it('SeasonSlider is exist', () => {
+  it('LocaleSwitcher is exist', () => {
     expect(true).toBe(true)
   })
 })

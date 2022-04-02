@@ -1,0 +1,25 @@
+@import '~@/assets/scss/index.scss';
+
+.locale-switcher {
+  @apply relative text-3xl;
+  &.active {
+    .locale-list {
+      transform: translateX(0);
+    }
+  }
+}
+
+.locale-current {
+  @apply w-14 h-14 border-2 border-iColor-blue rounded-md flex justify-center items-center cursor-pointer;
+}
+
+.locale-list {
+  @apply fixed h-full bg-iColor-dark top-0 right-0 py-5;
+  transition: transform 0.3s;
+  transform: translateX(100%);
+  a {
+    &:hover {
+      @extend %text-gradient;
+    }
+  }
+}

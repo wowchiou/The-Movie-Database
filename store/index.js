@@ -1,6 +1,7 @@
 import http from '@/services'
 
 export const state = () => ({
+  lang: '',
   images: {
     origin: `https://image.tmdb.org/t/p/original/`,
     cast: `https://www.themoviedb.org/t/p/w138_and_h175_face/`,
@@ -9,29 +10,18 @@ export const state = () => ({
     post: `https://www.themoviedb.org/t/p/w300_and_h450_bestv2/`,
     profile: `https://www.themoviedb.org/t/p/w45_and_h45_face/`,
   },
-  nowPlayingMovie: [],
-  topMovie: [],
-  popularMovie: [],
 })
 
 export const mutations = {
-  SET_NOW_PLAYING_MOVIE(state, movie) {
-    state.nowPlayingMovie.push(...movie)
-  },
-
-  SET_TOP_MOVIE(state, movie) {
-    state.topMovie.push(...movie)
-  },
-
-  SET_POPULAR_MOVIE(state, movie) {
-    state.popularMovie.push(...movie)
+  SET_LANG(state, lang) {
+    state.lang = lang
   },
 }
 
 export const actions = {
-  getSearchMovie(context, { searchText, page }) {
+  getSearchMovie({ state }, { searchText, page }) {
     return http
-      .getSearchMovie(searchText, page)
+      .getSearchMovie(searchText, page, state.lang)
       .then((res) => {
         return res.data
       })
@@ -56,9 +46,9 @@ export const actions = {
     return movieResult
   },
 
-  fetchNowPlayingMovie(context, page) {
+  fetchNowPlayingMovie({ state }, page) {
     return http
-      .getNowPlayingMovie(page)
+      .getNowPlayingMovie(page, state.lang)
       .then((res) => {
         return res.data
       })
@@ -67,9 +57,9 @@ export const actions = {
       })
   },
 
-  fetchTopMovie(context, page) {
+  fetchTopMovie({ state }, page) {
     return http
-      .getTopMovie(page)
+      .getTopMovie(page, state.lang)
       .then((res) => {
         return res.data
       })
@@ -78,9 +68,9 @@ export const actions = {
       })
   },
 
-  fetchPopularMovie(context, page) {
+  fetchPopularMovie({ state }, page) {
     return http
-      .getPopularMovie(page)
+      .getPopularMovie(page, state.lang)
       .then((res) => {
         return res.data
       })

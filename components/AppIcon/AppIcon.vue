@@ -1,5 +1,5 @@
 <template>
-  <span class="material-icons" data-test="icon">{{ icon }}</span>
+  <span class="material-icons select-none" data-test="icon">{{ icon }}</span>
 </template>
 
 <script>

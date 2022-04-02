@@ -15,8 +15,9 @@
 }
 
 .vote-average {
+  width: 16.5rem;
   @extend %text-gradient;
-  @apply text-5xl font-bold;
+  @apply text-5xl font-bold text-right;
   span {
     @apply leading-none font-bold;
     font-size: 9rem;

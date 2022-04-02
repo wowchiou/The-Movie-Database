@@ -23,9 +23,12 @@ import SearchBar from '@/components/SearchBar'
 export default {
   components: { SearchBar, MoviesList },
   head() {
-    return { title: `尋找${this.$route.query.searchText}` }
+    return {
+      title: `${this.$t('searchButtonText')}${this.$route.query.searchText}`,
+    }
   },
-  async asyncData({ store, query }) {
+  async asyncData({ app, store, query }) {
+    store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
     const searchText = encodeURIComponent(query.searchText)
     const searchResult = await store.dispatch('getSearchMovie', {
       searchText,
@@ -67,10 +70,12 @@ export default {
         searchText,
         page: 1,
       })
-      this.$router.push({
-        name: 'Search',
-        query: { searchText },
-      })
+      this.$router.push(
+        this.localePath({
+          name: 'Search',
+          query: { searchText },
+        })
+      )
       this.movies = searchResult.results.filter((itm) => itm.poster_path)
       this.moviePage = 1
       this.movieTotalPage = searchResult.total_pages

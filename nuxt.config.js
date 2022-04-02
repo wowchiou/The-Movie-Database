@@ -33,6 +33,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-swiper.js', ssr: false },
     { src: '~/plugins/vue-infinite-scroll.js', ssr: false },
+    // { src: '~/plugins/i18n.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -49,7 +50,28 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    baseUrl: 'https://the-movie-database-practice.herokuapp.com',
+    locales: ['zh', 'en', 'ja', 'ko'],
+    defaultLocale: 'zh',
+    vueI18n: {
+      fallbackLocale: 'zh',
+      messages: {
+        zh: require('./locales/zh.json'),
+        en: require('./locales/en.json'),
+        ja: require('./locales/ja.json'),
+        ko: require('./locales/ko.json'),
+      },
+    },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

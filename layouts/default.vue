@@ -19,6 +19,13 @@ export default {
   head() {
     return {
       titleTemplate: '%s - TMDB',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('metaGlobalDescription'),
+        },
+      ],
     }
   },
 }

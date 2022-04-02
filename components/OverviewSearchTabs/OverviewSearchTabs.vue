@@ -2,12 +2,14 @@
   <ul class="tabs">
     <li v-for="tab in tabs" :key="tab.search">
       <nuxt-link
-        :to="{
-          name: tab.name,
-          params: { search: tab.search },
-        }"
+        :to="
+          localePath({
+            name: tab.name,
+            params: { search: tab.search },
+          })
+        "
       >
-        <span>{{ tab.label }}</span>
+        <span>{{ $t(tab.label) }}</span>
       </nuxt-link>
     </li>
   </ul>

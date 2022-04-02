@@ -1,11 +1,10 @@
 <template>
   <div class="appFooter">
     <p class="text-center text-2xl">
-      本網站由<a
-        href="https://www.themoviedb.org/?language=zh-TW"
-        target="_blank"
+      {{ $t('footerText1')
+      }}<a href="https://www.themoviedb.org/?language=zh-TW" target="_blank"
         >The Movie Database</a
-      >提供資料
+      >{{ $t('footerText2') }}
     </p>
   </div>
 </template>

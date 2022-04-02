@@ -13,7 +13,9 @@
         :key="`${movie.id}${movieIndex}`"
         class="movie-item"
       >
-        <nuxt-link :to="{ name: 'Movie-id', params: { id: movie.id } }">
+        <nuxt-link
+          :to="localePath({ name: 'Movie-id', params: { id: movie.id } })"
+        >
           <img :src="`${picUrl}${movie.poster_path}`" :alt="movie.title" />
         </nuxt-link>
       </li>

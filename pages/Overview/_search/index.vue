@@ -20,10 +20,11 @@ export default {
       (itm) => this.$route.params.search === itm.search
     )
     return {
-      title: `${page.label}電影`,
+      title: this.$t(page.label),
     }
   },
-  async asyncData({ params, store, error }) {
+  async asyncData({ app, params, store, error }) {
+    store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
     try {
       const searchType = params.search
       let movies = await store.dispatch('getMovies', { searchType, page: 1 })

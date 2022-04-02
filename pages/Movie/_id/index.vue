@@ -29,7 +29,7 @@
               <GenresList class="mt-5" :genres="detail.genres" />
             </div>
             <div class="vote-average">
-              <span class="vote-average">{{ tweenVoteAverage.toFixed(0) }}</span
+              <span>{{ tweenVoteAverage.toFixed(0) }}</span
               >%
             </div>
             <span
@@ -92,13 +92,15 @@ export default {
       title: this.detail.title,
     }
   },
-  async asyncData({ params, error }) {
+  async asyncData({ app, store, params, error }) {
+    const lang = app.localePath('index').split('/')[1] || 'zh'
+    store.commit('SET_LANG', lang)
     try {
       const movieID = params.id
-      const detailResult = await http.getDetailMovie(movieID)
-      const castResult = await http.getCastMovie(movieID)
-      const reviewResult = await http.getReviewMovie(movieID, 1)
-      const recommendations = await http.getRecommendations(movieID)
+      const detailResult = await http.getDetailMovie(movieID, lang)
+      const castResult = await http.getCastMovie(movieID, lang)
+      const reviewResult = await http.getReviewMovie(movieID, 1, lang)
+      const recommendations = await http.getRecommendations(movieID, lang)
 
       return {
         detail: detailResult.data,

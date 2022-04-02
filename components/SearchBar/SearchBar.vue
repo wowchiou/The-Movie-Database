@@ -1,7 +1,7 @@
 <template>
   <form class="search-bar" @submit.prevent="searchHandler(searchText)">
     <input type="text" v-model="searchText" />
-    <button class="bg-gradient">搜尋</button>
+    <button class="bg-gradient">{{ $t('searchButtonText') }}</button>
   </form>
 </template>
 

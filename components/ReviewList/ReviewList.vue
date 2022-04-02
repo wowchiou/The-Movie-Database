@@ -1,7 +1,7 @@
 <template>
   <div class="reviews">
     <h3 v-if="reviews.length === 0" class="text-4xl text-center font-bold">
-      尚無留言評論
+      {{ $t('noReviewText') }}
     </h3>
     <ul v-else>
       <li v-for="review in reviews" :key="review.id">
