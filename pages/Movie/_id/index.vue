@@ -93,10 +93,11 @@ export default {
     }
   },
   async asyncData({ app, store, params, error }) {
-    const lang = app.localePath('index').split('/')[1] || 'zh'
+    const i18n = app.i18n
+    const lang = i18n.locale
+    const movieID = params.id
     store.commit('SET_LANG', lang)
     try {
-      const movieID = params.id
       const detailResult = await http.getDetailMovie(movieID, lang)
       const castResult = await http.getCastMovie(movieID, lang)
       const reviewResult = await http.getReviewMovie(movieID, 1, lang)
@@ -113,7 +114,7 @@ export default {
     } catch (err) {
       error({
         statusCode: 503,
-        message: `${app.i18n.t('503movieText1')} ${params.id} ${app.i18n.t(
+        message: `${i18n.t('503movieText1')} ${movieID} ${i18n.t(
           '503movieText2'
         )}`,
       })

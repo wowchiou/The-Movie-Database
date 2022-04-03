@@ -3,7 +3,7 @@
     <div
       class="banner"
       :style="{
-        backgroundImage: `url(${$store.state.images.screen}${nowPlayingMovie[0].poster_path})`,
+        backgroundImage: `url(${imagesURL.screen}${nowPlayingMovie[0].poster_path})`,
       }"
     >
       <div class="relative z-10 w-full flex justify-center items-center">
@@ -16,15 +16,27 @@
     <div class="mt-10">
       <div>
         <HomeSliderTitle label="navNowPlaying" type="now" class="mb-5" />
-        <VideoSlider videoType="Movie" :video="nowPlayingMovie" />
+        <VideoSlider
+          videoType="Movie"
+          :video="nowPlayingMovie"
+          :imageURL="imagesURL.post"
+        />
       </div>
       <div class="mt-10">
         <HomeSliderTitle label="navTop" type="top" class="mb-5" />
-        <VideoSlider videoType="Movie" :video="topMovie" />
+        <VideoSlider
+          videoType="Movie"
+          :video="topMovie"
+          :imageURL="imagesURL.post"
+        />
       </div>
       <div class="mt-10">
         <HomeSliderTitle label="navPopular" type="popular" class="mb-5" />
-        <VideoSlider videoType="Movie" :video="popularMovie" />
+        <VideoSlider
+          videoType="Movie"
+          :video="popularMovie"
+          :imageURL="imagesURL.post"
+        />
       </div>
     </div>
   </div>
@@ -40,8 +52,9 @@ export default {
   head() {
     return { title: this.$t('metaTitleIndex') }
   },
-  async asyncData({ app, store }) {
-    store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
+  async asyncData({ app, store, error }) {
+    const i18n = app.i18n
+    store.commit('SET_LANG', i18n.locale)
     try {
       const nowPlayingMovie = await store.dispatch('fetchNowPlayingMovie', 1)
       const topMovie = await store.dispatch('fetchTopMovie', 1)
@@ -52,9 +65,14 @@ export default {
         topMovie: topMovie.results,
         popularMovie: popularMovie.results,
       }
-    } catch (error) {
-      console.log(error)
+    } catch (err) {
+      error({ statusCode: 500, message: i18n.t('500Text') })
     }
+  },
+  computed: {
+    imagesURL() {
+      return this.$store.state.images
+    },
   },
   methods: {
     searchHandler(searchText) {

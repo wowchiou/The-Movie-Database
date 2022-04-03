@@ -11,10 +11,12 @@
   "searchButtonText": "搜尋",
   "recommendedTitle": "為您推薦",
   "noReviewText": "尚無留言評論",
+  "noSearchMovie": "抱歉！查無電影資料",
 
   "backHomeButtonText": "返回首頁",
 
   "404Text": "此頁面不存在",
+  "500Text": "網頁發生問題，請稍後再試！",
   "503movieText1": "未找到",
   "503movieText2": "電影資料",
 

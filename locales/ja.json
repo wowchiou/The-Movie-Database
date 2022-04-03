@@ -10,11 +10,13 @@
 
   "searchButtonText": "探す",
   "recommendedTitle": "あなたにおすすめ",
+  "noSearchMovie": "ごめんなさい！映画情報なし",
   "noReviewText": "コメントはまだありません",
 
   "backHomeButtonText": "ホームページに戻る",
 
   "404Text": "このページは存在しません",
+  "500Text": "ページに問題がありました。しばらくしてからもう一度お試しください。",
   "503movieText1": "",
   "503movieText2": "の映画データが見つかりません",
 

@@ -24,7 +24,7 @@ export default {
     }
   },
   async asyncData({ app, params, store, error }) {
-    store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
+    store.commit('SET_LANG', app.i18n.locale)
     try {
       const searchType = params.search
       let movies = await store.dispatch('getMovies', { searchType, page: 1 })

@@ -4,7 +4,7 @@
       <SearchBar :searchHandler="searchHandler" />
     </div>
     <h3 v-if="movies.length === 0" class="text-4xl text-center p-20">
-      抱歉！查無電影資料
+      {{ $t('noSearchMovie') }}
     </h3>
     <MoviesList
       v-else
@@ -27,9 +27,10 @@ export default {
       title: `${this.$t('searchButtonText')}${this.$route.query.searchText}`,
     }
   },
-  async asyncData({ app, store, query }) {
+  async asyncData({ app, store, query, error }) {
+    const i18n = app.i18n
     try {
-      store.commit('SET_LANG', app.localePath('index').split('/')[1] || 'zh')
+      store.commit('SET_LANG', i18n.locale)
       const searchText = encodeURIComponent(query.searchText)
       const searchResult = await store.dispatch('getSearchMovie', {
         searchText,
@@ -40,8 +41,8 @@ export default {
         moviePage: 1,
         movieTotalPage: searchResult.total_pages,
       }
-    } catch (error) {
-      console.log(error)
+    } catch (err) {
+      error({ statusCode: 500, message: i18n.t('500Text') })
     }
   },
   data() {

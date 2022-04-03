@@ -7,7 +7,7 @@
         >
           <div class="video-image">
             <img
-              :data-src="`${imagesURL}${list.poster_path}`"
+              :data-src="`${imageURL}${list.poster_path}`"
               :alt="list.title"
               class="swiper-lazy"
             />
@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import IMAGES from '@/data/images-src.json'
 import AppIcon from '@/components/AppIcon'
 
 export default {
@@ -40,10 +39,13 @@ export default {
       type: Array,
       required: true,
     },
+    imageURL: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
-      imagesURL: IMAGES.post,
       swiperOption: {
         loop: true,
         slidesPerView: 'auto',
@@ -63,9 +65,6 @@ export default {
       },
     }
   },
-  computed: {},
-  methods: {},
-  mounted() {},
 }
 </script>
 

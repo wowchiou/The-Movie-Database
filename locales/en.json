@@ -11,10 +11,12 @@
   "searchButtonText": "search",
   "recommendedTitle": "Recommended for you",
   "noReviewText": "No comments yet",
+  "noSearchMovie": "I am sorry! No movie information",
 
   "backHomeButtonText": "Back to Home",
 
   "404Text": "This page does not exist",
+  "500Text": "There was a problem with the page, please try again later!",
   "503movieText1": "",
   "503movieText2": "movie data not found",
 
