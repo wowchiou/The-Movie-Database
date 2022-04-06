@@ -77,7 +77,6 @@ export default {
           ...this.movies,
           ...moviesOfSearch,
         ])
-
         this.movies = moviesMap
         this.moviePage += 1
         this.busy = false

@@ -1,29 +1,17 @@
 <template>
   <div class="_id">
-    <div
-      class="banner"
-      :style="{
-        backgroundImage: `url(
-          ${images.screen}${detail.backdrop_path}
-        )`,
-      }"
-    ></div>
+    <MovieBackGroundBanner class="banner" :backGroundImage="bannerBGImage" />
 
     <div class="main">
       <div class="info">
-        <div class="video-post">
-          <img
-            :src="`${images.post}${detail.poster_path}`"
-            :alt="detail.title"
-          />
-        </div>
+        <MoviePoster :postURL="postURL" :postAlt="detail.title" />
         <div class="flex-1 text-3xl overflow-hidden">
           <div class="relative flex justify-start items-start pb-5">
             <div class="flex-1 mr-10">
               <h1 class="font-bold text-5xl">
                 {{ detail.title }}
                 <span class="text-3xl text-gray-300">
-                  {{ detail.release_date.split('-')[0] }}
+                  {{ movieYear }}
                 </span>
               </h1>
               <GenresList class="mt-5" :genres="detail.genres" />
@@ -52,13 +40,7 @@
     </div>
 
     <div v-if="detail.backdrop_path" class="pic-bar">
-      <div
-        :style="{
-          backgroundImage: `url(
-          ${images.screen}${detail.backdrop_path}
-        )`,
-        }"
-      ></div>
+      <MovieBackGroundBanner class="banner" :backGroundImage="bannerBGImage" />
     </div>
 
     <RecommendationsCard
@@ -73,6 +55,8 @@
 import { mapState } from 'vuex'
 import http from '@/services'
 import gsap from 'gsap'
+import MovieBackGroundBanner from '@/components/MovieBackGroundBanner'
+import MoviePoster from '@/components/MoviePoster'
 import GenresList from '@/components/GenresList'
 import CompaniesList from '@/components/CompaniesList'
 import CastSlider from '@/components/CastSlider'
@@ -81,6 +65,8 @@ import RecommendationsCard from '@/components/RecommendationsCard'
 
 export default {
   components: {
+    MovieBackGroundBanner,
+    MoviePoster,
     GenresList,
     CompaniesList,
     CastSlider,
@@ -98,11 +84,13 @@ export default {
     const movieID = params.id
     store.commit('SET_LANG', lang)
     try {
-      const detailResult = await http.getDetailMovie(movieID, lang)
-      const castResult = await http.getCastMovie(movieID, lang)
-      const reviewResult = await http.getReviewMovie(movieID, 1, lang)
-      const recommendations = await http.getRecommendations(movieID, lang)
-
+      const [detailResult, castResult, reviewResult, recommendations] =
+        await Promise.all([
+          http.getDetailMovie(movieID, lang),
+          http.getCastMovie(movieID, lang),
+          http.getReviewMovie(movieID, 1, lang),
+          http.getRecommendations(movieID, lang),
+        ])
       return {
         detail: detailResult.data,
         casts: castResult.data.cast,
@@ -128,6 +116,15 @@ export default {
   },
   computed: {
     ...mapState(['images']),
+    bannerBGImage() {
+      return `${this.images.screen}${this.detail.backdrop_path}`
+    },
+    postURL() {
+      return `${this.images.post}${this.detail.poster_path}`
+    },
+    movieYear() {
+      return this.detail.release_date.split('-')[0]
+    },
   },
   watch: {
     voteAverage(newValue) {

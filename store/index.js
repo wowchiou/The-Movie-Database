@@ -99,7 +99,7 @@ export const actions = {
     const moviesFormateMap = movies.reduce((arr, el) => {
       return [...arr, [el.id, el]]
     }, [])
-    // 篩選調重複的資料並轉成物件陣列
+    // 篩選調重複的資料轉成物件陣列
     return [...new Map(moviesFormateMap)].reduce((arr, el) => {
       return [...arr, el[1]]
     }, [])

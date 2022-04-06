@@ -1,7 +1,9 @@
 <template>
   <nuxt-link
     class="homeSliderTitle"
-    :to="{ name: 'Overview-search', params: { search: searchParam } }"
+    :to="
+      localePath({ name: 'Overview-search', params: { search: searchParam } })
+    "
   >
     <h2>{{ $t(label) }}</h2>
   </nuxt-link>
