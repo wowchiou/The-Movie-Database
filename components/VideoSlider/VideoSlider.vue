@@ -1,7 +1,11 @@
 <template>
   <div class="slider" v-swiper:mySwiper="swiperOption">
     <ul class="swiper-wrapper">
-      <li v-for="list in movies" :key="list.id" class="video-list swiper-slide">
+      <li
+        v-for="list in movies"
+        :key="`${videoType}-${list.id}`"
+        class="video-list swiper-slide"
+      >
         <nuxt-link
           :to="localePath({ name: `${videoType}-id`, params: { id: list.id } })"
         >

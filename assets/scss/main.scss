@@ -73,6 +73,14 @@ button {
   transition: all 1s;
 }
 
+.slideUp-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+.slideUp-enter-active {
+  transition: all 1s;
+}
+
 .fadeIn-enter {
   opacity: 0;
 }
@@ -98,5 +106,16 @@ button {
   }
   100% {
     left: 3000px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

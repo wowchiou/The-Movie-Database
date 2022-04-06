@@ -32,14 +32,14 @@ export default {
     try {
       store.commit('SET_LANG', i18n.locale)
       const searchText = encodeURIComponent(query.searchText)
-      const searchResult = await store.dispatch('getSearchMovie', {
+      const { results, total_pages } = await store.dispatch('getSearchMovie', {
         searchText,
         page: 1,
       })
       return {
-        movies: searchResult.results.filter((itm) => itm.poster_path),
+        movies: results.filter((itm) => itm.poster_path),
         moviePage: 1,
-        movieTotalPage: searchResult.total_pages,
+        movieTotalPage: total_pages,
       }
     } catch (err) {
       error({ statusCode: 500, message: i18n.t('500Text') })
@@ -69,12 +69,17 @@ export default {
       }
 
       try {
-        const moviesResults = await this.getSearchMovies({
+        const { moviesOfSearch } = await this.getSearchMovies({
           searchText: this.$route.query.searchText,
           page: this.moviePage + 1,
         })
+        const moviesMap = await this.$store.dispatch('filterRepeatMovies', [
+          ...this.movies,
+          ...moviesOfSearch,
+        ])
+
+        this.movies = moviesMap
         this.moviePage += 1
-        this.movies.push(...moviesResults)
         this.busy = false
       } catch (err) {
         this.busy = false
@@ -86,13 +91,15 @@ export default {
       if (!searchText) return
 
       try {
-        const searchResults = await this.getSearchMovies({
-          searchText,
-          page: 1,
-        })
-        this.movies = searchResults
+        const { moviesOfSearch, searchTotalPages } = await this.getSearchMovies(
+          {
+            searchText,
+            page: 1,
+          }
+        )
+        this.movies = moviesOfSearch
         this.moviePage = 1
-        this.movieTotalPage = searchResults.total_pages
+        this.movieTotalPage = searchTotalPages
         this.$router.push(
           this.localePath({
             name: 'Search',
@@ -109,7 +116,10 @@ export default {
         searchText,
         page,
       })
-      return moviesResults.results.filter((itm) => itm.poster_path)
+      return {
+        moviesOfSearch: moviesResults.results.filter((itm) => itm.poster_path),
+        searchTotalPages: moviesResults.total_pages,
+      }
     },
 
     redirectErrorPage({ statusCode, message }) {

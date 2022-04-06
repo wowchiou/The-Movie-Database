@@ -56,8 +56,12 @@ export default {
         page: this.moviePage + 1,
       })
       moviesResults = moviesResults.results.filter((itm) => itm.poster_path)
+      const moviesMap = await this.$store.dispatch('filterRepeatMovies', [
+        ...this.movies,
+        ...moviesResults,
+      ])
+      this.movies = moviesMap
       this.moviePage += 1
-      this.movies.push(...moviesResults)
       this.busy = false
     },
   },

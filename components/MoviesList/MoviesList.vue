@@ -2,7 +2,7 @@
   <div>
     <transition-group
       tag="ul"
-      name="slideLeft"
+      name="slideUp"
       v-infinite-scroll="loadMovies"
       infinite-scroll-disabled="busy"
       :infinite-scroll-distance="getInfinityScrollHeight()"
@@ -20,19 +20,13 @@
         </nuxt-link>
       </li>
     </transition-group>
-    <div v-if="busy" class="my-20 flex justify-self-center items-center">
-      <div class="m-auto w-20">
-        <img
-          class="movie-loader"
-          src="~@/assets/images/logo-primary-full.svg"
-          alt="logo"
-        />
-      </div>
-    </div>
+    <MoviesListLoader v-if="busy" />
   </div>
 </template>
 
 <script>
+import MoviesListLoader from '@/components/MoviesListLoader'
+
 export default {
   props: {
     movies: {
@@ -52,6 +46,7 @@ export default {
       required: true,
     },
   },
+  components: { MoviesListLoader },
   methods: {
     getInfinityScrollHeight() {
       if (process.browser) {

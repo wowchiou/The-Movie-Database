@@ -93,4 +93,15 @@ export const actions = {
         throw err
       })
   },
+
+  filterRepeatMovies(context, movies) {
+    // 重編排成Map格式使之後可以篩選重複的資料
+    const moviesFormateMap = movies.reduce((arr, el) => {
+      return [...arr, [el.id, el]]
+    }, [])
+    // 篩選調重複的資料並轉成物件陣列
+    return [...new Map(moviesFormateMap)].reduce((arr, el) => {
+      return [...arr, el[1]]
+    }, [])
+  },
 }
