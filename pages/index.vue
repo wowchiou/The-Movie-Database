@@ -10,6 +10,7 @@
       <div
         v-for="sliderData in movieSliders"
         :key="sliderData.label"
+        data-test="movie-slider"
         class="mt-10"
       >
         <HomeSliderTitle
