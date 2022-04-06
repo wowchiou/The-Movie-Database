@@ -3,7 +3,7 @@
     <div class="search-wrap">
       <SearchBar :searchHandler="searchHandler" />
     </div>
-    <h3 v-if="movies.length === 0" class="text-4xl text-center p-20">
+    <h3 v-if="!hasSearchMovies" class="text-4xl text-center p-20">
       {{ $t('noSearchMovie') }}
     </h3>
     <MoviesList
@@ -53,37 +53,72 @@ export default {
       busy: false,
     }
   },
+  computed: {
+    hasSearchMovies() {
+      return this.movies.length !== 0
+    },
+    showAllOfMovie() {
+      return this.moviePage === this.movieTotalPage
+    },
+  },
   methods: {
     async loadMovies() {
       this.busy = true
-      if (this.moviePage === this.movieTotalPage || this.movies.length === 0) {
+      if (this.showAllOfMovie || !this.hasSearchMovies) {
         return (this.busy = false)
       }
-      let moviesResults = await this.$store.dispatch('getSearchMovie', {
-        searchText: this.$route.query.searchText,
-        page: this.moviePage + 1,
-      })
-      moviesResults = moviesResults.results.filter((itm) => itm.poster_path)
-      this.moviePage += 1
-      this.movies.push(...moviesResults)
-      this.busy = false
+
+      try {
+        const moviesResults = await this.getSearchMovies({
+          searchText: this.$route.query.searchText,
+          page: this.moviePage + 1,
+        })
+        this.moviePage += 1
+        this.movies.push(...moviesResults)
+        this.busy = false
+      } catch (err) {
+        this.busy = false
+        this.redirectErrorPage({ statusCode: 500, message: this.$t('500Text') })
+      }
     },
 
     async searchHandler(searchText) {
       if (!searchText) return
-      const searchResult = await this.$store.dispatch('getSearchMovie', {
+
+      try {
+        const searchResults = await this.getSearchMovies({
+          searchText,
+          page: 1,
+        })
+        this.movies = searchResults
+        this.moviePage = 1
+        this.movieTotalPage = searchResults.total_pages
+        this.$router.push(
+          this.localePath({
+            name: 'Search',
+            query: { searchText },
+          })
+        )
+      } catch (error) {
+        this.redirectErrorPage({ statusCode: 500, message: this.$t('500Text') })
+      }
+    },
+
+    async getSearchMovies({ searchText, page }) {
+      const moviesResults = await this.$store.dispatch('getSearchMovie', {
         searchText,
-        page: 1,
+        page,
       })
+      return moviesResults.results.filter((itm) => itm.poster_path)
+    },
+
+    redirectErrorPage({ statusCode, message }) {
       this.$router.push(
         this.localePath({
-          name: 'Search',
-          query: { searchText },
+          name: 'error',
+          params: { statusCode, message },
         })
       )
-      this.movies = searchResult.results.filter((itm) => itm.poster_path)
-      this.moviePage = 1
-      this.movieTotalPage = searchResult.total_pages
     },
   },
 }
