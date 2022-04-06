@@ -40,7 +40,7 @@
     </div>
 
     <div v-if="detail.backdrop_path" class="pic-bar">
-      <MovieBackGroundBanner class="banner" :backGroundImage="bannerBGImage" />
+      <MovieBackGroundBanner :backGroundImage="bannerBGImage" />
     </div>
 
     <RecommendationsCard
