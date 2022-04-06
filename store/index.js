@@ -46,6 +46,21 @@ export const actions = {
     return movieResult
   },
 
+  getHomeMovieSliders({ dispatch }) {
+    const page = 1
+    return Promise.all([
+      dispatch('fetchNowPlayingMovie', page),
+      dispatch('fetchTopMovie', page),
+      dispatch('fetchPopularMovie', page),
+    ])
+      .then((values) => {
+        return values
+      })
+      .catch((err) => {
+        throw err
+      })
+  },
+
   fetchNowPlayingMovie({ state }, page) {
     return http
       .getNowPlayingMovie(page, state.lang)

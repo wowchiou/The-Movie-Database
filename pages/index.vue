@@ -1,40 +1,25 @@
 <template>
   <div class="home">
-    <div
-      class="banner"
-      :style="{
-        backgroundImage: `url(${imagesURL.screen}${nowPlayingMovie[0].poster_path})`,
-      }"
-    >
-      <div class="relative z-10 w-full flex justify-center items-center">
-        <div class="search-wrap">
-          <p class="text-4xl font-bold">{{ $t('homeSearchText') }}</p>
-          <SearchBar :searchHandler="searchHandler" />
-        </div>
+    <HomeBanner :bannerPic="bannerPic">
+      <div class="search-wrap">
+        <p class="text-4xl font-bold">{{ $t('homeSearchText') }}</p>
+        <SearchBar :searchHandler="searchHandler" />
       </div>
-    </div>
+    </HomeBanner>
     <div class="mt-10">
-      <div>
-        <HomeSliderTitle label="navNowPlaying" type="now" class="mb-5" />
-        <VideoSlider
-          videoType="Movie"
-          :video="nowPlayingMovie"
-          :imageURL="imagesURL.post"
+      <div
+        v-for="sliderData in movieSliders"
+        :key="sliderData.label"
+        class="mt-10"
+      >
+        <HomeSliderTitle
+          :label="sliderData.label"
+          :searchParam="sliderData.searchParam"
+          class="mb-5"
         />
-      </div>
-      <div class="mt-10">
-        <HomeSliderTitle label="navTop" type="top" class="mb-5" />
         <VideoSlider
           videoType="Movie"
-          :video="topMovie"
-          :imageURL="imagesURL.post"
-        />
-      </div>
-      <div class="mt-10">
-        <HomeSliderTitle label="navPopular" type="popular" class="mb-5" />
-        <VideoSlider
-          videoType="Movie"
-          :video="popularMovie"
+          :movies="sliderData.movies"
           :imageURL="imagesURL.post"
         />
       </div>
@@ -44,11 +29,12 @@
 
 <script>
 import SearchBar from '@/components/SearchBar'
+import HomeBanner from '@/components/HomeBanner'
 import HomeSliderTitle from '@/components/HomeSliderTitle'
 import VideoSlider from '@/components/VideoSlider'
 
 export default {
-  components: { SearchBar, HomeSliderTitle, VideoSlider },
+  components: { HomeBanner, SearchBar, HomeSliderTitle, VideoSlider },
   head() {
     return { title: this.$t('metaTitleIndex') }
   },
@@ -56,14 +42,23 @@ export default {
     const i18n = app.i18n
     store.commit('SET_LANG', i18n.locale)
     try {
-      const nowPlayingMovie = await store.dispatch('fetchNowPlayingMovie', 1)
-      const topMovie = await store.dispatch('fetchTopMovie', 1)
-      const popularMovie = await store.dispatch('fetchPopularMovie', 1)
-
+      const [nowPlayingMovie, topMovie, popularMovie] = await store.dispatch(
+        'getHomeMovieSliders'
+      )
       return {
-        nowPlayingMovie: nowPlayingMovie.results,
-        topMovie: topMovie.results,
-        popularMovie: popularMovie.results,
+        movieSliders: [
+          {
+            label: 'navNowPlaying',
+            searchParam: 'now',
+            movies: nowPlayingMovie.results,
+          },
+          { label: 'navTop', searchParam: 'top', movies: topMovie.results },
+          {
+            label: 'navPopular',
+            searchParam: 'popular',
+            movies: popularMovie.results,
+          },
+        ],
       }
     } catch (err) {
       error({ statusCode: 500, message: i18n.t('500Text') })
@@ -72,6 +67,11 @@ export default {
   computed: {
     imagesURL() {
       return this.$store.state.images
+    },
+    bannerPic() {
+      const [nowPlayingMovies] = this.movieSliders
+      const [firstNowPayingMovie] = nowPlayingMovies.movies
+      return this.imagesURL.screen + firstNowPayingMovie.backdrop_path
     },
   },
   methods: {

@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     class="homeSliderTitle"
-    :to="{ name: 'Overview-search', params: { search: type } }"
+    :to="{ name: 'Overview-search', params: { search: searchParam } }"
   >
     <h2>{{ $t(label) }}</h2>
   </nuxt-link>
@@ -14,7 +14,7 @@ export default {
       type: String,
       required: true,
     },
-    type: {
+    searchParam: {
       type: String,
       required: true,
     },
