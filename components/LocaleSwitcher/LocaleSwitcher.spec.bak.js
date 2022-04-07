@@ -1,26 +1,35 @@
-import { mount } from '@vue/test-utils'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import { createVuexStore } from '@/store'
-import { routes } from '@/router'
-import LocaleSwitcher from './LocaleSwitcher.vue'
+import { mount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
+import VueRouter from 'vue-router'
+import VueI18n from 'vue-i18n'
+import COMPONENT_NAME from './COMPONENT_NAME.vue'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
+localVue.use(VueRouter)
+localVue.use(VueI18n)
 
 let wrapper
+let NuxtStore
 let store
 let router
 
-describe('LocaleSwitcher', () => {
-  beforeEach(() => {
-    store = createVuexStore()
-    router = createRouter({
-      history: createWebHashHistory(process.env.BASE_URL),
-      routes,
-    })
-    wrapper = mount(LocaleSwitcher, {
-      global: { plugins: [store, router] },
-    })
+describe(COMPONENT_NAME, () => {
+  beforeAll(async () => {
+    NuxtStore = await import(`@/store`)
+    router = new VueRouter()
   })
 
-  it('LocaleSwitcher is exist', () => {
-    expect(true).toBe(true)
+  beforeEach(async () => {
+    store = await new Vuex.Store(NuxtStore)
+    wrapper = mount(Home, {
+      localVue,
+      store,
+      router,
+      mocks: { $t: (msg) => msg, localePath: (i) => i },
+      data() {
+        return {}
+      },
+    })
   })
 })
