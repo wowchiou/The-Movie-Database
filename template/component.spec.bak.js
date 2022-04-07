@@ -17,10 +17,10 @@ let router
 describe(COMPONENT_NAME, () => {
   beforeAll(async () => {
     NuxtStore = await import(`@/store`)
-    router = new VueRouter()
   })
 
   beforeEach(async () => {
+    router = new VueRouter()
     store = await new Vuex.Store(NuxtStore)
     wrapper = mount(Home, {
       localVue,
