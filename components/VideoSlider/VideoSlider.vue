@@ -5,6 +5,7 @@
         v-for="list in movies"
         :key="`${videoType}-${list.id}`"
         class="video-list swiper-slide"
+        data-test="movie-slide"
       >
         <nuxt-link
           :to="localePath({ name: `${videoType}-id`, params: { id: list.id } })"

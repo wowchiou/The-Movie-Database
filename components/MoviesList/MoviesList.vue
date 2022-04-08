@@ -12,11 +12,17 @@
         v-for="(movie, movieIndex) in movies"
         :key="`${movie.id}${movieIndex}`"
         class="movie-item"
+        data-test="movie-item"
       >
         <nuxt-link
           :to="localePath({ name: 'Movie-id', params: { id: movie.id } })"
+          data-test="movie-link"
         >
-          <img :src="`${picUrl}${movie.poster_path}`" :alt="movie.title" />
+          <img
+            data-test="movie-poster"
+            :src="`${picUrl}${movie.poster_path}`"
+            :alt="movie.title"
+          />
         </nuxt-link>
       </li>
     </transition-group>
