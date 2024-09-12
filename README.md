@@ -2,7 +2,7 @@
 
 nodejs-version：v12.14.0
 
-使用 Ｎ uxt 搭配 the movie database api 製作電影影評查詢網站。
+使用 Ｎuxt 搭配 the movie database api 製作電影影評查詢網站。
 
 技術：<br>
 Vue2、Nuxt2、vuex、scss、tailwind、vueI18n、GsapJS
